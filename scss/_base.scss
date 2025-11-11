@@ -1,0 +1,187 @@
+@charset "UTF-8";
+@use'./_mixin.scss' as mx;
+
+// --------------------------------------
+// カラーパレット
+// --------------------------------------
+$black: #333333;
+$white: #FFFFFF;
+$yellow: #DB8405;
+$blue: #80A0B1;
+$light-grey: #F6F6F6;
+$dark-grey: #808080;
+$navy: #283038;
+
+// --------------------------------------
+// Typography 
+// --------------------------------------
+$font-family-base: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif;
+// 文字サイズ（(Base 1rem = 10px/PCサイズ）
+$fs-h2: 3.0rem;
+$fs-h3: 2.0rem;
+$fs-h4: 2.0rem;
+
+$fs-middle: 1.8rem;
+$fs-text: 1.6rem;
+$fs-small: 1.2rem;
+
+// 文字の太さ
+$fw-bold: 700;
+$fw-medium: 500;
+$fw-light: 400;
+
+// 行間・文字間スペース
+$lh-heading: 1.3;
+$lh-body: 1.7;
+$ls-base: 0.03em;
+
+// --------------------------------------
+// Placeholders(line-height/line-space）
+// --------------------------------------
+%heading {
+    line-height: $lh-heading;
+    letter-spacing: $ls-base;
+}
+
+%paragraph {
+    line-height: $lh-body;
+    letter-spacing: $ls-base;
+    font-weight: $fw-light;
+}
+
+// --------------------------------------
+// Global Base-共通項
+// --------------------------------------
+
+html {
+    font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: $font-family-base;
+    line-height: $lh-body;
+    letter-spacing: $ls-base;
+    overflow-x: hidden;
+    color: $black;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: $black;
+    display: inline-block;
+}
+
+img {
+    width: 100%;
+    vertical-align: bottom;
+    object-fit: cover;
+}
+
+// --------------------------------------
+// 共通Classes
+// --------------------------------------
+.section-title {
+    @extend %heading;
+    font-size: $fs-h2;
+    font-weight: $fw-bold;
+
+    @include mx.tb {
+        font-size: 2.6rem;
+    }
+
+    @include mx.sp {
+        font-size: 2.2rem;
+    }
+
+}
+
+.box-title {
+    @extend %heading;
+    font-size: $fs-h3;
+    font-weight: $fw-bold;
+
+    @include mx.tb {
+        font-size: 1.8rem;
+    }
+
+    @include mx.sp {
+        font-size: 1.6rem;
+    }
+}
+
+.message {
+    @extend %heading;
+    font-size: $fs-h4;
+    font-weight: $fw-medium;
+
+    @include mx.tb {
+        font-size: 1.8rem;
+    }
+
+    @include mx.sp {
+        font-size: 1.6rem;
+    }
+}
+
+.text {
+    @extend %paragraph;
+    font-size: $fs-text;
+
+    @include mx.tb {
+        font-size: 1.5rem;
+    }
+
+    @include mx.sp {
+        font-size: 1.4rem;
+    }
+}
+
+.middle {
+    @extend %paragraph;
+    font-size: $fs-middle;
+    font-weight: $fw-medium;
+
+    @include mx.tb {
+        font-size: 1.6rem;
+    }
+
+    @include mx.sp {
+        font-size: 1.5rem;
+    }
+}
+
+.small {
+    @extend %paragraph;
+    font-size: $fs-small;
+
+    @include mx.tb {
+        font-size: 1.1rem;
+    }
+
+    @include mx.sp {
+        font-size: 1.0rem;
+    }
+}
+
+.wrapper {
+    max-width: 1100px;
+    margin-inline: auto;
+    padding-inline: 20px;
+}
+
+.inner {
+    max-width: 640px;
+    margin-inline: auto;
+    padding-inline: 20px;
+}
