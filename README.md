@@ -22,3 +22,12 @@ idex.html：topページ（さきさん・るな）
 about.html：スクール詳細ページ（優華さん）
 voice.html：受講生の声・コミュニティー（優華さん）
 company.html：会社概要（るな）
+
+# カラーパレット
+$black: #333333;　文字
+$white: #FFFFFF;　背景、反転した時の文字
+$yellow: #DB8405;　アクセントカラー１
+$blue: #80A0B1;　アクセントカラー２
+$light-grey: #F6F6F6;　fv背景の装飾文字（Pronavi/Company/About...）
+$grey:#E8E8E8;　会社概要の線とか、他社比較の線とか薄めの線系
+$navy: #283038;　フッター

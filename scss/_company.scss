@@ -1,2 +1,263 @@
 @use './_mixin' as mx;
-@use './_base';
+@use './base' as *;
+
+.company {
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 4.0rem;
+    }
+
+    .flex-left {
+        width: 30%
+    }
+
+    .flex-right {
+        width: 70%
+    }
+
+    #fv {
+        .section-title {
+            color: $black;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 5%;
+                bottom: -10px;
+                width: 30%;
+                height: 2px;
+                background-color: $yellow;
+                border-radius: 2px;
+            }
+        }
+    }
+
+    // ページ全体共通
+    .flex-left {
+        .box-title {
+            margin-bottom: 0;
+        }
+
+        span {
+            font-size: 1.2rem;
+            margin-left: 20px;
+            position: relative;
+
+            &:before {
+                content: "";
+                position: absolute;
+                left: -15px;
+                bottom: 50%;
+                transform: translateY(50%);
+                width: 8px;
+                height: 8px;
+                background-color: $yellow;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    ul {
+        padding-left: 0;
+    }
+
+    #member {
+        .flex-right {
+            ul {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+
+                .items {
+                    width: 30%;
+
+                }
+            }
+        }
+    }
+
+    #sns {
+        .flex-right {
+            ul {
+
+                li {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 5%;
+                    margin-bottom: 24px;
+
+                    .icon {
+                        width: 30%;
+
+                        img {
+                            height: 160px;
+                            width: 160px;
+                            object-fit: contain;
+                        }
+                    }
+
+                    .text {
+                        width: 70%
+                    }
+                }
+            }
+        }
+    }
+
+    #media {
+        ul {
+            li {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                gap: 5%;
+
+                .thumnail {
+                    width: 30%;
+                }
+
+                .info {
+                    width: 70%;
+
+                    .text {
+                        margin-top: 0;
+                    }
+
+                    a {
+                        padding: 4px 12px;
+                        background-color: $blue;
+                        border-radius: 3px;
+                        color: $white;
+
+                        &:hover {
+                            background-color: $white;
+                            color: $blue;
+                            border: 2px solid $blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #overview {
+        .company-table {
+            margin-top: 24px;
+            width: 70%;
+            border-collapse: collapse;
+            border-top: 1px solid $grey;
+            border-bottom: 1px solid $grey;
+
+            tr {
+                border-bottom: 1px solid $grey;
+            }
+
+
+            th,
+            td {
+                text-align: left;
+                padding: 3rem 1rem;
+                vertical-align: top;
+            }
+
+            th {
+                width: 30%;
+                font-weight: 400;
+            }
+
+            td {
+                line-height: 1.6;
+            }
+
+            a {
+                text-decoration: underline;
+                word-break: break-all;
+            }
+        }
+    }
+
+    footer {
+        background-color: $navy;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding-block: 64px 112px;
+
+
+        .contact {
+            display: block;
+            background-color: $blue;
+            border-radius: 10px;
+            width: 100%;
+            padding: 2.5rem 1.8rem;
+
+            .flex {
+                display: flex;
+                justify-content: space-between;
+                gap: 2%;
+
+                img {
+                    display: block;
+                    width: 20%;
+                    object-fit: contain;
+                }
+
+                p {
+                    color: $white;
+                }
+            }
+
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 2%;
+            width: 100%;
+            border-bottom: 1px solid $white;
+
+            .left {
+                width: 25%;
+
+                img {
+                    margin-block: 32px;
+                }
+
+                a {
+                    color: $white;
+                    font-size: 1.2rem;
+                    margin-bottom: 1.6rem;
+
+                    &:hover {
+                        opacity: 0.6;
+                    }
+                }
+            }
+
+            .right {
+                width: 25%;
+                margin-left: auto;
+                margin-top: 80px;
+
+                li {
+                    text-align: right;
+
+                    a {
+                        color: $white;
+                        font-size: 1.2rem;
+                        margin-bottom: 1.6rem;
+
+                        &:hover {
+                            opacity: 0.6;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
