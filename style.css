@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .message, .box-title, .section-title {
   line-height: 1.3;
   letter-spacing: 0.03em;
@@ -41,8 +42,7 @@ a {
 img {
   width: 100%;
   vertical-align: bottom;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .section-title {
@@ -146,6 +146,293 @@ img {
   padding-inline: 20px;
 }
 
+.about #fv {
+  position: relative;
+  padding-block: 50px;
+}
+.about #fv .section-title__en {
+  font-size: 150px;
+  font-weight: 900;
+  color: #F6F6F6;
+  position: absolute;
+  left: -10px;
+  bottom: -20px;
+  z-index: 0;
+}
+.about #fv .section-title {
+  color: #333333;
+  position: relative;
+}
+.about #fv .section-title::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  width: 30%;
+  height: 2px;
+  background-color: #DB8405;
+  border-radius: 2px;
+}
+.about section {
+  margin-block: 80px;
+}
+.about .box-title {
+  margin-block: 5px;
+}
+.about .box-title span {
+  font-size: 1.2rem;
+  margin-left: 20px;
+  position: relative;
+  display: block;
+}
+.about .box-title span:before {
+  content: "";
+  position: absolute;
+  left: -15px;
+  bottom: 50%;
+  transform: translateY(50%);
+  width: 8px;
+  height: 8px;
+  background-color: #DB8405;
+  border-radius: 50%;
+}
+.about .shadow-box {
+  background: #FFFFFF;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  padding: 40px;
+  margin-top: 40px;
+}
+.about .back-text {
+  background-color: #80A0B1;
+  display: inline-block;
+  padding: 8px;
+  color: #FFFFFF;
+}
+.about #moya {
+  background-color: #F6F6F6;
+  border-radius: 15px;
+  padding: 25px 70px;
+  text-align: center;
+  position: relative;
+}
+.about #moya .box-title {
+  margin-bottom: 30px;
+}
+.about #moya::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  right: 250px;
+  width: 20%;
+  height: 0;
+  border-style: solid;
+  border-width: 40px 60px 0 60px;
+  border-color: #80A0B1 transparent transparent transparent;
+}
+.about #ideal {
+  text-align: center;
+  margin-block: 60px;
+}
+.about #ideal ul {
+  background-color: #FEF1DD;
+  box-shadow: -5px 10px 20px rgba(0, 0, 0, 0.15);
+  padding: 30px 120px;
+  position: relative;
+}
+.about #ideal ul::after {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  /* 中央寄せ */
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 50px 280px 0 280px;
+  /* 上が20pxの三角 */
+  border-color: #FEF1DD transparent transparent transparent;
+}
+.about #ideal ul li {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+.about #ideal ul li span img {
+  width: 40px;
+  margin-right: 20px;
+}
+.about #power {
+  text-align: center;
+}
+.about #power .yellow {
+  background-color: #DB8405;
+}
+.about #power ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px 20px;
+}
+.about #about {
+  padding: 50px 100px;
+}
+.about #about .flex-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px 10px;
+}
+.about #about .flex-box .flex-left {
+  width: 80%;
+}
+.about #about .flex-box .flex-left .text {
+  font-weight: 700;
+}
+.about #about .flex-box .flex-left .shadow-box {
+  padding: 5px 20px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+.about #about .flex-box .flex-left .shadow-box .text {
+  border-bottom: #DB8405 1px solid;
+}
+.about #about .flex-box .flex-right {
+  width: 90%;
+  position: relative;
+}
+.about #about .flex-box .flex-right .message {
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  line-height: 1.7;
+}
+.about #about .flex-box .flex-right button {
+  position: absolute;
+  right: 0;
+  background: #FFFFFF;
+  border: #333333 1px solid;
+  border-radius: 20px;
+  margin-top: 20px;
+  padding: 10px 20px;
+}
+.about #curriculum .step {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  gap: 5px 20px;
+  margin-bottom: 40px;
+}
+.about #curriculum .step .month {
+  position: relative;
+  background: #cfdde3;
+  color: #FFFFFF;
+  text-align: center;
+  padding-block: 50px;
+  border-radius: 15px 15px 0 0;
+}
+.about #curriculum .step .month::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 70px 0 70px;
+  border-color: #cfdde3 transparent transparent transparent;
+  z-index: 10;
+}
+.about #curriculum .step .month:nth-of-type(2) {
+  background: #B7CEDB;
+  z-index: 9;
+}
+.about #curriculum .step .month:nth-of-type(2)::after {
+  border-color: #B7CEDB transparent transparent transparent;
+  z-index: 9;
+}
+.about #curriculum .step .month:nth-of-type(3) {
+  background: #acc8d8;
+  z-index: 8;
+}
+.about #curriculum .step .month:nth-of-type(3)::after {
+  border-color: #acc8d8 transparent transparent transparent;
+  z-index: 8;
+}
+.about #curriculum .step .month:nth-of-type(4) {
+  background: #98b3c2;
+  z-index: 7;
+}
+.about #curriculum .step .month:nth-of-type(4)::after {
+  border-color: #98b3c2 transparent transparent transparent;
+  z-index: 7;
+}
+.about #curriculum .step .month:nth-of-type(5) {
+  background: #80A0B1;
+  z-index: 6;
+}
+.about #curriculum .step .month:nth-of-type(5)::after {
+  border-color: #80A0B1 transparent transparent transparent;
+  z-index: 6;
+}
+.about #curriculum .step .content {
+  border-bottom: 1px solid #ccc;
+  padding: 5px 10px;
+}
+.about #curriculum .step .content:first-of-type {
+  border-top: 1px solid #ccc;
+}
+.about #curriculum .step .label {
+  display: inline-block;
+  background: #80A0B1;
+  color: #fff;
+  font-weight: 700;
+  padding: 4px 10px;
+  margin-right: 8px;
+}
+.about #curriculum .step h3 {
+  display: inline-block;
+  font-weight: 700;
+}
+.about #price .shadow-box {
+  text-align: center;
+  position: relative;
+}
+.about #price .shadow-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background-color: #80A0B1;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+}
+.about #price .shadow-box .box-title {
+  border-bottom: 2px solid #DB8405;
+  display: inline-block;
+}
+.about #price .shadow-box .middle {
+  font-size: 3.75rem;
+  font-weight: 700;
+}
+.about #price .shadow-box ul {
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+}
+.about #price .shadow-box ul li {
+  position: relative;
+}
+.about #price .shadow-box ul li:before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  bottom: 50%;
+  transform: translateY(50%);
+  width: 15px;
+  height: 15px;
+  background-color: #DB8405;
+  border-radius: 50%;
+}
 .company .wrapper {
   display: flex;
   justify-content: space-between;
@@ -215,8 +502,7 @@ img {
 .company #sns .flex-right ul li .icon img {
   height: 160px;
   width: 160px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .company #sns .flex-right ul li .text {
   width: 70%;
@@ -295,8 +581,7 @@ img {
 .company footer .contact .flex img {
   display: block;
   width: 20%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .company footer .contact .flex p {
   color: #FFFFFF;

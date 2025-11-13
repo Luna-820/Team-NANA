@@ -1,2 +1,340 @@
 @use './_mixin' as mx;
-@use './_base';
+@use './_base' as *;
+
+
+.about {
+    #fv {
+        position: relative;
+        padding-block: 50px;
+
+        .section-title__en {
+            font-size: 150px;
+            font-weight: 900;
+            color: $light-grey;
+            position: absolute;
+            left: -10px;
+            bottom: -20px;
+            z-index: 0;
+        }
+
+        .section-title {
+            color: $black;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: -10px;
+                width: 30%;
+                height: 2px;
+                background-color: $yellow;
+                border-radius: 2px;
+            }
+        }
+    }
+
+    // ページ全体共通
+    section {
+        margin-block: 80px;
+    }
+
+    .box-title {
+        margin-block: 5px;
+        span {
+            font-size: 1.2rem;
+            margin-left: 20px;
+            position: relative;
+            display: block;
+
+            &:before {
+                content: "";
+                position: absolute;
+                left: -15px;
+                bottom: 50%;
+                transform: translateY(50%);
+                width: 8px;
+                height: 8px;
+                background-color: $yellow;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .shadow-box {
+        background: $white;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        padding: 40px;
+        margin-top: 40px;
+    }
+
+    .back-text {
+        background-color: $blue;
+        display: inline-block;
+        padding: 8px;
+        color: $white;
+    }
+
+    // 各セクション
+    #moya {
+        background-color: $light-grey;
+        border-radius: 15px;
+        padding: 25px 70px;
+        text-align: center;
+        position: relative;
+
+        .box-title {
+            margin-bottom: 30px;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -30px;
+            right: 250px;
+            width: 20%;
+            height: 0;
+            border-style: solid;
+            border-width: 40px 60px 0 60px;
+            border-color: $blue transparent transparent transparent;
+        }
+    }
+
+    #ideal {
+        text-align: center;
+        margin-block: 60px;
+
+        ul {
+            background-color: $light-yellow;
+            box-shadow: -5px 10px 20px rgba(0, 0, 0, 0.15);
+            padding: 30px 120px;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -50px;
+                left: 50%;
+                transform: translateX(-50%);
+                /* 中央寄せ */
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 50px 280px 0 280px;
+                /* 上が20pxの三角 */
+                border-color: $light-yellow transparent transparent transparent;
+            }
+
+            li {
+                text-align: left;
+                display: flex;
+                align-items: center;
+                font-weight: 700;
+
+                span {
+                    img {
+                        width: 40px;
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    #power {
+        text-align: center;
+
+        .yellow {
+            background-color: $yellow;
+        }
+
+        ul {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px 20px;
+        }
+    }
+
+    #about {
+        padding: 50px 100px;
+
+        .flex-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px 10px;
+
+            .flex-left {
+                width: 80%;
+
+                .text {
+                    font-weight: 700;
+                }
+
+                .shadow-box {
+                    padding: 5px 20px;
+                    margin-top: 10px;
+                    border-radius: 10px;
+
+                    .text {
+                        border-bottom: $yellow 1px solid;
+                    }
+                }
+            }
+
+            .flex-right {
+                width: 90%;
+                position: relative;
+
+                .message {
+                    font-weight: 600;
+                    letter-spacing: 0.2em;
+                    line-height: 1.7;
+                }
+
+                button {
+                    position: absolute;
+                    right: 0;
+                    background: $white;
+                    border: $black 1px solid;
+                    border-radius: 20px;
+                    margin-top: 20px;
+                    padding: 10px 20px;
+
+                }
+            }
+        }
+    }
+
+    #curriculum {
+        .step {
+            display: grid;
+            grid-template-columns: 25% 75%;
+            gap: 5px 20px;
+            margin-bottom: 40px;
+
+            .month {
+                position: relative;
+                background: #cfdde3;
+                color: $white;
+                text-align: center;
+                padding-block: 50px;
+                border-radius: 15px 15px 0 0;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -20px;
+                    left: 0;
+                    width: 100%;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 20px 70px 0 70px;
+                    border-color: #cfdde3 transparent transparent transparent;
+                    z-index: 10;
+                }
+
+                // 背景と下の三角をまとめて上書き（グラデーション風に）
+                @for $i from 2 through 5 {
+                    &:nth-of-type(#{$i}) {
+                        $colors: (
+                            #B7CEDB,
+                            #acc8d8,
+                            #98b3c2,
+                            $blue
+                        );
+                    $z: (
+                        9,
+                        8,
+                        7,
+                        6
+                    );
+                background: nth($colors, $i - 1);
+                z-index: nth($z, $i - 1);
+
+                &::after {
+                    border-color: nth($colors, $i - 1) transparent transparent transparent;
+                    z-index: nth($z, $i - 1);
+                }
+            }
+        }
+    }
+
+    .content {
+        border-bottom: 1px solid #ccc;
+        padding: 5px 10px;
+
+        &:first-of-type {
+            border-top: 1px solid #ccc;
+        }
+    }
+
+    .label {
+        display: inline-block;
+        background: $blue;
+        color: #fff;
+        font-weight: 700;
+        padding: 4px 10px;
+        margin-right: 8px;
+    }
+
+    h3 {
+        display: inline-block;
+        font-weight: 700;
+    }
+}
+}
+
+#price {
+    .shadow-box {
+        text-align: center;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            background-color: $blue;
+            border-top-left-radius: 24px;
+            border-top-right-radius: 24px;
+        }
+
+        .box-title {
+            border-bottom: 2px solid $yellow;
+            display: inline-block;
+        }
+
+        .middle {
+            font-size: 3.75rem;
+            font-weight: 700;
+        }
+
+        ul {
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+
+            li {
+
+                position: relative;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    left: -30px;
+                    bottom: 50%;
+                    transform: translateY(50%);
+                    width: 15px;
+                    height: 15px;
+                    background-color: $yellow;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}
+
+#works {}
+}
