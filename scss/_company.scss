@@ -18,6 +18,19 @@
     }
 
     #fv {
+        position: relative;
+        padding-block: 50px;
+
+        .section-title__en {
+            font-size: 150px;
+            font-weight: 900;
+            color: $light-grey;
+            position: absolute;
+            left: -10px;
+            bottom: -20px;
+            z-index: 0;
+        }
+
         .section-title {
             color: $black;
             position: relative;

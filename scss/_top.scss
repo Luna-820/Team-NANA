@@ -1,2 +1,139 @@
 @use './_mixin' as mx;
 @use './base' as *;
+
+
+
+
+#flow {
+
+    .section-title {
+        margin-bottom: 0
+    }
+
+    span {
+        font-size: 1.2rem;
+        margin-left: 20px;
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: -10px;
+            bottom: 50%;
+            transform: translateY(50%);
+            width: 8px;
+            height: 8px;
+            background-color: $yellow;
+            border-radius: 50%;
+        }
+    }
+
+    ul {
+        background-color: $grey;
+        border-radius: 8px;
+        padding: 32px 24px;
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        margin-top: 40px;
+        gap: 24px;
+
+        li {
+            .card {
+                background-color: $white;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 24px 16px;
+                border-radius: 8px;
+
+                .middle {
+                    margin-bottom: 0;
+                }
+
+                img {
+                    width: 80px;
+                    height: 80px;
+                }
+
+            }
+        }
+
+    }
+
+    .scroll-divider {
+        overflow: hidden;
+        background: transparent;
+
+
+        .scroll-text {
+            color: $white;
+            font-size: 200px;
+            font-weight: 700;
+            opacity: 0.08;
+            white-space: nowrap;
+            animation: marquee 12s linear infinite;
+        }
+    }
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+#teacher {
+
+    .section-title {
+        margin-bottom: 0
+    }
+
+    span {
+        font-size: 1.2rem;
+        margin-left: 20px;
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: -10px;
+            bottom: 50%;
+            transform: translateY(50%);
+            width: 8px;
+            height: 8px;
+            background-color: $yellow;
+            border-radius: 50%;
+        }
+    }
+
+    .teacher-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        margin-top: 40px;
+        gap: 24px;
+
+    }
+
+}
+
+.theme-section {
+    background-color: transparent;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    padding: 80px 0;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.theme-section.theme-blue {
+    background-color: $blue;
+    color: $white;
+
+    .section-title,
+    .text {
+        color: inherit;
+    }
+}

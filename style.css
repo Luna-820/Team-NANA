@@ -27,6 +27,8 @@ body {
   letter-spacing: 0.03em;
   overflow-x: hidden;
   color: #333333;
+  background-color: #FFFFFF;
+  color: #333333;
 }
 
 li {
@@ -144,6 +146,113 @@ img {
   max-width: 640px;
   margin-inline: auto;
   padding-inline: 20px;
+}
+
+#flow .section-title {
+  margin-bottom: 0;
+}
+#flow span {
+  font-size: 1.2rem;
+  margin-left: 20px;
+  position: relative;
+}
+#flow span:before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  bottom: 50%;
+  transform: translateY(50%);
+  width: 8px;
+  height: 8px;
+  background-color: #DB8405;
+  border-radius: 50%;
+}
+#flow ul {
+  background-color: #E8E8E8;
+  border-radius: 8px;
+  padding: 32px 24px;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  margin-top: 40px;
+  gap: 24px;
+}
+#flow ul li .card {
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px;
+  border-radius: 8px;
+}
+#flow ul li .card .middle {
+  margin-bottom: 0;
+}
+#flow ul li .card img {
+  width: 80px;
+  height: 80px;
+}
+#flow .scroll-divider {
+  overflow: hidden;
+  background: transparent;
+}
+#flow .scroll-divider .scroll-text {
+  color: #FFFFFF;
+  font-size: 200px;
+  font-weight: 700;
+  opacity: 0.08;
+  white-space: nowrap;
+  animation: marquee 12s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+#teacher .section-title {
+  margin-bottom: 0;
+}
+#teacher span {
+  font-size: 1.2rem;
+  margin-left: 20px;
+  position: relative;
+}
+#teacher span:before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  bottom: 50%;
+  transform: translateY(50%);
+  width: 8px;
+  height: 8px;
+  background-color: #DB8405;
+  border-radius: 50%;
+}
+#teacher .teacher-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 40px;
+  gap: 24px;
+}
+
+.theme-section {
+  background-color: transparent;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  padding: 80px 0;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.theme-section.theme-blue {
+  background-color: #80A0B1;
+  color: #FFFFFF;
+}
+.theme-section.theme-blue .section-title,
+.theme-section.theme-blue .text {
+  color: inherit;
 }
 
 .about #fv {
@@ -444,6 +553,19 @@ img {
 }
 .company .flex-right {
   width: 70%;
+}
+.company #fv {
+  position: relative;
+  padding-block: 50px;
+}
+.company #fv .section-title__en {
+  font-size: 150px;
+  font-weight: 900;
+  color: #F6F6F6;
+  position: absolute;
+  left: -10px;
+  bottom: -20px;
+  z-index: 0;
 }
 .company #fv .section-title {
   color: #333333;
