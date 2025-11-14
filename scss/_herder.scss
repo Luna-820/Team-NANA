@@ -196,6 +196,7 @@ header {
       right: 80px;
       transition: .4s ease;
       padding: 5px 15px;
+      z-index: 100;
 
       &:hover {
         opacity: .8;
@@ -209,6 +210,7 @@ header {
       top: 32px;
       right: 30px;
       cursor: pointer;
+      z-index: 100;
       
       &:hover {
         span {
