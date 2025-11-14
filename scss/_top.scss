@@ -1,139 +1,214 @@
-@use './_mixin' as mx;
-@use './base' as *;
+@use "./_mixin" as mx;
+@use "./base" as *;
 
+.fv {
+  width: 100%;
+  height: calc(100vh - 72px);
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 80px;
+  
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+    z-index: -1;
+  }
 
-
-
-#flow {
-
-    .section-title {
-        margin-bottom: 0
-    }
-
-    span {
-        font-size: 1.2rem;
-        margin-left: 20px;
-        position: relative;
-
-        &:before {
-            content: "";
-            position: absolute;
-            left: -10px;
-            bottom: 50%;
-            transform: translateY(50%);
-            width: 8px;
-            height: 8px;
-            background-color: $yellow;
-            border-radius: 50%;
-        }
-    }
-
-    ul {
-        background-color: $grey;
-        border-radius: 8px;
-        padding: 32px 24px;
-        display: grid;
-        grid-template-columns: repeat(5, minmax(0, 1fr));
-        margin-top: 40px;
-        gap: 24px;
-
-        li {
-            .card {
-                background-color: $white;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                padding: 24px 16px;
-                border-radius: 8px;
-
-                .middle {
-                    margin-bottom: 0;
-                }
-
-                img {
-                    width: 80px;
-                    height: 80px;
-                }
-
-            }
-        }
-
-    }
-
-    .scroll-divider {
-        overflow: hidden;
-        background: transparent;
-
-
-        .scroll-text {
-            color: $white;
-            font-size: 200px;
-            font-weight: 700;
-            opacity: 0.08;
-            white-space: nowrap;
-            animation: marquee 12s linear infinite;
-        }
-    }
-}
-
-@keyframes marquee {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(-50%);
-    }
-}
-
-#teacher {
-
-    .section-title {
-        margin-bottom: 0
-    }
+  .title {
+    font-size: 5rem;
+    font-weight: $fw-bold;
 
     span {
-        font-size: 1.2rem;
-        margin-left: 20px;
-        position: relative;
+      display: inline-block;
+      background-color: $white;
+      padding: 15px;
 
-        &:before {
-            content: "";
-            position: absolute;
-            left: -10px;
-            bottom: 50%;
-            transform: translateY(50%);
-            width: 8px;
-            height: 8px;
-            background-color: $yellow;
-            border-radius: 50%;
+      &:nth-child(1) {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        border-radius: 20px 20px 20px 0;
+      }
+
+      &:nth-child(3) {
+        position: absolute;
+        top: 100px;
+        left: 20px;
+        border-radius: 0 0 20px 20px;
+      }
+    }
+  }
+}
+
+.purpose {
+  margin-bottom: 90px;
+
+  .section-title {
+    text-align: center;
+    margin-bottom: 50px;
+
+    span {
+      display: inline-block;
+      font-size: $fs-small;
+      position: relative;
+
+      &::before {
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        top: 50%;
+        left: -14px;
+        transform: translateY(-50%);
+        content: "";
+        background-color: $yellow;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .purpose-list {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+    padding: 0;
+
+    li {
+
+      a {
+        display: flex;
+        align-items: center;
+        background-color: $white;
+        border-radius: 20px;
+        box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.25);
+        padding: 10px;
+        
+        img {
+          width: 50px;
+          height: 50px;
+          margin-right: 10px;
         }
+        
+        .box-title {
+          span {
+            display: block;
+            font-size: $fs-small;
+          }
+        }
+      }
     }
-
-    .teacher-grid {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        margin-top: 40px;
-        gap: 24px;
-
-    }
-
+  }
 }
 
-.theme-section {
-    background-color: transparent;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-    padding: 80px 0;
-    transition: background-color 0.4s ease, color 0.4s ease;
+.before-after {
+
+  .message {
+    span {
+      color: $yellow;
+    }
+  }
+
+  .list {
+    display: flex;
+    justify-content: space-between;
+
+    li {
+      position: relative;
+      flex: 1;
+      background-color: $white;
+      box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.25);
+      border-radius: 20px;
+      padding: 10px 20px;
+      margin-right: 20px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      img {
+        height: 200px;
+        object-fit: cover;
+        border-radius: 20px;
+      }
+
+      .middle {
+        span {
+          display: block;
+          font-size: $fs-small;
+        }
+      }
+
+      .right {
+        text-align: right;
+      }
+
+      .arrow {
+        width: 50px;
+        height: 30px;
+        position: absolute;
+        left: 10px;
+        bottom: 60px;
+
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .small {
+        text-align: center;
+      }
+    }
+  }
 }
 
-.theme-section.theme-blue {
-    background-color: $blue;
-    color: $white;
+.reason {
+  .section-title {
+    span {
+      position: relative;
+      display: block;
+      font-size: $fs-small;
+      margin-top: 10px;
+      margin-left: 20px;
 
-    .section-title,
-    .text {
-        color: inherit;
+      &::before {
+        width: 8px;
+        height: 8px;
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -14px;
+        transform: translateY(-50%);
+        background-color: $yellow;
+        border-radius: 50%;
+      }
     }
+  }
+
+  .list {
+    margin-top: 50px;
+
+    .item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+
+      .left {
+        width: 30%;
+        margin-right: 15px;
+      }
+
+      .right {
+        width: 70%;
+
+        .box-title {
+          color: $yellow;
+        }
+      }
+    }
+  }
 }
