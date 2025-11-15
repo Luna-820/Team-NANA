@@ -43,9 +43,9 @@ $(function () {
       slidesToScroll: 1,
       infinite: true,
       autoplay: true,
-      autoplaySpeed: 0,    
-      speed: 6000,          
-      cssEase: "linear",    
+      autoplaySpeed: 0,
+      speed: 6000,
+      cssEase: "linear",
       arrows: false,
       dots: false,
       pauseOnHover: true,
@@ -71,4 +71,17 @@ $(function () {
       ],
     });
   }
+  // ------------------------------------
+  // FAQ アコーディオン
+  // ------------------------------------
+  $('.js-faq-toggle').on('click', function () {
+    const $item = $(this).closest('.faq-item');
+
+    $('.faq-item').not($item).removeClass('is-open')
+      .find('.faq-a').slideUp(200);
+
+    $item.toggleClass('is-open');
+    $item.find('.faq-a').stop().slideToggle(200);
+  });
+
 });

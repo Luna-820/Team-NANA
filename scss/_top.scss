@@ -213,6 +213,42 @@
   }
 }
 
+#flow,
+#teacher,
+#works,
+#comparison,
+#faq {
+  .section-title {
+    margin-bottom: 0
+  }
+
+  .section-title,
+  span,
+  .text,
+  .name,
+  .words {
+    color: $black;
+  }
+
+  .section-title-deco {
+    font-size: 1.2rem;
+    margin-left: 20px;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: -15px;
+      bottom: 50%;
+      transform: translateY(50%);
+      width: 8px;
+      height: 8px;
+      background-color: $yellow;
+      border-radius: 50%;
+    }
+  }
+
+}
 
 #flow {
   background-color: $blue;
@@ -221,33 +257,10 @@
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
 
-  .section-title {
-    margin-bottom: 0;
-    color: $white;
-  }
-
   .section-title,
   span,
   .text-top {
     color: $white;
-  }
-
-  span {
-    font-size: 1.2rem;
-    margin-left: 20px;
-    position: relative;
-
-    &:before {
-      content: "";
-      position: absolute;
-      left: -10px;
-      bottom: 50%;
-      transform: translateY(50%);
-      width: 8px;
-      height: 8px;
-      background-color: $yellow;
-      border-radius: 50%;
-    }
   }
 
   ul {
@@ -306,41 +319,6 @@
   to {
     transform: translateX(-50%);
   }
-}
-
-#teacher,
-#works,
-#comparison {
-  .section-title {
-    margin-bottom: 0
-  }
-
-  .section-title,
-  span,
-  .text,
-  .name,
-  .words {
-    color: $black;
-  }
-
-  span {
-    font-size: 1.2rem;
-    margin-left: 20px;
-    position: relative;
-
-    &:before {
-      content: "";
-      position: absolute;
-      left: -15px;
-      bottom: 50%;
-      transform: translateY(50%);
-      width: 8px;
-      height: 8px;
-      background-color: $yellow;
-      border-radius: 50%;
-    }
-  }
-
 }
 
 #teacher {
@@ -471,26 +449,20 @@
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     font-size: 1.8rem;
-    border: 1px solid #a6a6a6;
+    border: 1px solid $border-grey;
     margin-bottom: 100px;
-
-    span {
-      &:before {
-        display: none
-      }
-    }
 
     th,
     td {
       padding: 20px 16px;
-      border-bottom: 1px solid #a6a6a6;
+      border-bottom: 1px solid $border-grey;
       text-align: center;
       vertical-align: middle;
     }
 
     thead {
       tr {
-        border-bottom: 1px solid #a6a6a6;
+        border-bottom: 1px solid $border-grey;
       }
 
       th {
@@ -515,7 +487,7 @@
       }
 
       th.right {
-        border-left: 1px solid #a6a6a6;
+        border-left: 1px solid $border-grey;
       }
 
       .school-name {
@@ -547,7 +519,7 @@
       }
 
       td.right {
-        border-left: 1px solid #a6a6a6;
+        border-left: 1px solid $border-grey;
       }
 
       td.pronavi {
@@ -572,15 +544,6 @@
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     padding: 24px 56px;
-
-
-    span {
-      margin-left: 0;
-
-      &:before {
-        display: none
-      }
-    }
 
     .box-inner {
       padding-inline: 15%;
@@ -625,7 +588,7 @@
               left: 0;
               content: "";
               background-color: $yellow;
-              width:310px;
+              width: 310px;
               height: 2px;
 
             }
@@ -641,6 +604,78 @@
           max-width: 180px;
         }
 
+      }
+    }
+  }
+}
+
+#faq {
+  padding-block: 80px;
+  background-color: $light-grey;
+
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .flex-left {
+      width: 30%;
+    }
+
+    .flex-right {
+      width: 70%;
+
+      .faq-item {
+        border-bottom: 1px solid $border-grey;
+
+        .faq-q {
+          width: 100%;
+          padding: 24px 16px;
+          display: flex;
+          align-items: center;
+          gap: 24px;
+          background-color: transparent;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          text-align: left;
+          position: relative;
+
+          .faq-label {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: $yellow;
+            flex-shrink: 0;
+          }
+
+          .faq-question {
+            font-size: 1.8rem;
+            flex: 1;
+          }
+        }
+
+        .faq-a {
+          display: none;
+          padding: 24px 16px 32px;
+          margin-bottom: 24px;
+          border-radius: 10px;
+          background-color: $white;
+          display: none;
+
+          .a-label {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: $blue;
+            margin-right: 24px;
+            float: left;
+          }
+
+          .faq-answer {
+            font-size: 1.6rem;
+            line-height: 1.8;
+            margin-left: 56px; 
+          }
+        }
       }
     }
   }

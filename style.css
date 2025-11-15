@@ -317,6 +317,65 @@ img {
   color: #DB8405;
 }
 
+#flow .section-title,
+#teacher .section-title,
+#works .section-title,
+#comparison .section-title,
+#faq .section-title {
+  margin-bottom: 0;
+}
+#flow .section-title,
+#flow span,
+#flow .text,
+#flow .name,
+#flow .words,
+#teacher .section-title,
+#teacher span,
+#teacher .text,
+#teacher .name,
+#teacher .words,
+#works .section-title,
+#works span,
+#works .text,
+#works .name,
+#works .words,
+#comparison .section-title,
+#comparison span,
+#comparison .text,
+#comparison .name,
+#comparison .words,
+#faq .section-title,
+#faq span,
+#faq .text,
+#faq .name,
+#faq .words {
+  color: #333333;
+}
+#flow .section-title-deco,
+#teacher .section-title-deco,
+#works .section-title-deco,
+#comparison .section-title-deco,
+#faq .section-title-deco {
+  font-size: 1.2rem;
+  margin-left: 20px;
+  position: relative;
+}
+#flow .section-title-deco:before,
+#teacher .section-title-deco:before,
+#works .section-title-deco:before,
+#comparison .section-title-deco:before,
+#faq .section-title-deco:before {
+  content: "";
+  position: absolute;
+  left: -15px;
+  bottom: 50%;
+  transform: translateY(50%);
+  width: 8px;
+  height: 8px;
+  background-color: #DB8405;
+  border-radius: 50%;
+}
+
 #flow {
   background-color: #80A0B1;
   margin-top: 100px;
@@ -324,30 +383,10 @@ img {
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
 }
-#flow .section-title {
-  margin-bottom: 0;
-  color: #FFFFFF;
-}
 #flow .section-title,
 #flow span,
 #flow .text-top {
   color: #FFFFFF;
-}
-#flow span {
-  font-size: 1.2rem;
-  margin-left: 20px;
-  position: relative;
-}
-#flow span:before {
-  content: "";
-  position: absolute;
-  left: -10px;
-  bottom: 50%;
-  transform: translateY(50%);
-  width: 8px;
-  height: 8px;
-  background-color: #DB8405;
-  border-radius: 50%;
 }
 #flow ul {
   background-color: #E8E8E8;
@@ -394,49 +433,6 @@ img {
     transform: translateX(-50%);
   }
 }
-#teacher .section-title,
-#works .section-title,
-#comparison .section-title {
-  margin-bottom: 0;
-}
-#teacher .section-title,
-#teacher span,
-#teacher .text,
-#teacher .name,
-#teacher .words,
-#works .section-title,
-#works span,
-#works .text,
-#works .name,
-#works .words,
-#comparison .section-title,
-#comparison span,
-#comparison .text,
-#comparison .name,
-#comparison .words {
-  color: #333333;
-}
-#teacher span,
-#works span,
-#comparison span {
-  font-size: 1.2rem;
-  margin-left: 20px;
-  position: relative;
-}
-#teacher span:before,
-#works span:before,
-#comparison span:before {
-  content: "";
-  position: absolute;
-  left: -15px;
-  bottom: 50%;
-  transform: translateY(50%);
-  width: 8px;
-  height: 8px;
-  background-color: #DB8405;
-  border-radius: 50%;
-}
-
 #teacher {
   background-color: #80A0B1;
   padding-block: 10px 40px;
@@ -545,9 +541,6 @@ img {
   border: 1px solid #a6a6a6;
   margin-bottom: 100px;
 }
-#comparison .compare-table span:before {
-  display: none;
-}
 #comparison .compare-table th,
 #comparison .compare-table td {
   padding: 20px 16px;
@@ -614,12 +607,6 @@ img {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   padding: 24px 56px;
 }
-#comparison .cooling-off span {
-  margin-left: 0;
-}
-#comparison .cooling-off span:before {
-  display: none;
-}
 #comparison .cooling-off .box-inner {
   padding-inline: 15%;
 }
@@ -669,6 +656,68 @@ img {
 }
 #comparison .cooling-off .box-inner .flex .icon {
   max-width: 180px;
+}
+
+#faq {
+  padding-block: 80px;
+  background-color: #F6F6F6;
+}
+#faq .flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+#faq .flex .flex-left {
+  width: 30%;
+}
+#faq .flex .flex-right {
+  width: 70%;
+}
+#faq .flex .flex-right .faq-item {
+  border-bottom: 1px solid #a6a6a6;
+}
+#faq .flex .flex-right .faq-item .faq-q {
+  width: 100%;
+  padding: 24px 16px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-align: left;
+  position: relative;
+}
+#faq .flex .flex-right .faq-item .faq-q .faq-label {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #DB8405;
+  flex-shrink: 0;
+}
+#faq .flex .flex-right .faq-item .faq-q .faq-question {
+  font-size: 1.8rem;
+  flex: 1;
+}
+#faq .flex .flex-right .faq-item .faq-a {
+  display: none;
+  padding: 24px 16px 32px;
+  margin-bottom: 24px;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  display: none;
+}
+#faq .flex .flex-right .faq-item .faq-a .a-label {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #80A0B1;
+  margin-right: 24px;
+  float: left;
+}
+#faq .flex .flex-right .faq-item .faq-a .faq-answer {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  margin-left: 56px;
 }
 
 .about #fv {
@@ -1376,7 +1425,7 @@ footer .footer-bottom {
   border-bottom: 1px solid #FFFFFF;
 }
 footer .footer-bottom .left {
-  width: 25%;
+  width: 35%;
 }
 footer .footer-bottom .left img {
   margin-block: 32px;
