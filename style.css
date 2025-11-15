@@ -1426,6 +1426,7 @@ footer .footer-bottom {
 }
 footer .footer-bottom .left {
   width: 35%;
+  padding-left: 0;
 }
 footer .footer-bottom .left img {
   margin-block: 32px;
