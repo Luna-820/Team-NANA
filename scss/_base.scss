@@ -9,7 +9,7 @@ $yellow: #DB8405;
 $light-yellow: #FEF1DD;
 $blue: #80A0B1;
 $light-grey: #F6F6F6;
-$grey:#E8E8E8;
+$grey: #E8E8E8;
 $navy: #283038;
 $border-grey: #a6a6a6;
 
@@ -188,4 +188,40 @@ img {
     max-width: 640px;
     margin-inline: auto;
     padding-inline: 20px;
+}
+
+// --------------------------------------
+// チャットボット
+// --------------------------------------
+.chatbot {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 1000;
+
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: $yellow; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+    opacity: 0.95;
+
+    img {
+        width: 32px;
+        height: 32px;
+        object-fit: contain;
+        display: block;
+    }
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+        opacity: 1;
+    }
 }
