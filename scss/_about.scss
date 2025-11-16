@@ -40,6 +40,7 @@
 
     .box-title {
         margin-block: 5px;
+
         span {
             font-size: 1.2rem;
             margin-left: 20px;
@@ -166,18 +167,78 @@
             .flex-left {
                 width: 80%;
 
-                .text {
-                    font-weight: 700;
+                .circle {
+                    display: flex;
+                    color: $white;
+                    text-align: center;
+                    position: relative;
+
+                    .circle-left,
+                    .circle-right {
+                        flex: 1;
+                        /* 等分して横並び */
+                        aspect-ratio: 1;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        color: #fff;
+                        background-color: #acc8d8;
+                    }
+
+                    .circle-right {
+                        background-color: #98b3c2;
+                    }
+
+                    //真ん中の「×」
+                    &::before,
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        width: 38px;
+                        height: 2px;
+                        background: $white;
+                        transform-origin: center;
+                        transform: translate(-50%, -50%) rotate(45deg);
+                        border-radius: 2px;
+                    }
+                    &::after {
+                        transform: translate(-50%, -50%) rotate(-45deg);
+                    }
                 }
 
                 .shadow-box {
                     padding: 5px 20px;
                     margin-top: 10px;
                     border-radius: 10px;
+                    position: relative;
 
                     .text {
                         border-bottom: $yellow 1px solid;
+                        font-weight: 700;
                     }
+
+                    //真ん中の「＋」
+                    &::before,
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 50%;
+                        top: -18%;
+                        width: 30px;
+                        height: 5px;
+                        background: $blue;
+                        transform-origin: center;
+                        transform: translate(-50%, -50%);
+                        border-radius: 2px;
+                    }
+                    &::after {
+                        transform: translate(-50%, -50%) rotate(-90deg);
+                    }
+
                 }
             }
 
@@ -200,6 +261,10 @@
                     margin-top: 20px;
                     padding: 10px 20px;
 
+                    &:hover{
+                        opacity: 0.5;
+
+                    }
                 }
             }
         }
@@ -213,23 +278,22 @@
             margin-bottom: 40px;
 
             .month {
-                position: relative;
-                background: #cfdde3;
-                color: $white;
+                padding: 50px 0;
                 text-align: center;
-                padding-block: 50px;
+                position: relative;
+                color: $white;
                 border-radius: 15px 15px 0 0;
+                background-color: #c8d6df;
 
                 &::after {
                     content: "";
                     position: absolute;
-                    bottom: -20px;
-                    left: 0;
-                    width: 100%;
-                    height: 0;
-                    border-style: solid;
-                    border-width: 20px 70px 0 70px;
-                    border-color: #cfdde3 transparent transparent transparent;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    top: 100%;
+                    border-top: 20px solid #c8d6df;
+                    border-left: 75px solid transparent;
+                    border-right: 75px solid transparent;
                     z-index: 10;
                 }
 
