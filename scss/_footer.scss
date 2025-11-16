@@ -1,0 +1,163 @@
+@use './_mixin' as mx;
+@use './base' as *;
+
+footer {
+    background-color: $navy;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    padding-block: 64px 112px;
+    position: relative;
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 4.0rem;
+    }
+
+
+    .contact {
+        display: block;
+        background-color: $blue;
+        border-radius: 5px;
+        width: 100%;
+        padding: 2.5rem 1.8rem;
+
+        .flex {
+            display: flex;
+            justify-content: space-between;
+            gap: 2%;
+
+            img {
+                display: block;
+                width: 20%;
+                object-fit: contain;
+            }
+
+            p {
+                color: $white;
+            }
+        }
+
+    }
+
+    .footer-bottom {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 2%;
+        width: 100%;
+        border-bottom: 1px solid $white;
+
+        .left {
+            width: 35%;
+            padding-left: 0;
+
+            img {
+                margin-block: 32px;
+            }
+
+            a {
+                color: $white;
+                font-size: 1.2rem;
+                margin-bottom: 1.6rem;
+
+                &:hover {
+                    opacity: 0.6;
+                }
+            }
+        }
+
+        .right {
+            width: 25%;
+            margin-left: auto;
+            margin-top: 80px;
+
+            li {
+                text-align: right;
+
+                a {
+                    color: $white;
+                    font-size: 1.2rem;
+                    margin-bottom: 1.6rem;
+
+                    &:hover {
+                        opacity: 0.6;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .page-top {
+        position: absolute;
+        right: 40px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 120px;
+        height: 300px;
+        background-color: transparent;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+
+        &:hover {
+            opacity: 0.7;
+        }
+
+        button {
+            position: relative;
+            display: block;
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+
+            .line {
+                position: relative;
+                display: block;
+                width: 2px;
+                height: 80px;
+                margin: 0 auto 20px;
+                background-color: transparent;
+                overflow: hidden;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    width: 100%;
+                    height: 50px; // 白いバーの長さ
+                    background-color: $white;
+                    top: 100%; 
+                    animation: moveLine 1.5s linear infinite;
+                }
+            }
+
+            .to-top-text {
+                display: block;
+                margin-top: 30px;
+                writing-mode: vertical-rl;
+                text-orientation: mixed;
+                letter-spacing: 0.2em;
+                color: $white;
+            }
+        }
+    }
+}
+
+@keyframes moveLine {
+    0% {
+        transform: translateY(0); 
+    }
+
+    100% {
+        transform: translateY(-210%); 
+    }
+}

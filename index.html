@@ -1,65 +1,42 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>
-      ProNavi｜仲間と一緒に成長できる“伴走型”プログラミング学習コミュニティ
-    </title>
-    <meta
-      name="description"
-      content="学習だけで終わらせない、実装と案件獲得まで伴走する学習環境。現役エンジニアが継続サポートし、確実に成果につながるスキル定着を支援します。" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- OGP -->
-    <meta property="og:site_name" content="ProNavi（プロナビ）" />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:title"
-      content="ProNavi｜仲間と実践で伸びる“伴走型”プログラミング学習コミュニティ" />
-    <meta
-      property="og:description"
-      content="教材で終わらせない。実装・ポートフォリオ制作・案件獲得まで、現役エンジニアが継続伴走。" />
-    <meta
-      property="og:url"
-      content="https://pronavi.navigator-of-engineering.com/" />
-    <meta
-      property="og:image"
-      content="https://pronavi.navigator-of-engineering.com/img/ogp.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:locale" content="ja_JP" />
+  <title>
+    ProNavi｜仲間と一緒に成長できる“伴走型”プログラミング学習コミュニティ
+  </title>
+  <meta name="description" content="学習だけで終わらせない、実装と案件獲得まで伴走する学習環境。現役エンジニアが継続サポートし、確実に成果につながるスキル定着を支援します。" />
 
-    <!-- X(Twitter)カード -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="ProNavi｜仲間と実践で伸びる“伴走型”プログラミング学習コミュニティ" />
-    <meta
-      name="twitter:description"
-      content="教材で終わらせない。実装・ポートフォリオ制作・案件獲得まで、現役エンジニアが継続伴走。" />
-    <meta
-      name="twitter:image"
-      content="https://pronavi.navigator-of-engineering.com/img/ogp.png" />
+  <!-- OGP -->
+  <meta property="og:site_name" content="ProNavi（プロナビ）" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ProNavi｜仲間と実践で伸びる“伴走型”プログラミング学習コミュニティ" />
+  <meta property="og:description" content="教材で終わらせない。実装・ポートフォリオ制作・案件獲得まで、現役エンジニアが継続伴走。" />
+  <meta property="og:url" content="https://pronavi.navigator-of-engineering.com/" />
+  <meta property="og:image" content="https://pronavi.navigator-of-engineering.com/img/ogp.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="ja_JP" />
 
-    <!-- Canonical URL -->
-    <link
-      rel="canonical"
-      href="https://pronavi.navigator-of-engineering.com/" />
+  <!-- X(Twitter)カード -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ProNavi｜仲間と実践で伸びる“伴走型”プログラミング学習コミュニティ" />
+  <meta name="twitter:description" content="教材で終わらせない。実装・ポートフォリオ制作・案件獲得まで、現役エンジニアが継続伴走。" />
+  <meta name="twitter:image" content="https://pronavi.navigator-of-engineering.com/img/ogp.png" />
 
-    <!-- Favicon & App Icon -->
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="https://pronavi.navigator-of-engineering.com/img/favicon.png" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="https://pronavi.navigator-of-engineering.com/img/apple-touch-icon.png" />
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://pronavi.navigator-of-engineering.com/" />
 
-    <!-- 構造化データ（Organization） -->
-    <script type="application/ld+json">
+  <!-- Favicon & App Icon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="https://pronavi.navigator-of-engineering.com/img/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="https://pronavi.navigator-of-engineering.com/img/apple-touch-icon.png" />
+
+  <!-- 構造化データ（Organization） -->
+  <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Organization",
@@ -83,282 +60,663 @@
         }
       }
     </script>
+  <!-- slick -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<body>
+  <header>
+    <h1>
+      <a href="index.html"><img src="img/logo.png" alt="" class="logo" /></a>
+    </h1>
 
-  <body>
-    <header>
-      <h1>
-        <a href="index.html"><img src="img/logo.png" alt="" class="logo" /></a>
-      </h1>
-
-      <div class="menu-bg"></div>
-      <nav class="hamburger-menu">
-        <div class="company">
-          <h2 class="active-logo">
-            <a href="index.html"><img src="img/logo.png" alt="" /></a>
-          </h2>
-          <p class="address">
-            〒460-0002<br />愛知県名古屋市中区丸の内3丁目15-22<br />丸の内Usビル801号室
-          </p>
-        </div>
-
-        <ul class="menu">
-          <li>
-            <a href="index.html">
-              <span class="en">top</span>
-              <span class="ja">トップページ</span>
-            </a>
-          </li>
-          <li>
-            <a href="about.html">
-              <span class="en">about</span>
-              <span class="ja">スクールの紹介</span>
-            </a>
-          </li>
-          <li>
-            <a href="voice.html">
-              <span class="en">voice</span>
-              <span class="ja">受講生の声</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span class="en">price</span>
-              <span class="ja">料金</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span class="en">faq</span>
-              <span class="ja">よくある質問</span>
-            </a>
-          </li>
-          <li>
-            <a href="company.html">
-              <span class="en">company</span>
-              <span class="ja">会社概要</span>
-            </a>
-          </li>
-        </ul>
-
-        <ul class="link">
-          <li>
-            <a href="https://line.me/R/ti/p/@420zidsx?oat_content=url"
-              >公式LINE</a
-            >
-          </li>
-          <li><a href="https://pronavi-board.noe-p.com/">PortNavi</a></li>
-          <li>
-            <a
-              href="https://www.instagram.com/kakashi.programming.lab?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-              ><img src="img/instgram.png" class="ig" />かかし</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://www.instagram.com/iruka.freelance?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-              ><img src="img/instgram.png" class="ig" />いるか</a
-            >
-          </li>
-          <li><a href="https://navigator-of-engineering.com/">運営会社</a></li>
-        </ul>
-      </nav>
-
-      <nav class="header-menu">
-        <ul class="menu">
-          <li>
-            <a href="about.html">
-              <span class="en">about</span>
-              <span class="ja">スクールの紹介</span>
-            </a>
-          </li>
-          <li>
-            <a href="voice.html">
-              <span class="en">voice</span>
-              <span class="ja">受講生の声</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span class="en">price</span>
-              <span class="ja">料金</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span class="en">faq</span>
-              <span class="ja">よくある質問</span>
-            </a>
-          </li>
-          <li>
-            <a href="company.html">
-              <span class="en">company</span>
-              <span class="ja">会社概要</span>
-            </a>
-          </li>
-        </ul>
-
-        <!-- 固定 -->
-        <a href="https://line.me/R/ti/p/@420zidsx?oat_content=url" class="line">LINE相談</a>
-
-        <div class="hamburger_fixed">
-          <div class="hamburger_toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-        <!--  -->
-      </nav>
-    </header>
-
-    <main>
-      <div class="fv">
-        <video autoplay muted loop playsinline class="fv-video">
-          <source src="img/fv-video.mp4" type="video/mp4" />
-        </video>
-        <p class="title">
-          <span>じぶんらしく働く</span><br /><span>未来をつくろう</span>
+    <div class="menu-bg"></div>
+    <nav class="hamburger-menu">
+      <div class="company">
+        <h2 class="active-logo">
+          <a href="index.html"><img src="img/logo.png" alt="" /></a>
+        </h2>
+        <p class="address">
+          〒460-0002<br />愛知県名古屋市中区丸の内3丁目15-22<br />丸の内Usビル801号室
         </p>
       </div>
 
-      <section class="purpose">
-        <div class="wrapper">
-          <h3 class="section-title">あなたの目的は<br><span>purpose</span></h3>
+      <ul class="menu">
+        <li>
+          <a href="index.html">
+            <span class="en">top</span>
+            <span class="ja">トップページ</span>
+          </a>
+        </li>
+        <li>
+          <a href="about.html">
+            <span class="en">about</span>
+            <span class="ja">スクールの紹介</span>
+          </a>
+        </li>
+        <li>
+          <a href="voice.html">
+            <span class="en">voice</span>
+            <span class="ja">受講生の声</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="en">price</span>
+            <span class="ja">料金</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="en">faq</span>
+            <span class="ja">よくある質問</span>
+          </a>
+        </li>
+        <li>
+          <a href="company.html">
+            <span class="en">company</span>
+            <span class="ja">会社概要</span>
+          </a>
+        </li>
+      </ul>
 
-          <div class="inner">
-            <ul class="purpose-list">
-              <li>
-                <a href="#">
-                  <img src="img/purpose-1.png" alt="" />
-                  <h3 class="box-title">他社との比較<span>comparison</span></h3>
-                </a>
-              </li>
-              <li>
-                <a href="about.html">
-                  <img src="img/purpose-2.png" alt="" />
-                  <h3 class="box-title">どんなスクール？<span>school</span></h3>
-                </a>
-              </li>
-              <li>
-                <a href="voice.html">
-                  <img src="img/purpose-3.png" alt="" />
-                  <h3 class="box-title">案件獲得できる？<span>lead</span></h3>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="img/purpose-4.png" alt="" />
-                  <h3 class="box-title">
-                    未経験でも大丈夫？<span>unexperienced</span>
-                  </h3>
-                </a>
-              </li>
-            </ul>
-          </div>
+      <ul class="link">
+        <li>
+          <a href="https://line.me/R/ti/p/@420zidsx?oat_content=url">公式LINE</a>
+        </li>
+        <li><a href="https://pronavi-board.noe-p.com/">PortNavi</a></li>
+        <li>
+          <a
+            href="https://www.instagram.com/kakashi.programming.lab?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img
+              src="img/instgram.png" class="ig" />かかし</a>
+        </li>
+        <li>
+          <a
+            href="https://www.instagram.com/iruka.freelance?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img
+              src="img/instgram.png" class="ig" />いるか</a>
+        </li>
+        <li><a href="https://navigator-of-engineering.com/">運営会社</a></li>
+      </ul>
+    </nav>
+
+    <nav class="header-menu">
+      <ul class="menu">
+        <li>
+          <a href="about.html">
+            <span class="en">about</span>
+            <span class="ja">スクールの紹介</span>
+          </a>
+        </li>
+        <li>
+          <a href="voice.html">
+            <span class="en">voice</span>
+            <span class="ja">受講生の声</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="en">price</span>
+            <span class="ja">料金</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="en">faq</span>
+            <span class="ja">よくある質問</span>
+          </a>
+        </li>
+        <li>
+          <a href="company.html">
+            <span class="en">company</span>
+            <span class="ja">会社概要</span>
+          </a>
+        </li>
+      </ul>
+
+      <!-- 固定 -->
+      <a href="https://line.me/R/ti/p/@420zidsx?oat_content=url" class="line">LINE相談</a>
+
+      <div class="hamburger_fixed">
+        <div class="hamburger_toggle">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-      </section>
+      </div>
+      <!--  -->
+    </nav>
+  </header>
 
-      <section class="before-after">
-        <div class="wrapper">
-          <h4 class="message">Pronaviで多くの受講生が、<br><span>“実践的な”</span>プログラミングスキル<br>を身につけています。</h4>
+  <main>
+    <div class="fv">
+      <video autoplay muted loop playsinline class="fv-video">
+        <source src="img/fv-video.mp4" type="video/mp4" />
+      </video>
+      <p class="title">
+        <span>じぶんらしく働く</span><br /><span>未来をつくろう</span>
+      </p>
+    </div>
 
-          <ul class="list">
+    <section class="purpose">
+      <div class="wrapper">
+        <h3 class="section-title">あなたの目的は<br><span>purpose</span></h3>
+
+        <div class="inner">
+          <ul class="purpose-list">
             <li>
-              <img src="img/before-after-1.png" alt="">
-              <p class="middle left"><span>before</span>独学で挫折</p>
-              <p class="middle right"><span>after</span>5ヶ月で初案件獲得</p>
-              <div class="arrow"><img src="img/arrow1.png" alt=""></div>
-              <p class="small">ちえさん｜30歳｜会社員</p>
+              <a href="#">
+                <img src="img/purpose-1.png" alt="" />
+                <h3 class="box-title">他社との比較<span>comparison</span></h3>
+              </a>
             </li>
             <li>
-              <img src="img/before-after-2.png" alt="">
-              <p class="middle left"><span>before</span>スキルに不安</p>
-              <p class="middle right"><span>after</span>自分の制作で喜ばれるように</p>
-              <div class="arrow"><img src="img/arrow1.png" alt=""></div>
-              <p class="small">みきさん｜20歳｜専業主婦</p>
+              <a href="about.html">
+                <img src="img/purpose-2.png" alt="" />
+                <h3 class="box-title">どんなスクール？<span>school</span></h3>
+              </a>
             </li>
             <li>
-              <img src="img/before-after-3.png" alt="">
-              <p class="middle left"><span>before</span>仕事と両立できない</p>
-              <p class="middle right"><span>after</span>毎月安定して収入に</p>
-              <div class="arrow"><img src="img/arrow1.png" alt=""></div>
-              <p class="small">太郎さん｜30歳｜会社員</p>
+              <a href="voice.html">
+                <img src="img/purpose-3.png" alt="" />
+                <h3 class="box-title">案件獲得できる？<span>lead</span></h3>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="img/purpose-4.png" alt="" />
+                <h3 class="box-title">
+                  未経験でも大丈夫？<span>unexperienced</span>
+                </h3>
+              </a>
             </li>
           </ul>
-
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="reason">
-        <div class="wrapper">
-          <h2 class="section-title">プロナビが選ばれる理由<span>reason</span></h2>
-          <p class="text">あなた専属のコーチが毎日伴走。<br>性格診断でマッチング「どこでつまずいているか」「次に何をすべきか」を一緒に整理しながら、<br>一人ひとりのペースで確実に前進できるよう伴走します。</p>
-          
-          <div class="inner">
-            <ul class="list">
-              
-              <li class="item">
-                <div class="left">
-                  <img src="img/reason-1.png" alt="">
-                </div>
-                <div class="right">
-                  <h3 class="box-title">コーチング型個別指導</h3>
-                  <p>あなた専属のコーチが毎日伴走。性格診断でマッチング<br>「どこでつまずいているか」「次に何をすべきか」を一緒に整理しながら、一人ひとりのペースで確実に前進できるよう伴走します。</p>
-                </div>
-              </li>
-              
-              <li class="item">
-                <div class="left">
-                  <img src="img/reason-2.png" alt="">
-                </div>
-                <div class="right">
-                  <h3 class="box-title">24時間質問対応</h3>
-                  <p>公式LINEでいつでも質問可能<br>「今すぐ聞きたい！」その気持ち、大切にします。深夜でも早朝でも、あなたの学習リズムに合わせて対応。</p>
-                </div>
-              </li>
-              
-              <li class="item">
-                <div class="left">
-                  <img src="img/reason-3.png" alt="">
-                </div>
-                <div class="right">
-                  <h3 class="box-title">案件獲得まで徹底サポート</h3>
-                  <p>営業同行、実案件での質問対応まで<br>「スキルは身についた。でも営業が不安...」そんなあなたを、案件獲得の瞬間まで完全サポート。</p>
-                </div>
-              </li>
-              
-              <li class="item">
-                <div class="left">
-                  <img src="img/reason-4.png" alt="">
-                </div>
-                <div class="right">
-                  <h3 class="box-title">実践重視のカリキュラム</h3>
-                  <p>模写コーディングだけでなく、実際の案件を想定<br>「教材はできるけど、実案件は不安...」そのギャップを埋めるのが、私たちのカリキュラム。</p>
-                </div>
-              </li>
-              
-              <li class="item">
-                <div class="left">
-                  <img src="img/reason-5.png" alt="">
-                </div>
-                <div class="right">
-                  <h3 class="box-title">卒業後も安心のコミュニティ</h3>
-                  <p>卒業生同士の交流、継続学習サポート<br>卒業は終わりじゃない。新しいスタート。仲間と切磋琢磨できる環境で、成長し続けられます。</p>
-                </div>
-              </li>
-              
-            </ul>
+    <section class="before-after">
+      <div class="wrapper">
+        <h4 class="message">Pronaviで多くの受講生が、<br><span>“実践的な”</span>プログラミングスキル<br>を身につけています。</h4>
+
+        <ul class="list">
+          <li>
+            <img src="img/before-after-1.png" alt="">
+            <p class="middle left"><span>before</span>独学で挫折</p>
+            <p class="middle right"><span>after</span>5ヶ月で初案件獲得</p>
+            <div class="arrow"><img src="img/arrow1.png" alt=""></div>
+            <p class="small">ちえさん｜30歳｜会社員</p>
+          </li>
+          <li>
+            <img src="img/before-after-2.png" alt="">
+            <p class="middle left"><span>before</span>スキルに不安</p>
+            <p class="middle right"><span>after</span>自分の制作で喜ばれるように</p>
+            <div class="arrow"><img src="img/arrow1.png" alt=""></div>
+            <p class="small">みきさん｜20歳｜専業主婦</p>
+          </li>
+          <li>
+            <img src="img/before-after-3.png" alt="">
+            <p class="middle left"><span>before</span>仕事と両立できない</p>
+            <p class="middle right"><span>after</span>毎月安定して収入に</p>
+            <div class="arrow"><img src="img/arrow1.png" alt=""></div>
+            <p class="small">太郎さん｜30歳｜会社員</p>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+    <section class="reason">
+      <div class="wrapper">
+        <h2 class="section-title">プロナビが選ばれる理由<span>reason</span></h2>
+        <p class="text">あなた専属のコーチが毎日伴走。<br>性格診断でマッチング「どこでつまずいているか」「次に何をすべきか」を一緒に整理しながら、<br>一人ひとりのペースで確実に前進できるよう伴走します。
+        </p>
+
+        <div class="inner">
+          <ul class="list">
+
+            <li class="item">
+              <div class="left">
+                <img src="img/reason-1.png" alt="">
+              </div>
+              <div class="right">
+                <h3 class="box-title">コーチング型個別指導</h3>
+                <p>あなた専属のコーチが毎日伴走。性格診断でマッチング<br>「どこでつまずいているか」「次に何をすべきか」を一緒に整理しながら、一人ひとりのペースで確実に前進できるよう伴走します。</p>
+              </div>
+            </li>
+
+            <li class="item">
+              <div class="left">
+                <img src="img/reason-2.png" alt="">
+              </div>
+              <div class="right">
+                <h3 class="box-title">24時間質問対応</h3>
+                <p>公式LINEでいつでも質問可能<br>「今すぐ聞きたい！」その気持ち、大切にします。深夜でも早朝でも、あなたの学習リズムに合わせて対応。</p>
+              </div>
+            </li>
+
+            <li class="item">
+              <div class="left">
+                <img src="img/reason-3.png" alt="">
+              </div>
+              <div class="right">
+                <h3 class="box-title">案件獲得まで徹底サポート</h3>
+                <p>営業同行、実案件での質問対応まで<br>「スキルは身についた。でも営業が不安...」そんなあなたを、案件獲得の瞬間まで完全サポート。</p>
+              </div>
+            </li>
+
+            <li class="item">
+              <div class="left">
+                <img src="img/reason-4.png" alt="">
+              </div>
+              <div class="right">
+                <h3 class="box-title">実践重視のカリキュラム</h3>
+                <p>模写コーディングだけでなく、実際の案件を想定<br>「教材はできるけど、実案件は不安...」そのギャップを埋めるのが、私たちのカリキュラム。</p>
+              </div>
+            </li>
+
+            <li class="item">
+              <div class="left">
+                <img src="img/reason-5.png" alt="">
+              </div>
+              <div class="right">
+                <h3 class="box-title">卒業後も安心のコミュニティ</h3>
+                <p>卒業生同士の交流、継続学習サポート<br>卒業は終わりじゃない。新しいスタート。仲間と切磋琢磨できる環境で、成長し続けられます。</p>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="flow" class="theme-section js-theme-section" data-theme="blue">
+      <div class="wrapper">
+        <h2 class="section-title">受講の流れ</h2> <span class="section-title-deco">flow</span>
+        <p class="text-top">未経験から案件獲得までの道のり、最短6ヶ月のロードマップ</p>
+      </div>
+      <ul class="wrapper">
+        <li class="step1">
+          <div class="card"> <img src="img/top_step1.png" alt="flow_step1">
+            <p class="middle">LINE相談</p>
           </div>
+          <p class="text">あなたの目標をヒアリングし、最適な学習プランをご提案します。不安に思っていること、なんでもご相談ください。</p>
+        </li>
+        <li class="step2">
+          <div class="card"> <img src="img/top_step2.png" alt="flow_step1">
+            <p class="middle">講師決定</p>
+          </div>
+          <p class="text"> 専属コーチが学習スケジュールを一緒に設計します。あなたの学習フェーズや授業を受けやすい時間、性格などを踏まえて、あなたにぴったりの講師を選別。</p>
+        </li>
+        <li class="step3">
+          <div class="card"> <img src="img/top_step3.png" alt="flow_step1">
+            <p class="middle">授業</p>
+          </div>
+          <p class="text">HTML・CSS・JavaScript・PHPを個別授業で学び、実践課題でスキルを磨きます。わからないことはLINEですぐに講師へ質問OK!</p>
+        </li>
+        <li class="step4">
+          <div class="card"> <img src="img/top_step4.png" alt="flow_step1">
+            <p class="middle">サイト制作</p>
+          </div>
+          <p class="text">学習の総まとめとしてオリジナルサイトを制作。講師のフィードバックを受けながら、完成度を高めていきます。</p>
+        </li>
+        <li class="step5">
+          <div class="card"> <img src="img/top_step5.png" alt="flow_step1">
+            <p class="middle">案件獲得サポート</p>
+          </div>
+          <p class="text">クラウドソーシングでの提案文の添削や営業動向サポートで、初受注を徹底サポートします。さらに、受注後も案件でわからないことがあればアドバイスします。</p>
+        </li>
+      </ul>
+      <div class="scroll-divider">
+        <div class="scroll-text">ProNavi ProNavi ProNavi ProNavi ProNavi</div>
+      </div>
+    </section>
+
+    <section id="teacher" class="theme-section js-theme-section" data-theme="blue">
+      <div class="wrapper">
+        <h2 class="section-title">講師プロフィール</h2> <span class="section-title-deco">teachers</span>
+      </div>
+      <ul class="teacher-grid wrapper">
+        <li class="items"> <img src="img/member_pic_demo.png" class="pic" alt="teacher_pic1"> <span
+            class="position">現役エンジニア講師</span>
+          <p class="name">TETSU</p>
+          <p class="words">継続可能かつ着実にスキルをつけられる学習方法を一緒に探します。</p> <img src="img/underline_deco.png" class="underline"
+            alt="message_deco">
+        </li>
+        <li class="items"> <img src="img/top_teacher2.png" class="pic" alt="teacher_pic2"> <span
+            class="position">現役エンジニア講師</span>
+          <p class="name">YURIKO</p>
+          <p class="words">プログラミングスキルを習得するには環境×覚悟が必要だと思っています。</p> <img src="img/underline_deco.png" class="underline"
+            alt="message_deco">
+        </li>
+        <li class="items"> <img src="img/member_pic_demo.png" class="pic" alt="teacher_pic3"> <span
+            class="position">現役エンジニア講師</span>
+          <p class="name">AOKI</p>
+          <p class="words">卒業後も自分の力で成長していける学習スキルも身につけて欲しい。</p> <img src="img/underline_deco.png" class="underline"
+            alt="message_deco">
+        </li>
+        <li class="items"> <img src="img/member_pic_demo.png" class="pic" alt="teacher_pic4"> <span
+            class="position">現役エンジニア講師</span>
+          <p class="name">TETSU</p>
+          <p class="words">継続可能かつ着実にスキルをつけられる学習方法を一緒に探します。</p> <img src="img/underline_deco.png" class="underline"
+            alt="message_deco">
+        </li>
+      </ul>
+    </section>
+
+    <section id="works" class="flip-slider">
+      <div class="wrapper">
+        <h2 class="section-title">生徒の制作実績</h2><span class="section-title-deco">works</span>
+      </div>
+      <div class="wrapper">
+        <div class="flip-slider__inner js-flip-slider">
+          <a
+            href="https://pronavi-board.noe-p.com/%e7%be%8e%e5%ae%b9%e3%82%a8%e3%82%b9%e3%83%86%e3%82%b5%e3%83%ad%e3%83%b3%e3%81%aehp/">
+            <div class="slider-inner">
+              <div class="front">
+                <img src="img/works/1-front.png" alt="works1-front">
+              </div>
+              <div class="back">
+                <img src="img/works/1-back.png" alt="works1-back">
+              </div>
+            </div>
+          </a>
+
+          <a href="https://quietkg.shop/">
+            <div class="slider-inner">
+              <div class="front">
+                <img src="img/works/2-front.png" alt="works2-front">
+              </div>
+              <div class="back">
+                <img src="img/works/2-back.png" alt="works2-back">
+              </div>
+            </div>
+          </a>
+
+          <a href="https://takerunakase.github.io/Trattoria-Verde/">
+            <div class="slider-inner">
+              <div class="front">
+                <img src="img/works/3-front.png" alt="works3-front">
+              </div>
+              <div class="back">
+                <img src="img/works/3-back.png" alt="works3-back">
+              </div>
+            </div>
+          </a>
+
+          <a href="https://yuta-swallows.github.io/tokyo-thundards-goods-site/">
+            <div class="slider-inner">
+              <div class="front">
+                <img src="img/works/4-front.png" alt="works4-front">
+              </div>
+              <div class="back">
+                <img src="img/works/4-back.png" alt="works4-back">
+              </div>
+            </div>
+          </a>
+
+          <a href="https://ryotasogawa.github.io/originalsitte/">
+            <div class="slider-inner">
+              <div class="front">
+                <img src="img/works/5-front.png" alt="works5-front">
+              </div>
+              <div class="back">
+                <img src="img/works/5-back.png" alt="works5-back">
+              </div>
+            </div>
+          </a>
+
+          <a href="https://chimoe166.github.io/-LP/">
+            <div class="slider-inner">
+              <div class="front">
+                <img src="img/works/6-front.png" alt="works6-front">
+              </div>
+              <div class="back">
+                <img src="img/works/6-back.png" alt="works6-back">
+              </div>
+            </div>
+          </a>
         </div>
-      </section>
+      </div>
+      <div class="wrapper viewmore">
+        <a href="https://pronavi-board.noe-p.com/">View More ></a>
+      </div>
 
-    </main>
+    </section>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="main.js" defer></script>
-  </body>
+    <section id="comparison">
+      <div class="wrapper">
+        <h2 class="section-title">他スクールとの比較</h2><span class="section-title-deco">comparison</span>
+      </div>
+      <table class="compare-table wrapper">
+        <thead>
+          <tr>
+            <th></th>
+            <th class="pronavi">
+              <p class="school-name">Pronavi</p>
+            </th>
+
+            <th>
+              <p class="school-name">A社</p>
+            </th>
+
+            <th class="right">
+              <p class="school-name">B社</p>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">料金</th>
+            <td class="pronavi">55万円</td>
+            <td>17〜35万円<br><span class="small">（コースにより変動）</span></td>
+            <td class="right">40〜80万円<br><span class="small">（転職保証付きコース）</span></td>
+          </tr>
+
+          <tr>
+            <th scope="row">期間</th>
+            <td class="pronavi">６ヶ月</td>
+            <td><br><span class="small">4〜12週間</span></td>
+            <td class="right">△<br><span class="small">3〜6ヶ月</span></td>
+          </tr>
+
+          <tr>
+            <th scope="row">個別指導</th>
+            <td class="pronavi">〇<br><span class="small">専属コーチ制</span></td>
+            <td>✕<br><span class="small">チャット＋週2メンタリング</span></td>
+            <td class="right">〇<br><span class="small">メンター複数制</span></td>
+          </tr>
+
+          <tr>
+            <th scope="row">質問対応</th>
+            <td class="pronavi">〇<br><span class="small">24時間LINE対応</span></td>
+            <td>△<br><span class="small">15〜23時のみ</span></td>
+            <td class="right">△<br><span class="small">面談＋チャット制限あり</span></td>
+          </tr>
+
+          <tr>
+            <th scope="row">案件獲得支援</th>
+            <td class="pronavi">〇<br><span class="small">営業同行・提案添削</span></td>
+            <td>△<br><span class="small">案件紹介のみ</span></td>
+            <td class="right">✕<br><span class="small">転職支援中心</span></td>
+          </tr>
+
+          <tr>
+            <th scope="row">卒業後サポート</th>
+            <td class="pronavi">〇<br><span class="small">永久コミュニティ参加</span></td>
+            <td>△<br><span class="small">受講期間中のみ</span></td>
+            <td class="right">✕<br><span class="small">転職後サポートなし</span></td>
+          </tr>
+
+          <tr>
+            <th scope="row">返金保証</th>
+            <td class="pronavi">〇<br><span class="small">あり（8日間）</span></td>
+            <td>△<br><span class="small">一部コースのみ</span></td>
+            <td class="right">✕<br><span class="small">転職保証付き</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="cooling-off wrapper">
+        <div class="box-inner">
+          <div class="flex">
+            <div class="text-box">
+              <p class="text sub">安心の返金保証</p>
+              <p class="middle label">Risk Free</p>
+              <p class="middle info">8<span>日間</span>無条件返金保証</p>
+            </div>
+            <div class="icon">
+              <img src="img/top_riskfree.png" alt="">
+            </div>
+          </div>
+          <small>
+            ※テキストテキストテキステキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキステキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキス
+          </small>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="flex wrapper">
+        <div class="flex-left">
+          <h2 class="section-title">よくある質問</h2><span class="section-title-deco">FAQ</span>
+        </div>
+        <div class="flex-right">
+          <div class="faq-item">
+            <button class="faq-q js-faq-toggle">
+              <span class="faq-label">Q</span>
+              <p class="faq-question">他のスクールとの違いは何ですか？</p>
+            </button>
+            <div class="faq-a">
+              <span class="faq-label a-label">A</span>
+              <div class="faq-answer">
+                <p>大きく3つあります。<br><br>
+                  ・専属コーチ制: あなた専属のコーチが毎日伴走<br>
+                  ・案件獲得まで完全サポート: 営業同行・受注後のサポートまで<br>
+                  ・卒業後も永久コミュニティ: 一生涯の学習仲間が得られる「スキルを教えて終わり」ではなく、
+                  「案件を獲得して稼げるようになるまで」が私たちのゴールです。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q js-faq-toggle">
+              <span class="faq-label">Q</span>
+              <p class="faq-question">本当に未経験でも大丈夫ですか？</p>
+            </button>
+            <div class="faq-a">
+              <span class="faq-label a-label">A</span>
+              <div class="faq-answer">
+                <p>はい、大丈夫です。<br>
+                  受講生の多くが完全未経験からのスタートです。<br>
+                  「パソコンは苦手」という方でも、基礎の基礎から丁寧にサポートします。<br>
+                  まずは無料カウンセリングで、あなたのレベルに合った学習プランをご提案させてください。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q js-faq-toggle">
+              <span class="faq-label">Q</span>
+              <p class="faq-question">働きながらでも学習できますか？</p>
+            </button>
+            <div class="faq-a">
+              <span class="faq-label a-label">A</span>
+              <div class="faq-answer">
+                <p>はい、できます。<br>
+                  受講生の多くが働きながらや、子育てと両立しながら学習しています。<br><br>
+                  ・学習時間の例：平日2時間、休日4〜5時間・忙しい時期は学習ペースを調整可能。<br>
+                  ・空き時間に合わせて週１回の授業を予約できます。<br>
+                  ・授業の24時間前まで日程変更可能なので、急な予定変更にも対応可能。<br><br>
+                  あなたのライフスタイルに合わせた学習プランを一緒に考えます。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q js-faq-toggle">
+              <span class="faq-label">Q</span>
+              <p class="faq-question">どれくらいの期間で案件獲得できますか？</p>
+            </button>
+            <div class="faq-a">
+              <span class="faq-label a-label">A</span>
+              <div class="faq-answer">
+                <p>平均6ヶ月で初案件獲得される方が多いです。<br><br>
+                  ただし、学習時間や経験によって個人差があります。<br>
+                  最短３ヶ月〜平均６ヶ月での案件獲得を目指して一緒に学習サポートしていきまが、<br>
+                  焦らず、あなたのペースで確実にスキルを身につけることが大切です。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q js-faq-toggle">
+              <span class="faq-label">Q</span>
+              <p class="faq-question">どんな人が講師をしていますか？</p>
+            </button>
+            <div class="faq-a">
+              <span class="faq-label a-label">A</span>
+              <div class="faq-answer">
+                <p>全員が「現役で稼いでいる」プロフェッショナルです。<br><br>
+                  ・現役フリーランスエンジニア<br>
+                  ・アプリ開発を手掛ける講師<br>
+                  ・ここで学んだ卒業生も講師として活躍<br>
+                  教科書的な知識だけでなく、現場の生きたノウハウをお伝えします。</p>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer>
+    <div class="inner">
+      <a href="https://line.me/R/ti/p/@420zidsx?oat_content=url" class="contact">
+        <div class="flex">
+          <img src="img/contact.png" alt="contact">
+          <p class="small">まずはLINEで無料カウンセリングから。<br>お気軽にご相談ください。</p>
+        </div>
+      </a>
+      <div class="footer-bottom">
+        <ul class="left">
+          <li><img src="img/logo_transparent.png" alt="logo"></li>
+          <li><a href="https://navigator-of-engineering.com/" target="_blank">運営会社｜株式会社NOE</a></li>
+          <li><a href="https://pronavi.navigator-of-engineering.com/law_info.html#" target="_blank">特定商取引法に基づく表記</a>
+          </li>
+          <li><a href="https://pronavi.navigator-of-engineering.com/privacy.html" target="_blank">プライバシーポリシー</a></li>
+        </ul>
+        <nav class="right">
+          <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="about.html">スクール概要</a></li>
+            <li><a href="voice.html">受講生の声</a></li>
+            <li><a href="#">会社概要</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <a href="#" class="page-top">
+        <button>
+          <span class="line"></span>
+          <span class="to-top-text">PAGE TOP</span>
+        </button>
+      </a>
+
+      <a href="#" class="chatbot" aria-label="チャットで相談">
+        <img src="img/footer_icon-chatbot.png" alt="" />
+      </a>
+  </footer>
+  <!-- js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="main.js"></script>
+</body>
+
 </html>

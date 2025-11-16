@@ -18,8 +18,8 @@ $lh-body	本文の行間 (line-height for body)
 $ls-base	字間 (line-height for base)
 
 # 各ファイルメモ
-idex.html：topページ（さきさん・るな）
-about.html：スクール詳細ページ（優華さん）
+idex.html：topページ（優華さん・るな）
+about.html：スクール詳細ページ（さきさん）
 voice.html：受講生の声・コミュニティー（優華さん）
 company.html：会社概要（るな）
 
