@@ -157,4 +157,37 @@ window.addEventListener('scroll', function() {
   } else {
     fixed.classList.remove('scrolled');
   }
+    /*=================================================
+   ふわっと出てくる 
+  ===================================================*/
+
+  $(window).scroll(function () {
+    $(".fadeIn").each(function () {
+      var scroll = $(window).scrollTop();
+      var target = $(this).offset().top;
+      var windowHeight = $(window).height();
+      if (scroll > target - windowHeight + $(this).outerHeight()) {
+        // outerHeight()はpaddingを含めた高さを取得する
+        $(this).addClass("is-show");
+      }
+    });
+  });
+
+ /*=================================================
+  スクロール時の画像フェード表示
+  ===================================================*/
+  // スクロール時のイベント
+  $(window).scroll(function () {
+    $(".section-title").each(function () {
+      let scroll = $(window).scrollTop();
+      let target = $(this).offset().top;
+      let windowHeight = $(window).height();
+
+      if (scroll > target - windowHeight + 200) {
+        $(this).addClass('section-title-active');
+      }
+    });
+  });
+
+
 });
