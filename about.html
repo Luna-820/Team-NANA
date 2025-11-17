@@ -28,6 +28,8 @@
   <!-- Canonical -->
   <link rel="canonical" href="https://pronavi.navigator-of-engineering.com/about.html" />
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
   <!-- favicon / app icon -->
   <link rel="icon" type="image/png" href="./img/favicon.png">
   <link rel="apple-touch-icon" href="./img/apple-touch-icon.png">
@@ -73,9 +75,12 @@
   ]
 }
 </script>
-
+  <!-- slick -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
   <!-- CSS -->
-  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body class="about">
@@ -203,35 +208,35 @@
       <h2 class="section-title flex-left">スクール概要</h2>
     </section>
 
-    <section id="moya" class="inner">
-      <h3 class="box-title">こんな毎日にモヤモヤしていませんか</h3>
+    <section id="moya" class="wrapper inner">
+      <h3 class="box-title">こんな毎日にモヤモヤしていませんか?</h3>
       <img src="img/about_moya.png" alt=" モヤモヤする女の子">
     </section>
 
-    <section id="ideal" class="inner">
+    <section id="ideal" class="wrapper inner">
       <h3 class="box-title">稼げるプログラミングスキルを身につけると...</h3>
       <h3 class="box-title back-text  blue">そんなあなたの課題を実現できます！</h3>
       <ul>
         <li>
           <span><img src="img/about_check_icon.png" alt=""></span>
-          <p class="middle">好きな場所・時間に働ける</p>
+          <p class="message">好きな場所・時間に働ける</p>
         </li>
         <li>
           <span><img src="img/about_check_icon.png" alt=""></span>
-          <p class="middle">スキルを身につけて自己肯定感UP</p>
+          <p class="message">スキルを身につけて自己肯定感UP</p>
         </li>
         <li>
           <span><img src="img/about_check_icon.png" alt=""></span>
-          <p class="middle">余裕のある暮らしを目指せる</p>
+          <p class="message">余裕のある暮らしを目指せる</p>
         </li>
         <li>
           <span><img src="img/about_check_icon.png" alt=""></span>
-          <p class="middle">やりたいことを仕事にできる</p>
+          <p class="message">やりたいことを仕事にできる</p>
         </li>
       </ul>
     </section>
 
-    <section id="power" class="inner">
+    <section id="power" class="wrapper inner">
       <h3 class="box-title">プログラミングスキルで案件を獲得するためには</h3>
       <h3 class="box-title back-text yellow">３つの力が必要です</h3>
       <ul>
@@ -250,8 +255,8 @@
       </ul>
     </section>
 
-    <section id="about" class="wrapper  shadow-box">
-      <h3 class="box-title">プロナビとは<span>about</span></h3>
+    <section id="about" class="wrapper shadow-box">
+      <h3 class="section-title">プロナビとは<span>about</span></h3>
 
       <div class="flex-box">
         <div class="flex-left">
@@ -265,7 +270,7 @@
           </div>
         </div>
         <div class="flex-right">
-          <p class="message">“技術 × 営業 × 継続 × 仲間”で<br>案件獲得まで徹底サポート。 </p>
+          <p class="message">“技術 × 営業 × 継続 × 仲間”で案件獲得まで徹底サポート。 </p>
           <p class="small">Pro Naviは、「コーチング型プログラミングスクール」。 専属コーチがあなたの課題に合わせて1対1で伴走し、 同じ目標を持つ仲間と切磋琢磨できるコミュニティも完備。
             技術だけでなく、営業・案件獲得・継続サポートまでサポート。 「一人では不安」という方でも、一緒に頑張る仲間と共に安心してスキルを仕事に変えられます。</p>
           <button><a href="https://pronavi-board.noe-p.com/" class="small">コミュニティを詳しく知る</a></button>
@@ -274,12 +279,12 @@
     </section>
 
     <section id="curriculum" class="wrapper">
-      <h4 class="box-title">カリキュラム<span>curriculum</span></h4>
+      <h4 class="section-title">カリキュラム<span>curriculum</span></h4>
       <dl class="step inner">
         <dt class="month">1month</dt>
         <dd class="content">
           <span class="label">授業</span>
-          <h3 box-title>プログラミング基礎学習</h3>
+          <h3 box-title>プログラミング基礎</h3>
           <p class="small">HTML/CSSの基礎を徹底的に学習</p>
         </dd>
         <dt class="month">2–5month</dt>
@@ -291,7 +296,7 @@
         <dt class="month">6month</dt>
         <dd class="content">
           <span class="label">授業</span>
-          <h3 box-title>オリジナルWEBサイト作成</h3>
+          <h3 box-title>オリジナルサイト作成</h3>
           <p class="small">HTML/CSSの基礎を徹底的に学習</p>
         </dd>
         <dt class="month">7–8month</dt>
@@ -303,7 +308,7 @@
         <dt class="month">9month</dt>
         <dd class="content">
           <span class="label case">案件</span>
-          <h3 box-title>案件獲得後の営業同行</h3>
+          <h3 box-title>案件獲得時の営業同行</h3>
           <p class="small">HTML/CSSの基礎を徹底的に学習</p>
         </dd>
       </dl>
@@ -312,9 +317,9 @@
       </p>
     </section>
 
-    <section id="price" class="inner">
-      <h3 class="box-title">料金<span>price</span></h3>
-      <div class="shadow-box">
+    <section id="price" class="wrapper">
+      <h3 class="section-title fadeIn">料金<span>price</span></h3>
+      <div class="shadow-box inner">
         <h3 class="box-title">６ヶ月集中プログラム</h3>
         <p class="price">
           <span class="small">総額</span>
@@ -334,15 +339,123 @@
       </div>
     </section>
 
-    <section id="works" class="wrapper">
-      <h3 class="box-title">生徒の制作実績<span>works</span></h3>
-    </section>
+    <section id="works" class="flip-slider wrapper">
+      <h3 class="section-title">生徒の制作実績</h3><span class="section-title-deco">works</span>
+      <div class="flip-slider__inner js-flip-slider">
+        <a
+          href="https://pronavi-board.noe-p.com/%e7%be%8e%e5%ae%b9%e3%82%a8%e3%82%b9%e3%83%86%e3%82%b5%e3%83%ad%e3%83%b3%e3%81%aehp/">
+          <div class="slider-inner">
+            <div class="front">
+              <img src="img/works/1-front.png" alt="works1-front">
+            </div>
+            <div class="back">
+              <img src="img/works/1-back.png" alt="works1-back">
+            </div>
+          </div>
+        </a>
 
+        <a href="https://quietkg.shop/">
+          <div class="slider-inner">
+            <div class="front">
+              <img src="img/works/2-front.png" alt="works2-front">
+            </div>
+            <div class="back">
+              <img src="img/works/2-back.png" alt="works2-back">
+            </div>
+          </div>
+        </a>
+
+        <a href="https://takerunakase.github.io/Trattoria-Verde/">
+          <div class="slider-inner">
+            <div class="front">
+              <img src="img/works/3-front.png" alt="works3-front">
+            </div>
+            <div class="back">
+              <img src="img/works/3-back.png" alt="works3-back">
+            </div>
+          </div>
+        </a>
+
+        <a href="https://yuta-swallows.github.io/tokyo-thundards-goods-site/">
+          <div class="slider-inner">
+            <div class="front">
+              <img src="img/works/4-front.png" alt="works4-front">
+            </div>
+            <div class="back">
+              <img src="img/works/4-back.png" alt="works4-back">
+            </div>
+          </div>
+        </a>
+
+        <a href="https://ryotasogawa.github.io/originalsitte/">
+          <div class="slider-inner">
+            <div class="front">
+              <img src="img/works/5-front.png" alt="works5-front">
+            </div>
+            <div class="back">
+              <img src="img/works/5-back.png" alt="works5-back">
+            </div>
+          </div>
+        </a>
+
+        <a href="https://chimoe166.github.io/-LP/">
+          <div class="slider-inner">
+            <div class="front">
+              <img src="img/works/6-front.png" alt="works6-front">
+            </div>
+            <div class="back">
+              <img src="img/works/6-back.png" alt="works6-back">
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="viewmore">
+        <a href="https://pronavi-board.noe-p.com/">View More ></a>
+      </div>
+    </section>
   </main>
 
+  <footer>
+    <div class="inner">
+      <a href="https://line.me/R/ti/p/@420zidsx?oat_content=url" class="contact">
+        <div class="flex">
+          <img src="img/contact.png" alt="contact">
+          <p class="small">まずはLINEで無料カウンセリングから。<br>お気軽にご相談ください。</p>
+        </div>
+      </a>
+      <div class="footer-bottom">
+        <ul class="left">
+          <li><img src="img/logo_transparent.png" alt="logo"></li>
+          <li><a href="https://navigator-of-engineering.com/" target="_blank">運営会社｜株式会社NOE</a></li>
+          <li><a href="https://pronavi.navigator-of-engineering.com/law_info.html#" target="_blank">特定商取引法に基づく表記</a>
+          </li>
+          <li><a href="https://pronavi.navigator-of-engineering.com/privacy.html" target="_blank">プライバシーポリシー</a></li>
+        </ul>
+        <nav class="right">
+          <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="about.html">スクール概要</a></li>
+            <li><a href="voice.html">受講生の声</a></li>
+            <li><a href="#">会社概要</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <a href="#" class="page-top">
+        <button>
+          <span class="line"></span>
+          <span class="to-top-text">PAGE TOP</span>
+        </button>
+      </a>
+
+      <a href="#" class="chatbot" aria-label="チャットで相談">
+        <img src="img/footer_icon-chatbot.png" alt="" />
+      </a>
+  </footer>
+  <!-- js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="main.js"></script>
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="main.js" defer></script>Ï
 </body>
 
 </html>
