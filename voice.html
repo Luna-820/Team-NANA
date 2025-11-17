@@ -1,65 +1,432 @@
 <!DOCTYPE html>
 <html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ProNavi｜受講生の声</title>
+    <meta
+      name="description"
+      content="ProNavi受講生のリアルな体験談。学習〜実装、ポートフォリオ制作、案件獲得まで伴走されながら、どのようにスキルが伸びたのかをご紹介します。" />
 
-  <title>ProNavi｜受講生の声</title>
-  <meta name="description" content="ProNavi受講生のリアルな体験談。学習〜実装、ポートフォリオ制作、案件獲得まで伴走されながら、どのようにスキルが伸びたのかをご紹介します。">
+    <!-- OGP -->
+    <meta property="og:site_name" content="ProNavi（プロナビ）" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ProNavi｜受講生の声" />
+    <meta
+      property="og:description"
+      content="受講生の実体験から、伴走型でスキル定着・案件獲得につながったプロセスを紹介。" />
+    <meta
+      property="og:url"
+      content="https://pronavi.navigator-of-engineering.com/voice.html" />
+    <meta
+      property="og:image"
+      content="https://pronavi.navigator-of-engineering.com/img/ogp.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="ja_JP" />
 
-  <!-- OGP -->
-  <meta property="og:site_name" content="ProNavi（プロナビ）" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="ProNavi｜受講生の声" />
-  <meta property="og:description" content="受講生の実体験から、伴走型でスキル定着・案件獲得につながったプロセスを紹介。" />
-  <meta property="og:url" content="https://pronavi.navigator-of-engineering.com/voice.html" />
-  <meta property="og:image" content="https://pronavi.navigator-of-engineering.com/img/ogp.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:locale" content="ja_JP" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ProNavi｜受講生の声" />
+    <meta
+      name="twitter:description"
+      content="受講生の実体験から、伴走型でスキル定着・案件獲得につながったプロセスを紹介。" />
+    <meta
+      name="twitter:image"
+      content="https://pronavi.navigator-of-engineering.com/img/ogp.png" />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="ProNavi｜受講生の声" />
-  <meta name="twitter:description" content="受講生の実体験から、伴走型でスキル定着・案件獲得につながったプロセスを紹介。" />
-  <meta name="twitter:image" content="https://pronavi.navigator-of-engineering.com/img/ogp.png" />
+    <!-- Canonical -->
+    <link
+      rel="canonical"
+      href="https://pronavi.navigator-of-engineering.com/voice.html" />
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://pronavi.navigator-of-engineering.com/voice.html" />
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://pronavi.navigator-of-engineering.com/img/favicon.png" />
+    <link
+      rel="apple-touch-icon"
+      href="https://pronavi.navigator-of-engineering.com/img/apple-touch-icon.png" />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="https://pronavi.navigator-of-engineering.com/img/favicon.png">
-  <link rel="apple-touch-icon" href="https://pronavi.navigator-of-engineering.com/img/apple-touch-icon.png">
+    <!-- 構造化データ -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "ProNavi｜受講生の声",
+        "url": "https://pronavi.navigator-of-engineering.com/voice.html",
+        "description": "ProNavi受講生のリアルな体験談。学習〜実装、案件獲得までのプロセスを紹介。"
+      }
+    </script>
 
-  <!-- 構造化データ -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"CollectionPage",
-    "name":"ProNavi｜受講生の声",
-    "url":"https://pronavi.navigator-of-engineering.com/voice.html",
-    "description":"ProNavi受講生のリアルな体験談。学習〜実装、案件獲得までのプロセスを紹介。"
-  }
-  </script>
+    <!-- パンくず -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://pronavi.navigator-of-engineering.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "受講生の声",
+            "item": "https://pronavi.navigator-of-engineering.com/voice.html"
+          }
+        ]
+      }
+    </script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-  <!-- パンくず -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"BreadcrumbList",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"Home","item":"https://pronavi.navigator-of-engineering.com/"},
-      {"@type":"ListItem","position":2,"name":"受講生の声","item":"https://pronavi.navigator-of-engineering.com/voice.html"}
-    ]
-  }
-  </script>
-  <!-- CSS -->
-  <link rel="stylesheet" href="./style.css" />
-</head>
+  <body>
+    <header>
+      <h1>
+        <a href="index.html"><img src="img/logo.png" alt="" class="logo" /></a>
+      </h1>
 
-<body>
-  <script src="main.js"></script>
-</body>
+      <div class="menu-bg"></div>
+      <nav class="hamburger-menu">
+        <div class="company">
+          <h2 class="active-logo">
+            <a href="index.html"><img src="img/logo.png" alt="" /></a>
+          </h2>
+          <p class="address">
+            〒460-0002<br />愛知県名古屋市中区丸の内3丁目15-22<br />丸の内Usビル801号室
+          </p>
+        </div>
 
+        <ul class="menu">
+          <li>
+            <a href="index.html">
+              <span class="en">top</span>
+              <span class="ja">トップページ</span>
+            </a>
+          </li>
+          <li>
+            <a href="about.html">
+              <span class="en">about</span>
+              <span class="ja">スクールの紹介</span>
+            </a>
+          </li>
+          <li>
+            <a href="voice.html">
+              <span class="en">voice</span>
+              <span class="ja">受講生の声</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="en">price</span>
+              <span class="ja">料金</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="en">faq</span>
+              <span class="ja">よくある質問</span>
+            </a>
+          </li>
+          <li>
+            <a href="company.html">
+              <span class="en">company</span>
+              <span class="ja">会社概要</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="link">
+          <li>
+            <a href="https://line.me/R/ti/p/@420zidsx?oat_content=url"
+              >公式LINE</a
+            >
+          </li>
+          <li><a href="https://pronavi-board.noe-p.com/">PortNavi</a></li>
+          <li>
+            <a
+              href="https://www.instagram.com/kakashi.programming.lab?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              ><img src="img/instgram.png" class="ig" />かかし</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/iruka.freelance?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              ><img src="img/instgram.png" class="ig" />いるか</a
+            >
+          </li>
+          <li><a href="https://navigator-of-engineering.com/">運営会社</a></li>
+        </ul>
+      </nav>
+
+      <nav class="header-menu">
+        <ul class="menu">
+          <li>
+            <a href="about.html">
+              <span class="en">about</span>
+              <span class="ja">スクールの紹介</span>
+            </a>
+          </li>
+          <li>
+            <a href="voice.html">
+              <span class="en">voice</span>
+              <span class="ja">受講生の声</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="en">price</span>
+              <span class="ja">料金</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="en">faq</span>
+              <span class="ja">よくある質問</span>
+            </a>
+          </li>
+          <li>
+            <a href="company.html">
+              <span class="en">company</span>
+              <span class="ja">会社概要</span>
+            </a>
+          </li>
+        </ul>
+
+        <!-- 固定 -->
+        <a href="https://line.me/R/ti/p/@420zidsx?oat_content=url" class="line"
+          >LINE相談</a
+        >
+
+        <div class="hamburger_fixed">
+          <div class="hamburger_toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <!--  -->
+      </nav>
+    </header>
+
+    <main>
+      <section id="voice-fv" class="wrapper voice-fv">
+        <span class="section-title__en">VOICE</span>
+        <h2 class="section-title flex-left">生徒の声</h2>
+      </section>
+
+      <section class="voice">
+        <div class="wrapper">
+          <h4 class="message">
+            Pronaviで多くの受講生が、<br /><span>“実践的な”</span
+            >プログラミングスキル<br />を身につけています。
+          </h4>
+
+          <ul class="list">
+            <li>
+              <img src="img/voice-1.png" alt="" />
+              <p class="text-1">2023年4月入会</p>
+              <p class="text-2">
+                マンツーマン授業で、疑問を一緒に解決してもらえるだけでなく、自分で調べたり考える力もついたと思います。
+              </p>
+              <p class="small">N・Yさん｜30歳｜会社員</p>
+            </li>
+            <li>
+              <img src="img/before-after-2.png" alt="" />
+              <p class="text-1">2023年5月入会</p>
+              <p class="text-2">
+                プログラミングは全くの未経験でしたが、短期間で自分でWebサイトを作れるようになりました。
+              </p>
+              <p class="small">K・Hさん｜20代｜専業主婦</p>
+            </li>
+            <li>
+              <img src="img/before-after-3.png" alt="" />
+              <p class="text-1">2023年8月入会</p>
+              <p class="text-2">
+                副業からフリーランスになりたいと思って入会。初心者の僕でも挫折せず挫折せずに進められました。
+              </p>
+              <p class="small">M・Hさん｜30代｜会社員</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="meetup-section">
+        <div class="wrapper">
+          <ul class="meetups">
+            <li class="meetup">
+              <div class="left">
+                <h3 class="section-title">
+                  第１回プロナビオフ会<span>Meetup</span>
+                </h3>
+                <p class="text">開催地：名古屋<br />参加人数：　人</p>
+              </div>
+              <div class="right">
+                <img src="img/meetup-1.png" alt="" />
+                <div class="scroll-meter">
+                  <div class="fill"></div>
+                </div>
+              </div>
+            </li>
+
+            <li class="meetup">
+              <div class="left">
+                <h3 class="section-title">
+                  第２回プロナビオフ会<span>Meetup</span>
+                </h3>
+                <p class="text">開催地：名古屋<br />参加人数：　人</p>
+              </div>
+              <div class="right">
+                <img src="img/meetup-2.png" alt="" />
+                <div class="scroll-meter">
+                  <div class="fill"></div>
+                </div>
+              </div>
+            </li>
+
+            <li class="meetup">
+              <div class="left">
+                <h3 class="section-title">
+                  第３回プロナビオフ会<span>Meetup</span>
+                </h3>
+                <p class="text">開催地：名古屋<br />参加人数：　人</p>
+              </div>
+              <div class="right">
+                <img src="img/meetup-3.png" alt="" />
+                <div class="scroll-meter">
+                  <div class="fill"></div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="metaleaf">
+        <div class="wrapper">
+          <h3 class="section-title">Metaleaf<span>作業会の紹介</span></h3>
+
+          <ul class="list">
+            <li>
+              <img src="img/metaleaf-1.png" alt="" />
+              <p class="text">
+                フリースペース <span>気軽に話せる仲間が集まれる場所。</span>
+              </p>
+            </li>
+
+            <li>
+              <img src="img/metaleaf-2.png" alt="" />
+              <p class="text">
+                毎週月曜のセミナー <span>新しい発見や刺激が見つかる場所。</span>
+              </p>
+            </li>
+
+            <li>
+              <img src="img/metaleaf-3.png" alt="" />
+              <p class="text">
+                初心者専用部屋 <span>先輩が優しく声をかけてくれる場所。</span>
+              </p>
+            </li>
+
+            <li>
+              <img src="img/metaleaf-4.png" alt="" />
+              <p class="text">
+                モクモクブース <span>静かに集中したい人のための場所。</span>
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="hackathon">
+        <div class="wrapper">
+          <h3 class="section-title">Hackathon <span>ハッカソンの様子</span></h3>
+
+          <div class="slider-container">
+            <div class="vertical-slider">
+              <div><img src="img/hackathon-1.png" alt="Meetup1" /></div>
+              <div><img src="img/hackathon-1.png" alt="Meetup2" /></div>
+              <div><img src="img/hackathon-1.png" alt="Meetup3" /></div>
+            </div>
+
+            <div class="vertical-slider">
+              <div><img src="img/hackathon-1.png" alt="Meetup4" /></div>
+              <div><img src="img/hackathon-1.png" alt="Meetup5" /></div>
+              <div><img src="img/hackathon-1.png" alt="Meetup6" /></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="inner">
+        <a
+          href="https://line.me/R/ti/p/@420zidsx?oat_content=url"
+          class="contact">
+          <div class="flex">
+            <img src="img/contact.png" alt="contact" />
+            <p class="small">
+              まずはLINEで無料カウンセリングから。<br />お気軽にご相談ください。
+            </p>
+          </div>
+        </a>
+        <div class="footer-bottom">
+          <ul class="left">
+            <li><img src="img/logo_transparent.png" alt="logo" /></li>
+            <li>
+              <a href="https://navigator-of-engineering.com/" target="_blank"
+                >運営会社｜株式会社NOE</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://pronavi.navigator-of-engineering.com/law_info.html#"
+                target="_blank"
+                >特定商取引法に基づく表記</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://pronavi.navigator-of-engineering.com/privacy.html"
+                target="_blank"
+                >プライバシーポリシー</a
+              >
+            </li>
+          </ul>
+          <nav class="right">
+            <ul>
+              <li><a href="index.html">ホーム</a></li>
+              <li><a href="about.html">スクール概要</a></li>
+              <li><a href="voice.html">受講生の声</a></li>
+              <li><a href="#">会社概要</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <a href="#" class="page-top">
+          <button>
+            <span class="line"></span>
+            <span class="to-top-text">PAGE TOP</span>
+          </button>
+        </a>
+
+        <a href="#" class="chatbot" aria-label="チャットで相談">
+          <img src="img/footer_icon-chatbot.png" alt="" />
+        </a>
+      </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="main.js"></script>
+  </body>
 </html>

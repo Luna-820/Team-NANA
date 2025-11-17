@@ -2,17 +2,32 @@ $(function () {
   // ------------------------------------
   // header ハンバーガー
   // ------------------------------------
-  const header = document.querySelector("header");
-  const toggle = document.querySelector(".hamburger_toggle");
-  const mask = document.querySelector(".menu-bg");
+const header = document.querySelector("header");
+const toggle = document.querySelector(".hamburger_toggle");
+const mask = document.querySelector(".menu-bg");
+const hamburgerMenu = document.querySelector(".hamburger-menu");
 
-  toggle.addEventListener("click", () => {
-    header.classList.toggle("active");
-  });
+// ハンバーガークリック
+toggle.addEventListener("click", () => {
+  header.classList.toggle("active");
+});
 
-  mask.addEventListener("click", () => {
-    header.classList.remove("active");
+// 黒い背景(mask)クリック → 閉じる
+mask.addEventListener("click", () => {
+  header.classList.remove("active");
+});
+
+// 白背景（メニュー外側）クリック → 閉じる
+hamburgerMenu.addEventListener("click", () => {
+  header.classList.remove("active");
+});
+
+// メニューの中の要素（リンクなど）は閉じないようにする
+hamburgerMenu.querySelectorAll("*").forEach(el => {
+  el.addEventListener("click", (e) => {
+    e.stopPropagation();
   });
+});
 
   // ------------------------------------
   // スムーススクロール（PAGE TOP も含む）
@@ -84,4 +99,62 @@ $(function () {
     $item.find('.faq-a').stop().slideToggle(200);
   });
 
+});
+// ----------------------------------------
+// // meetupセクション
+// ----------------------------------------
+const cards = document.querySelectorAll(".meetup");
+const speed = 3;
+
+window.addEventListener("scroll", () => {
+  const scrollY = window.scrollY;
+  const sectionHeight = window.innerHeight;
+
+  const index = Math.min(Math.floor(scrollY / sectionHeight), cards.length - 1);
+  cards.forEach((card, i) => {
+    card.classList.toggle("active", i === index);
+  });
+
+  cards.forEach((card, i) => {
+    const fill = card.querySelector(".scroll-meter .fill");
+
+    const cardStart = i * sectionHeight;
+
+    let progress = (scrollY - cardStart) / sectionHeight;
+    progress = Math.min(Math.max(progress, 0), 1);
+
+    fill.style.height = `${progress * 100}%`;
+  });
+});
+// --------------------------------------
+// 
+// --------------------------------------
+$(document).ready(function(){
+  $('.vertical-slider').slick({
+    vertical: true,
+    verticalSwiping: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,          
+    dots: false,           
+    autoplay: true,
+    autoplaySpeed: 0,       // 自動再生の間隔を0に
+    speed: 7000,            // スクロールにかける時間(ms)
+    cssEase: 'linear',      // 線形で止まらずスムーズ
+    infinite: true          // 無限ループ
+  });
+});
+// 
+// 
+// 
+// スクロールを監視
+window.addEventListener('scroll', function() {
+  const fixed = document.querySelector('.fixed');
+
+  // 例えば50pxスクロールしたら背景色をつける
+  if (window.scrollY > 50) {
+    fixed.classList.add('scrolled');
+  } else {
+    fixed.classList.remove('scrolled');
+  }
 });

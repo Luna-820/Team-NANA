@@ -5,7 +5,7 @@
 // --------------------------------------
 $black: #333333;
 $white: #FFFFFF;
-$yellow: #DB8405;
+$yellow: #db8405;
 $light-yellow: #FEF1DD;
 $blue: #80A0B1;
 $light-grey: #F6F6F6;
@@ -126,7 +126,12 @@ img {
 .message {
     @extend %heading;
     font-size: $fs-h4;
-    font-weight: $fw-medium;
+    font-weight: $fw-bold;
+    margin-bottom: 50px;
+
+    span {
+        color: $yellow;
+    }
 
     @include mx.tb {
         font-size: 1.8rem;

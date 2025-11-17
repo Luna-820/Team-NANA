@@ -1,5 +1,5 @@
-@use './_mixin' as mx;
-@use './base' as *;
+@use "./_mixin" as mx;
+@use "./base" as *;
 
 header {
   width: 100%;
@@ -38,6 +38,7 @@ header {
     justify-content: space-between;
     align-items: center;
     text-align: center;
+    cursor: pointer;
     background-color: $white;
     border-radius: 20px;
     transform: translateX(100%);
@@ -46,6 +47,29 @@ header {
     pointer-events: none;
     padding: 10px 80px;
     margin-inline: auto;
+
+      &::after {
+      width: 35px;
+      height: 1px;
+      content: "";
+      position: absolute;
+      top: 50px;
+      right: 50px;
+      background-color: $black;
+      transform: rotate(45deg);
+    }
+
+      &::before {
+      width: 35px;
+      height: 1px;
+      content: "";
+      position: absolute;
+      top: 50px;
+      right: 50px;
+      background-color: $black;
+      transform: rotate(-45deg);
+    }
+
 
     .company {
       flex: 1;
@@ -60,7 +84,7 @@ header {
 
     .menu {
       flex: 1;
-      
+
       li {
         width: 150px;
         overflow: hidden;
@@ -78,7 +102,7 @@ header {
           align-items: center;
           transform: uppercase;
           transition: 0.4s ease;
-          
+
           span {
             transition: 0.4s ease;
           }
@@ -111,22 +135,41 @@ header {
 
     .link {
       flex: 1;
-      
+
       li {
+        position: relative;
         margin-bottom: 10px;
-        
+
         &:last-child {
           margin-bottom: 0;
         }
-        
-        a {
-          transition: .4s ease;
 
-          &:hover {
-            opacity: .8;
+        &::after {
+          width: 0%;
+          height: 1px;
+          content: "";
+          position: absolute;
+          left: 50%;
+          bottom: -5px;
+          transform: translateX(-50%);
+          background: $yellow;
+          transition: .4s ease;
+        }
+
+        &:hover {
+          &::after {
+            width: 30%;
           }
         }
-        
+
+        a {
+          span {
+            display: block;
+            font-size: $fs-small;
+            color: $border-grey;
+          }
+        }
+
         .ig {
           width: 15px;
           margin-right: 6px;
@@ -139,15 +182,21 @@ header {
   .header-menu {
     display: flex;
     align-items: center;
-    margin-right: 150px;
+    margin-right: 160px;
 
     .menu {
       display: flex;
+      padding-inline-start: 0;
+      
+      @include mx.tb-1100 {
+        display: none;
+      }
 
       li {
-        width: 130px;
+        width: 120px;
         overflow: hidden;
         text-align: center;
+        // margin-right: 20px;
 
         a {
           position: relative;
@@ -188,64 +237,79 @@ header {
       }
     }
 
-    .line {
-      border: 1px solid;
-      border-radius: 20px;
+    .fixed {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       position: fixed;
-      top: 27px;
-      right: 80px;
-      transition: .4s ease;
-      padding: 5px 15px;
-      z-index: 100;
+      top: 10px;
+      right: 20px;
+      border-radius: 10px;
+      transition: 0.4s ease;
+      padding: 15px;
+      z-index: 1;
 
-      &:hover {
-        opacity: .8;
-      }
-    }
+      &.scrolled {
+        background-color: rgba(255, 255, 255, 0.5); /* お好みの色に変更 */
+        box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.25);
 
-    .hamburger_fixed {
-      width: 35px;
-      height: 25px;
-      position: fixed;
-      top: 32px;
-      right: 30px;
-      cursor: pointer;
-      z-index: 100;
-      
-      &:hover {
-        span {
-          &:nth-child(1),
-          &:nth-child(3) {
-            transform: translateX(5px);
-          }
-          &:nth-child(2) {
-            transform: translateX(-5px);
-          }
+        .line {
+          color: $white;
+          background: rgba(222, 138, 34, 0.8);
         }
       }
 
-      .hamburger_toggle {
-        width: 100%;
-        height: 100%;
-        position: relative;
+      .line {
+        border: 1px solid $black;
+        border-radius: 20px;
+        transition: 0.4s ease;
+        padding: 5px 15px;
+        margin-right: 20px;
 
-        span {
+        &:hover {
+          background: $yellow;
+          color: $white;
+        }
+      }
+
+      .hamburger_fixed {
+        width: 35px;
+        height: 25px;
+        cursor: pointer;
+        z-index: 100;
+
+        &:hover {
+          span {
+            &:nth-child(1),
+            &:nth-child(3) {
+              transform: translateX(-5px);
+            }
+          }
+        }
+
+        .hamburger_toggle {
           width: 100%;
-          height: 1px;
-          background-color: $black;
-          transition: 0.4s ease;
-          position: absolute;
-          left: 0;
+          height: 100%;
+          position: relative;
 
-          &:nth-child(1) {
-            top: 5px;
-          }
-          &:nth-child(2) {
-            top: 50%;
-            transform: translateY(-50%);
-          }
-          &:nth-child(3) {
-            bottom: 5px;
+          span {
+            width: 100%;
+            height: 1px;
+            background-color: $black;
+            transition: 0.4s ease;
+            position: absolute;
+            left: 0;
+
+            &:nth-child(1) {
+              top: 5px;
+            }
+            &:nth-child(2) {
+              top: 50%;
+              transform: translateY(-50%);
+            }
+            &:nth-child(3) {
+              bottom: 5px;
+            }
           }
         }
       }
@@ -267,25 +331,29 @@ header {
       z-index: 2;
     }
 
-    .hamburger_fixed {
-      z-index: 3;
-      position: absolute;
-      top: 100px;
-      right: 80px;
+    .fixed {
+      opacity: 0;
+      pointer-events: none;
 
-      .hamburger_toggle {
-        span {
-          &:nth-child(1) {
-            transform: rotate(45deg) translateY(10px);
-          }
-          &:nth-child(2) {
-            opacity: 0;
-          }
-          &:nth-child(3) {
-            transform: rotate(-45deg) translateY(-10px);
-          }
-        }
-      }
+      // .hamburger_fixed {
+      //   .hamburger_toggle {
+      //     position: absolute;
+      //     top: 80px;
+      //     right: 80px;
+
+      //     span {
+      //       &:nth-child(1) {
+      //         transform: rotate(45deg) translateY(10px);
+      //       }
+      //       &:nth-child(2) {
+      //         opacity: 0;
+      //       }
+      //       &:nth-child(3) {
+      //         transform: rotate(-45deg) translateY(-10px);
+      //       }
+      //     }
+      //   }
+      // }
     }
   }
 }
