@@ -161,17 +161,17 @@ window.addEventListener('scroll', function() {
    ふわっと出てくる 
   ===================================================*/
 
-  $(window).scroll(function () {
-    $(".fadeIn").each(function () {
-      var scroll = $(window).scrollTop();
-      var target = $(this).offset().top;
-      var windowHeight = $(window).height();
-      if (scroll > target - windowHeight + $(this).outerHeight()) {
-        // outerHeight()はpaddingを含めた高さを取得する
-        $(this).addClass("is-show");
-      }
-    });
-  });
+  // $(window).scroll(function () {
+  //   $(".fadeIn").each(function () {
+  //     var scroll = $(window).scrollTop();
+  //     var target = $(this).offset().top;
+  //     var windowHeight = $(window).height();
+  //     if (scroll > target - windowHeight + $(this).outerHeight()) {
+  //       // outerHeight()はpaddingを含めた高さを取得する
+  //       $(this).addClass("is-show");
+  //     }
+  //   });
+  // });
 
  /*=================================================
   スクロール時の画像フェード表示
@@ -187,6 +187,29 @@ window.addEventListener('scroll', function() {
         $(this).addClass('section-title-active');
       }
     });
+  });
+
+  // -----------------------------------------------
+  // fadein
+  // -----------------------------------------------
+    function fadeInOnScroll() {
+    $(".fadein").each(function () {
+      const elemTop = $(this).offset().top;
+      const scroll = $(window).scrollTop();
+      const windowHeight = $(window).height();
+
+      if (scroll > elemTop - windowHeight + 100) {
+        $(this).addClass("active");
+      }
+    });
+  }
+
+  // 最初の実行
+  fadeInOnScroll();
+
+  // スクロールごとに実行
+  $(window).on("scroll", function () {
+    fadeInOnScroll();
   });
 
 

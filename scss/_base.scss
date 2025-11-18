@@ -230,3 +230,16 @@ img {
         opacity: 1;
     }
 }
+
+// fadein
+
+.fadein {
+    transform: translateY( 20px);
+    opacity: 0;
+    transition: 1s ease;
+
+    &.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

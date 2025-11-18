@@ -48,7 +48,7 @@ header {
     padding: 10px 80px;
     margin-inline: auto;
 
-      &::after {
+    &::after {
       width: 35px;
       height: 1px;
       content: "";
@@ -59,7 +59,7 @@ header {
       transform: rotate(45deg);
     }
 
-      &::before {
+    &::before {
       width: 35px;
       height: 1px;
       content: "";
@@ -69,7 +69,6 @@ header {
       background-color: $black;
       transform: rotate(-45deg);
     }
-
 
     .company {
       flex: 1;
@@ -153,7 +152,7 @@ header {
           bottom: -5px;
           transform: translateX(-50%);
           background: $yellow;
-          transition: .4s ease;
+          transition: 0.4s ease;
         }
 
         &:hover {
@@ -187,7 +186,7 @@ header {
     .menu {
       display: flex;
       padding-inline-start: 0;
-      
+
       @include mx.tb-1100 {
         display: none;
       }
@@ -196,7 +195,6 @@ header {
         width: 120px;
         overflow: hidden;
         text-align: center;
-        // margin-right: 20px;
 
         a {
           position: relative;
@@ -334,26 +332,6 @@ header {
     .fixed {
       opacity: 0;
       pointer-events: none;
-
-      // .hamburger_fixed {
-      //   .hamburger_toggle {
-      //     position: absolute;
-      //     top: 80px;
-      //     right: 80px;
-
-      //     span {
-      //       &:nth-child(1) {
-      //         transform: rotate(45deg) translateY(10px);
-      //       }
-      //       &:nth-child(2) {
-      //         opacity: 0;
-      //       }
-      //       &:nth-child(3) {
-      //         transform: rotate(-45deg) translateY(-10px);
-      //       }
-      //     }
-      //   }
-      // }
     }
   }
 }

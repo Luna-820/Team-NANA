@@ -6,7 +6,6 @@
   height: calc(100vh - 100px);
   overflow: hidden;
   position: relative;
-  margin-bottom: 100px;
 
   video {
     width: 95%;
@@ -21,6 +20,10 @@
   .titles {
     font-size: 5.5rem;
     font-weight: $fw-medium;
+
+    @include mx.tb {
+      font-size: 4rem;
+    }
 
     .title {
       display: inline-block;
@@ -37,6 +40,10 @@
         top: 0px;
         left: 20px;
         border-radius: 0 0 20px 0;
+
+        @include mx.tb {
+          left: 10px;
+        }
       }
 
       &:nth-child(3) {
@@ -44,17 +51,26 @@
         top: 130px;
         left: 20px;
         border-radius: 0 0 20px 0;
+
+        @include mx.tb {
+          top: 100px;
+          left: 10px;
+        }
       }
     }
   }
 
   .link {
     position: absolute;
-    right: 30px;
+    right: 20px;
     bottom: 0;
     background: $white;
     border-radius: 20px 0 0 0;
     padding: 20px 90px 20px 50px;
+
+    @include mx.tb {
+      right: 10px;
+    }
 
     .line {
       font-size: 3rem;
@@ -62,9 +78,13 @@
       background: $yellow;
       box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.25);
       border-radius: 50px;
-      transition: .4s ease;
+      transition: 0.4s ease;
       padding: 10px 40px;
-      
+
+      @include mx.tb {
+        font-size: 2rem;
+      }
+
       &:hover {
         transform: translateY(-4px);
         box-shadow: 2px 4px 15px 2px rgba(0, 0, 0, 0.25);
@@ -75,13 +95,12 @@
 
 .purpose {
   position: relative;
-  margin-bottom: 90px;
+  overflow: hidden;
+  padding-top: 100px;
 
   .scroll-divider {
-    overflow: hidden;
-    background: $white;
     position: absolute;
-    top: -150px;
+    top: -60px;
     z-index: -1;
 
     .scroll-text {
@@ -123,9 +142,22 @@
     gap: 20px;
     padding: 0;
 
+    @include mx.tb {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
     li {
       position: relative;
-      transition: .4s ease;
+      transition: 0.4s ease;
+
+      @include mx.tb {
+        width: 70%;
+        margin-inline: auto;
+      }
+
+      @include mx.tb {
+        width: 100%;
+      }
 
       &:hover {
         transform: scale(1.02);
@@ -185,7 +217,6 @@
             right: 8px;
             bottom: 36%;
             transform: rotate(-45deg);
-
           }
         }
       }
@@ -193,10 +224,46 @@
   }
 }
 
+.video-bg-wrap {
+  position: relative;
+  padding-top: 100px;
+
+  .video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; 
+  
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      // opacity: 0.7;
+    }
+  }
+
+
 .before-after {
+  .wrapper {
+    margin-bottom: 100px;
+  }
+
   .list {
     display: flex;
     justify-content: space-between;
+
+    @include mx.tb {
+      width: 70%;
+      flex-direction: column;
+      margin-inline: auto;
+    }
+
+    @include mx.sp {
+      width: 100%;
+    }
 
     li {
       position: relative;
@@ -206,6 +273,11 @@
       border-radius: 5px;
       padding: 10px 15px;
       margin-right: 20px;
+
+      @include mx.tb {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
 
       &:last-child {
         margin-right: 0;
@@ -219,12 +291,12 @@
 
       .middle {
         width: 100%;
-        
+
         .label {
           display: block;
           font-size: $fs-small;
         }
-        
+
         .text {
           display: inline-block;
           border-bottom: 1px solid $yellow;
@@ -256,6 +328,12 @@
 }
 
 .reason {
+  padding-bottom: 100px;
+
+  .wrapper {
+    margin-bottom: 0;
+  }
+
   .section-title {
     span {
       position: relative;
@@ -287,13 +365,25 @@
       align-items: center;
       margin-bottom: 25px;
 
+      @include mx.tb {
+        flex-direction: column;
+      }
+
       .left {
         width: 30%;
         margin-right: 15px;
+
+        @include mx.tb {
+          width: 50%;
+        }
       }
 
       .right {
         width: 70%;
+
+        @include mx.tb {
+          width: 100%;
+        }
 
         .box-title {
           color: $yellow;
@@ -301,6 +391,7 @@
       }
     }
   }
+}
 }
 
 #flow,
