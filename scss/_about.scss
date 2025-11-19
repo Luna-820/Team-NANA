@@ -1,5 +1,5 @@
-@use './_mixin' as mx;
-@use './_base' as *;
+@use "./_mixin" as mx;
+@use "./base" as *;
 
 .about {
 
@@ -10,6 +10,7 @@
         @include mx.tb {
             margin-bottom: 80px;
         }
+
         @include mx.sp {
             margin-bottom: 60px;
         }
@@ -17,10 +18,8 @@
 
     .section-title {
         margin-block: 5px 50px;
-        opacity: 0;
-        transform: translateY(30px);
         transition: opacity 1.2s ease, transform 1.2s ease;
-        
+
         @include mx.tb {
             margin-block: 5px 30px;
         }
@@ -45,11 +44,6 @@
         }
     }
 
-    .section-title-active {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
     .shadow-box {
         background: $white;
         border-radius: 20px;
@@ -70,13 +64,25 @@
         color: $white;
     }
 
+    .box-title {
+        margin-block: 0 15px;
+    }
+
+    video {
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: -100;
+        opacity: 0.4;
+    }
+
     // 各セクション
     #fv {
         position: relative;
-        margin-top:130px ;
+        margin-top: 130px;
 
         @include mx.sp {
-            margin-top:50px;
+            margin-top: 50px;
         }
 
         .section-title__en {
@@ -107,7 +113,7 @@
                 height: 2px;
                 background-color: $yellow;
                 border-radius: 2px;
-                
+
             }
         }
     }
@@ -115,7 +121,8 @@
     #moya {
         background-color: $light-grey;
         border-radius: 15px;
-        padding: 25px 70px;
+        padding: 60px 70px 25px;
+        margin-bottom: 80px;
         text-align: center;
         position: relative;
 
@@ -123,6 +130,7 @@
             padding: 25px;
             margin-inline: 20px;
         }
+
         .box-title {
             margin-bottom: 30px;
         }
@@ -136,7 +144,7 @@
             width: 0;
             height: 0;
             border-style: solid;
-            border-width: 40px 60px 0px 60px;
+            border-width: 50px 90px 0px 90px;
             border-color: $blue transparent transparent transparent;
         }
     }
@@ -164,7 +172,7 @@
                 width: 0;
                 height: 0;
                 border-style: solid;
-                border-width: 50px 380px 0 380px;
+                border-width: 60px 380px 0 380px;
                 border-color: $light-yellow transparent transparent transparent;
 
                 @include mx.sp {
@@ -176,6 +184,11 @@
                 text-align: left;
                 display: flex;
                 align-items: center;
+                margin-top: 20px;
+
+                .message {
+                    margin-block: 0;
+                }
 
                 span {
                     img {
@@ -189,10 +202,12 @@
 
     #power {
         text-align: center;
+        margin-top: 100px;
 
         .yellow {
             font-size: 2.5rem;
             background-color: $yellow;
+            margin-top: 0;
         }
 
         ul {
@@ -200,7 +215,8 @@
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             gap: 0px 40px;
-            padding-left: 0;
+            padding-inline: 80px;
+
 
             @include mx.sp {
                 gap: 0px 10px;
@@ -212,12 +228,14 @@
         padding: 50px 100px;
 
         @include mx.tb {
-            padding: 40px 30px 100px;
-            margin-inline:30px ;
+            padding: 40px 30px 130px;
+            margin-inline: 20px;
         }
+
         @include mx.sp {
-            padding: 40px 10px 100px;
+            padding: 40px 10px 150px;
         }
+
         .flex-box {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -321,30 +339,45 @@
                     line-height: 2.2;
                 }
 
-                button {
+                .button {
                     position: absolute;
-                    right: 0;
-                    background: $white;
-                    border: $black 1px solid;
-                    border-radius: 50px;
-                    margin-top: 20px;
-                    padding: 15px 30px;
-                    transition: all 0.5s ease;
-
-                    &:hover {
-                        background-color: $yellow;
-                        border: $white 1px solid;
-
-                        a {
-                            color: $white;
-                        }
-                    }
-
+                    right:0;
+                    margin-top: 15px;
+                    display: grid;
+                    
                     @include mx.sp {
-                        padding: 10px 25px;
+                        margin-top: 0px;
                     }
+                    button {
+                        width: 225px;
+                        background: $white;
+                        border: $black 1px solid;
+                        border-radius: 50px;
+                        margin-top: 10px;
+                        padding: 10px 25px;
+                        transition: all 0.5s ease;
+                        display: inline;
 
+                        @include mx.sp {
+                            width: 200px;
+                        }
+
+                        &:hover {
+                            background-color: $yellow;
+                            border: $white 1px solid;
+
+                            a {
+                                color: $white;
+                            }
+                        }
+
+                        @include mx.sp {
+                            padding: 10px 25px;
+                        }
+
+                    }
                 }
+
             }
         }
     }
@@ -359,7 +392,7 @@
             @include mx.sp {
                 grid-template-columns: 25% 75%;
                 gap: 7px;
-                padding:0;
+                padding: 0;
             }
 
             .month {
@@ -367,13 +400,15 @@
                 text-align: center;
                 position: relative;
                 color: $white;
-                border-radius: 15px 15px 5px 5px;
+                border-radius: 15px 15px 0px 0px;
                 background-color: #c8d6df;
+
                 @include mx.tb {
-                    padding:40px 0;
+                    padding: 40px 0;
                 }
+
                 @include mx.sp {
-                    padding:30px 0;
+                    padding: 30px 0;
                     font-size: 1.2rem;
                 }
 
@@ -393,6 +428,7 @@
                     @include mx.tb {
                         border-width: 15px 80px 0px 80px;
                     }
+
                     @include mx.sp {
                         border-width: 15px 40px 0px 40px;
                     }
@@ -447,16 +483,16 @@
             border-top: 1px solid #ccc;
         }
 
-        span{
+        span {
             @include mx.sp {
                 padding: 2px 10px;
                 font-size: 1.5rem;
             }
         }
 
-        h3{
+        h3 {
             @include mx.sp {
-                font-size:1.4rem;
+                font-size: 1.4rem;
                 margin-block: 10px;
             }
         }
@@ -507,6 +543,7 @@
         .box-title {
             border-bottom: 2px solid $yellow;
             display: inline-block;
+            margin-bottom: 0;
         }
 
         .middle {
@@ -519,8 +556,10 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 10px;
+
             @include mx.sp {
                 grid-template-columns: 1fr;
+                gap: 0px;
             }
 
             li {
@@ -538,6 +577,10 @@
                     border-radius: 50%;
                 }
             }
+        }
+        small{
+            text-align: left;
+            font-size: 0.85rem;
         }
     }
 }

@@ -3,82 +3,67 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>ProNavi｜スクール・学習サポート内容</title>
-  <meta name="description" content="ProNaviは、実装・ポートフォリオ制作・案件獲得まで伴走するプログラミング学習コミュニティです。カリキュラム内容、サポート体制、学習の流れをご紹介します。">
+  <title>
+    ProNavi｜仲間と一緒に成長できる“伴走型”プログラミング学習コミュニティ
+  </title>
+  <meta name="description" content="学習だけで終わらせない、実装と案件獲得まで伴走する学習環境。現役エンジニアが継続サポートし、確実に成果につながるスキル定着を支援します。" />
 
   <!-- OGP -->
   <meta property="og:site_name" content="ProNavi（プロナビ）" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="ProNavi｜スクール・学習サポート内容" />
-  <meta property="og:description" content="実装から案件獲得まで継続伴走する学習サポート内容を紹介。" />
+  <meta property="og:title" content="ProNavi｜仲間と実践で伸びる“伴走型”プログラミング学習コミュニティ" />
+  <meta property="og:description" content="教材で終わらせない。実装・ポートフォリオ制作・案件獲得まで、現役エンジニアが継続伴走。" />
+  <meta property="og:url" content="https://pronavi.navigator-of-engineering.com/" />
   <meta property="og:image" content="https://pronavi.navigator-of-engineering.com/img/ogp.png" />
-  <meta property="og:image" content="./img/ogp.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="ja_JP" />
 
   <!-- X(Twitter)カード -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="ProNavi｜スクール・学習サポート内容" />
-  <meta name="twitter:description" content="実装から案件獲得まで継続伴走する学習サポート内容を紹介。" />
+  <meta name="twitter:title" content="ProNavi｜仲間と実践で伸びる“伴走型”プログラミング学習コミュニティ" />
+  <meta name="twitter:description" content="教材で終わらせない。実装・ポートフォリオ制作・案件獲得まで、現役エンジニアが継続伴走。" />
   <meta name="twitter:image" content="https://pronavi.navigator-of-engineering.com/img/ogp.png" />
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://pronavi.navigator-of-engineering.com/about.html" />
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://pronavi.navigator-of-engineering.com/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <!-- Favicon & App Icon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="https://pronavi.navigator-of-engineering.com/img/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="https://pronavi.navigator-of-engineering.com/img/apple-touch-icon.png" />
 
-  <!-- favicon / app icon -->
-  <link rel="icon" type="image/png" href="./img/favicon.png">
-  <link rel="apple-touch-icon" href="./img/apple-touch-icon.png">
-
-  <!-- 構造化データ（Organization + ContactPoint ） -->
+  <!-- 構造化データ（Organization） -->
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "株式会社NOE",
-  "url": "https://pronavi.navigator-of-engineering.com/",
-  "description": "仲間と共に学び、実装と案件獲得まで伴走するプログラミング学習コミュニティ。",
-  "email": "noe.co.0126@gmail.com",
-  "logo": {
-    "@type": "ImageObject",
-    "url": "https://pronavi.navigator-of-engineering.com/img/logo.png"
-  },
-  "address": {
-    "@type": "PostalAddress",
-    "addressRegion": "愛知県",
-    "addressLocality": "名古屋市中区",
-    "streetAddress": "丸の内3丁目15-22 丸の内Usビル801号室",
-    "postalCode": "467-0002",
-    "addressCountry": "JP"
-  },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "contactType": "customer support",
-    "email": "noe.co.0126@gmail.com",
-    "availableLanguage": ["Japanese"]
-  }
-  /* "sameAs": ["https://x.com/xxx","https://www.instagram.com/xxx"]  ← あれば追加 */
-}
-</script>
-
-  <!-- パンくず -->
-  <script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"BreadcrumbList",
-  "itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://pronavi.navigator-of-engineering.com/"}
-  ]
-}
-</script>
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "株式会社NOE",
+        "url": "https://pronavi.navigator-of-engineering.com/",
+        "description": "仲間と共に学び、実装と案件獲得まで伴走するプログラミング学習コミュニティ。",
+        "email": "noe.co.0126@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressRegion": "愛知県",
+          "addressLocality": "名古屋市中区",
+          "streetAddress": "丸の内3丁目15-22 丸の内Usビル801号室",
+          "postalCode": "467-0002",
+          "addressCountry": "JP"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "email": "noe.co.0126@gmail.com",
+          "availableLanguage": ["Japanese"]
+        }
+      }
+    </script>
   <!-- slick -->
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" />
   <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -91,7 +76,6 @@
 
     <div class="menu-bg"></div>
     <nav class="hamburger-menu">
-
       <div class="company">
         <h2 class="active-logo">
           <a href="index.html"><img src="img/logo.png" alt="" /></a>
@@ -104,108 +88,123 @@
       <ul class="menu">
         <li>
           <a href="index.html">
-            <span class="en">top</span>
+            <span class="en">Top</span>
             <span class="ja">トップページ</span>
           </a>
         </li>
         <li>
           <a href="about.html">
-            <span class="en">about</span>
+            <span class="en">About</span>
             <span class="ja">スクールの紹介</span>
           </a>
         </li>
         <li>
           <a href="voice.html">
-            <span class="en">voice</span>
+            <span class="en">Voice</span>
             <span class="ja">受講生の声</span>
           </a>
         </li>
         <li>
           <a href="#">
-            <span class="en">price</span>
+            <span class="en">Price</span>
             <span class="ja">料金</span>
           </a>
         </li>
         <li>
           <a href="#">
-            <span class="en">faq</span>
+            <span class="en">FAQ</span>
             <span class="ja">よくある質問</span>
           </a>
         </li>
         <li>
           <a href="company.html">
-            <span class="en">company</span>
+            <span class="en">Company</span>
             <span class="ja">会社概要</span>
           </a>
         </li>
       </ul>
 
       <ul class="link">
-        <li><a href="https://line.me/R/ti/p/@420zidsx?oat_content=url">公式LINE</a></li>
-        <li><a href="https://pronavi-board.noe-p.com/">PortNavi</a></li>
-        <li><a
+        <li>
+          <a href="https://line.me/R/ti/p/@420zidsx?oat_content=url">公式LINE</a>
+        </li>
+        <li>
+          <a href="https://pronavi-board.noe-p.com/">PortNavi <span>〜受講生の制作物〜</span></a>
+        </li>
+        <li>
+          <a
             href="https://www.instagram.com/kakashi.programming.lab?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img
-              src="img/instgram.png" class="ig">かかし</a></li>
-        <li><a
+              src="img/instgram.png" class="ig" />かかし</a>
+        </li>
+        <li>
+          <a
             href="https://www.instagram.com/iruka.freelance?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img
-              src="img/instgram.png" class="ig">いるか</a></li>
+              src="img/instgram.png" class="ig" />いるか</a>
+        </li>
         <li><a href="https://navigator-of-engineering.com/">運営会社</a></li>
       </ul>
-
     </nav>
 
     <nav class="header-menu">
       <ul class="menu">
         <li>
           <a href="about.html">
-            <span class="en">about</span>
+            <span class="en">About</span>
             <span class="ja">スクールの紹介</span>
           </a>
         </li>
         <li>
           <a href="voice.html">
-            <span class="en">voice</span>
+            <span class="en">Voice</span>
             <span class="ja">受講生の声</span>
           </a>
         </li>
         <li>
           <a href="#">
-            <span class="en">price</span>
+            <span class="en">Price</span>
             <span class="ja">料金</span>
           </a>
         </li>
         <li>
           <a href="#">
-            <span class="en">faq</span>
+            <span class="en">FAQ</span>
             <span class="ja">よくある質問</span>
           </a>
         </li>
         <li>
           <a href="company.html">
-            <span class="en">company</span>
+            <span class="en">Company</span>
             <span class="ja">会社概要</span>
           </a>
         </li>
       </ul>
 
       <!-- 固定 -->
-      <a href="https://line.me/R/ti/p/@420zidsx?oat_content=url" class="line">LINE相談</a>
+      <div class="fixed">
 
-      <div class="hamburger_fixed">
-        <div class="hamburger_toggle">
-          <span></span>
-          <span></span>
-          <span></span>
+        <a href="https://line.me/R/ti/p/@420zidsx?oat_content=url" class="line">LINE相談</a>
+
+        <div class="hamburger_fixed">
+          <div class="hamburger_toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
+
       </div>
       <!--  -->
     </nav>
   </header>
 
+  <div class="video-bg">
+    <video src="img/leaf_bg_landscape.mp4" autoplay muted loop playsinline></video>
+  </div>
+
   <main>
     <section id="fv" class="wrapper">
       <span class="section-title__en">SCHOOL</span>
-      <h2 class="section-title flex-left">スクール概要</h2>
+      <h2 class="section-title flex-left fadein">スクール概要</h2>
     </section>
 
     <section id="moya" class="wrapper inner">
@@ -256,7 +255,7 @@
     </section>
 
     <section id="about" class="wrapper shadow-box">
-      <h3 class="section-title">プロナビとは<span>about</span></h3>
+      <h3 class="section-title fadein">プロナビとは<span>about</span></h3>
 
       <div class="flex-box">
         <div class="flex-left">
@@ -273,13 +272,16 @@
           <p class="message">“技術 × 営業 × 継続 × 仲間”で案件獲得まで徹底サポート。 </p>
           <p class="small">Pro Naviは、「コーチング型プログラミングスクール」。 専属コーチがあなたの課題に合わせて1対1で伴走し、 同じ目標を持つ仲間と切磋琢磨できるコミュニティも完備。
             技術だけでなく、営業・案件獲得・継続サポートまでサポート。 「一人では不安」という方でも、一緒に頑張る仲間と共に安心してスキルを仕事に変えられます。</p>
-          <button><a href="https://pronavi-board.noe-p.com/" class="small">コミュニティを詳しく知る</a></button>
+          <div class="button">
+            <button><a href="https://pronavi-board.noe-p.com/" class="small">コミュニティを詳しく知る　 〉</a></button>
+            <button><a href="https://line.me/R/ti/p/@420zidsx?oat_content=url" class="small">無料体験に申し込む　 〉</a></button>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="curriculum" class="wrapper">
-      <h4 class="section-title">カリキュラム<span>curriculum</span></h4>
+      <h4 class="section-title fadein">カリキュラム<span>curriculum</span></h4>
       <dl class="step inner">
         <dt class="month">1month</dt>
         <dd class="content">
@@ -318,7 +320,7 @@
     </section>
 
     <section id="price" class="wrapper">
-      <h3 class="section-title fadeIn">料金<span>price</span></h3>
+      <h3 class="section-title fadein">料金<span>price</span></h3>
       <div class="shadow-box inner">
         <h3 class="box-title">６ヶ月集中プログラム</h3>
         <p class="price">
@@ -336,11 +338,12 @@
             <li class="text">案件獲得のサポート</li>
           </div>
         </ul>
+        <small>※お申込み後8日以内であれば、手数料無料にて契約を無条件で解除できます。</small>
       </div>
     </section>
 
     <section id="works" class="flip-slider wrapper">
-      <h3 class="section-title">生徒の制作実績</h3><span class="section-title-deco">works</span>
+      <h3 class="section-title fadein">生徒の制作実績</h3><span class="section-title-deco">works</span>
       <div class="flip-slider__inner js-flip-slider">
         <a
           href="https://pronavi-board.noe-p.com/%e7%be%8e%e5%ae%b9%e3%82%a8%e3%82%b9%e3%83%86%e3%82%b5%e3%83%ad%e3%83%b3%e3%81%aehp/">
@@ -452,7 +455,7 @@
         <img src="img/footer_icon-chatbot.png" alt="" />
       </a>
   </footer>
-  <!-- js -->
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="main.js"></script>

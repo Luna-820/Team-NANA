@@ -29,6 +29,7 @@ body {
   color: #333333;
   background-color: #FFFFFF;
   color: #333333;
+  margin: 0;
 }
 
 li {
@@ -44,8 +45,7 @@ a {
 img {
   width: 100%;
   vertical-align: bottom;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .section-title {
@@ -173,8 +173,7 @@ img {
 .chatbot img {
   width: 32px;
   height: 32px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   display: block;
 }
 .chatbot:hover {
@@ -193,21 +192,51 @@ img {
   transform: translateY(0);
 }
 
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #F6F6F6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  z-index: 9999;
+}
+#loading img {
+  width: 500px;
+}
+
+.video-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -100;
+  opacity: 0.4;
+}
+
+header {
+  background-color: #FFFFFF;
+}
+
 .fv {
   width: 100%;
   height: calc(100vh - 100px);
   overflow: hidden;
   position: relative;
+  background-color: #FFFFFF;
 }
 .fv video {
-  width: 95%;
+  width: 92%;
   height: 100%;
   display: block;
   border-radius: 20px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   margin-inline: auto;
   z-index: -1;
+  background-color: #FFFFFF;
 }
 .fv .titles {
   font-size: 5.5rem;
@@ -286,6 +315,7 @@ img {
   position: relative;
   overflow: hidden;
   padding-top: 100px;
+  background: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0));
 }
 .purpose .scroll-divider {
   position: absolute;
@@ -359,8 +389,7 @@ img {
 }
 .purpose .purpose-list li a img {
   width: 15%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   margin-right: 10px;
 }
 .purpose .purpose-list li a .box-title {
@@ -418,8 +447,7 @@ img {
 .video-bg-wrap .video-bg video {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .video-bg-wrap .before-after .wrapper {
   margin-bottom: 100px;
@@ -460,8 +488,7 @@ img {
 }
 .video-bg-wrap .before-after .list li img {
   height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 5px;
 }
 .video-bg-wrap .before-after .list li .middle {
@@ -487,8 +514,7 @@ img {
 }
 .video-bg-wrap .before-after .list li .arrow img {
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .video-bg-wrap .before-after .list li .small {
   text-align: center;
@@ -970,8 +996,6 @@ img {
 }
 .about .section-title {
   margin-block: 5px 50px;
-  opacity: 0;
-  transform: translateY(30px);
   transition: opacity 1.2s ease, transform 1.2s ease;
 }
 @media (max-width: 900px) {
@@ -996,10 +1020,6 @@ img {
   background-color: #db8405;
   border-radius: 50%;
 }
-.about .section-title-active {
-  opacity: 1;
-  transform: translateY(0);
-}
 .about .shadow-box {
   background: #FFFFFF;
   border-radius: 20px;
@@ -1017,6 +1037,16 @@ img {
   display: inline-block;
   padding: 8px;
   color: #FFFFFF;
+}
+.about .box-title {
+  margin-block: 0 15px;
+}
+.about video {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -100;
+  opacity: 0.4;
 }
 .about #fv {
   position: relative;
@@ -1059,7 +1089,8 @@ img {
 .about #moya {
   background-color: #F6F6F6;
   border-radius: 15px;
-  padding: 25px 70px;
+  padding: 60px 70px 25px;
+  margin-bottom: 80px;
   text-align: center;
   position: relative;
 }
@@ -1081,7 +1112,7 @@ img {
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 40px 60px 0px 60px;
+  border-width: 50px 90px 0px 90px;
   border-color: #80A0B1 transparent transparent transparent;
 }
 .about #ideal {
@@ -1108,7 +1139,7 @@ img {
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 50px 380px 0 380px;
+  border-width: 60px 380px 0 380px;
   border-color: #FEF1DD transparent transparent transparent;
 }
 @media (max-width: 425px) {
@@ -1120,6 +1151,10 @@ img {
   text-align: left;
   display: flex;
   align-items: center;
+  margin-top: 20px;
+}
+.about #ideal ul li .message {
+  margin-block: 0;
 }
 .about #ideal ul li span img {
   width: 40px;
@@ -1127,17 +1162,19 @@ img {
 }
 .about #power {
   text-align: center;
+  margin-top: 100px;
 }
 .about #power .yellow {
   font-size: 2.5rem;
   background-color: #db8405;
+  margin-top: 0;
 }
 .about #power ul {
   margin-top: 50px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 0px 40px;
-  padding-left: 0;
+  padding-inline: 80px;
 }
 @media (max-width: 425px) {
   .about #power ul {
@@ -1149,13 +1186,13 @@ img {
 }
 @media (max-width: 900px) {
   .about #about {
-    padding: 40px 30px 100px;
-    margin-inline: 30px;
+    padding: 40px 30px 130px;
+    margin-inline: 20px;
   }
 }
 @media (max-width: 425px) {
   .about #about {
-    padding: 40px 10px 100px;
+    padding: 40px 10px 150px;
   }
 }
 .about #about .flex-box {
@@ -1246,25 +1283,41 @@ img {
 .about #about .flex-box .flex-right .small {
   line-height: 2.2;
 }
-.about #about .flex-box .flex-right button {
+.about #about .flex-box .flex-right .button {
   position: absolute;
   right: 0;
+  margin-top: 15px;
+  display: grid;
+}
+@media (max-width: 425px) {
+  .about #about .flex-box .flex-right .button {
+    margin-top: 0px;
+  }
+}
+.about #about .flex-box .flex-right .button button {
+  width: 225px;
   background: #FFFFFF;
   border: #333333 1px solid;
   border-radius: 50px;
-  margin-top: 20px;
-  padding: 15px 30px;
+  margin-top: 10px;
+  padding: 10px 25px;
   transition: all 0.5s ease;
+  display: inline;
 }
-.about #about .flex-box .flex-right button:hover {
+@media (max-width: 425px) {
+  .about #about .flex-box .flex-right .button button {
+    width: 200px;
+  }
+}
+.about #about .flex-box .flex-right .button button:hover {
   background-color: #db8405;
   border: #FFFFFF 1px solid;
 }
-.about #about .flex-box .flex-right button:hover a {
+.about #about .flex-box .flex-right .button button:hover a {
   color: #FFFFFF;
 }
 @media (max-width: 425px) {
-  .about #about .flex-box .flex-right button {
+  .about #about .flex-box .flex-right .button button {
     padding: 10px 25px;
   }
 }
@@ -1286,7 +1339,7 @@ img {
   text-align: center;
   position: relative;
   color: #FFFFFF;
-  border-radius: 15px 15px 5px 5px;
+  border-radius: 15px 15px 0px 0px;
   background-color: #c8d6df;
 }
 @media (max-width: 900px) {
@@ -1424,6 +1477,7 @@ img {
 .about #price .shadow-box .box-title {
   border-bottom: 2px solid #db8405;
   display: inline-block;
+  margin-bottom: 0;
 }
 .about #price .shadow-box .middle {
   font-size: 3.75rem;
@@ -1438,6 +1492,7 @@ img {
 @media (max-width: 425px) {
   .about #price .shadow-box ul {
     grid-template-columns: 1fr;
+    gap: 0px;
   }
 }
 .about #price .shadow-box ul li {
@@ -1453,6 +1508,10 @@ img {
   height: 15px;
   background-color: #db8405;
   border-radius: 50%;
+}
+.about #price .shadow-box small {
+  text-align: left;
+  font-size: 0.85rem;
 }
 .about #works .flip-slider__inner {
   padding-block: 80px;
@@ -1599,8 +1658,7 @@ img {
 .company #sns .flex-right ul li .icon img {
   height: 160px;
   width: 160px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .company #sns .flex-right ul li .text {
   width: 70%;
@@ -1731,8 +1789,7 @@ img {
 }
 .voice .list li img {
   height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 5px;
 }
 .voice .list li .text-1,
@@ -1815,8 +1872,7 @@ img {
   position: relative;
 }
 .meetup-section .meetups .meetup .right img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.25);
 }
 .meetup-section .meetups .meetup .right .scroll-meter {
@@ -1942,21 +1998,21 @@ img {
 .hackathon .wrapper .slider-container .vertical-slider img {
   width: 100%;
   display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   margin-bottom: 20px;
 }
 
 header {
   width: 100%;
-  height: 72px;
+  height: 120px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-inline: 30px;
+  padding-bottom: 40px;
 }
 header .logo {
-  width: 180px;
+  width: 150px;
 }
 header .menu-bg {
   width: 100%;
@@ -2251,8 +2307,7 @@ footer .contact .flex {
 footer .contact .flex img {
   display: block;
   width: 20%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 footer .contact .flex p {
   color: #FFFFFF;
