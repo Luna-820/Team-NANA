@@ -83,6 +83,7 @@
         }
       }
     </script>
+
     <!-- slick -->
     <link
       rel="stylesheet"
@@ -94,9 +95,15 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" />
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
+
   </head>
 
   <body>
+
+    <div id="loading">
+      <img src="img/logo_movie.gif">
+    </div>
+    
     <header>
       <h1>
         <a href="index.html"><img src="img/logo.png" alt="" class="logo" /></a>
@@ -231,10 +238,15 @@
       </nav>
     </header>
 
+        <!--鈴木追加  -->
+    <div class="video-bg">   
+      <video src="img/leaf_bg_landscape.mp4" autoplay muted loop playsinline></video>
+    </div>
+  
     <main>
       <div class="fv">
         <video autoplay muted loop playsinline>
-          <source src="img/fv-video.mp4" type="video/mp4" />
+          <source src="img/FVmovie.mp4" type="video/mp4" />
         </video>
         <p class="titles">
           <span class="title">じぶんらしく働く、</span><br />
