@@ -473,20 +473,45 @@ header {
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
 
-  .section-title,
-  span,
-  .text-top {
-    color: $white;
+  @include mx.sp {
+    padding-block: 60px 0;
+    margin-top: 0;
   }
+
+  .wrapper {
+
+    @include mx.tb {
+      margin-bottom: 40px;
+    }
+
+    .section-title,
+    span,
+    .text-top {
+      color: $white;
+    }
+  }
+
 
   ul {
     background-color: $grey;
     border-radius: 8px;
     padding: 32px 24px;
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     margin-top: 40px;
     gap: 24px;
+
+    @include mx.tb {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+      padding: 32px 40px;
+      margin-inline: 20px;
+    }
+
+    @include mx.sp {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      padding: 32px 40px;
+      margin-inline: 0 20px 0 20px;
+    }
 
     li {
       .card {
@@ -502,8 +527,8 @@ header {
         }
 
         img {
-          width: 80px;
-          height: 80px;
+          max-width: 80px;
+          max-height: 80px;
         }
       }
     }
@@ -520,6 +545,10 @@ header {
       opacity: 0.08;
       white-space: nowrap;
       animation: marquee 12s linear infinite;
+
+      @include mx.sp {
+        font-size: 100px;
+      }
     }
   }
 }
@@ -542,9 +571,17 @@ header {
 
   .teacher-grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     margin-top: 40px;
     gap: 24px;
+
+    @include mx.tb {
+      gap: 50px 25px;
+    }
+
+    @include mx.sp {
+      gap: 80px;
+    }
 
     .items {
       position: relative;
@@ -552,7 +589,7 @@ header {
       .teacher_more_button {
         position: absolute;
         right: 0;
-        bottom: -30px;
+        bottom: -40px;
         color: $white;
         display: block;
         width: 100%;
@@ -562,7 +599,7 @@ header {
         }
 
         span {
-          margin-left: 160px;
+          margin-left: 75%;
           color: $white;
         }
 
@@ -573,19 +610,35 @@ header {
       }
     }
   }
-}
 
-.section-title,
-span,
-.text,
-.name,
-.words {
-  color: $white;
+  .section-title,
+  span,
+  .text,
+  .name,
+  .words {
+    color: $white;
+  }
 }
-
 
 #works {
   padding-block: 100px;
+
+  @include mx.tb {
+    padding-block: 40px;
+  }
+
+  .wrapper {
+
+    @include mx.sp {
+      margin-bottom: 40px;
+    }
+
+    .section-title {
+      @include mx.sp {
+        margin-bottom: 0;
+      }
+    }
+  }
 
   .flip-slider__inner {
     perspective: 1000px;
@@ -643,6 +696,10 @@ span,
     display: flex;
     flex-direction: row-reverse;
 
+    @include mx.tb {
+      margin-bottom: 0;
+    }
+
     a {
       display: block;
       padding: 5px 20px;
@@ -663,6 +720,10 @@ span,
   position: relative;
   padding-bottom: 80px;
 
+  @include mx.sp {
+    padding-bottom: 0;
+  }
+
   &:before {
     content: "";
     position: absolute;
@@ -672,6 +733,12 @@ span,
     height: 20%;
     background-color: $light-grey;
     z-index: -10;
+  }
+
+  .wrapper {
+    @include mx.sp {
+      margin-bottom: 40px;
+    }
   }
 
   .compare-table {
@@ -684,6 +751,20 @@ span,
     font-size: 1.8rem;
     border: 1px solid $border-grey;
     margin-bottom: 100px;
+    padding-inline: 0;
+
+    @include mx.tb {
+      width: 90%;
+    }
+
+    @include mx.sp {
+      display: block;
+      width: 100%;
+      overflow-x: auto; 
+      -webkit-overflow-scrolling: touch; 
+      max-width: 320px;
+      font-size: 1.6rem;
+    }
 
     th,
     td {
@@ -691,6 +772,11 @@ span,
       border-bottom: 1px solid $border-grey;
       text-align: center;
       vertical-align: middle;
+
+      @include mx.sp {
+        white-space: nowrap;
+        padding: 16px 10px;
+      }
     }
 
     thead {
@@ -703,13 +789,25 @@ span,
         position: relative;
         height: 80px;
 
+        @include mx.sp {
+          height: 50px;
+        }
+
         &:first-child {
           background-color: $white;
           width: 18%;
+
+          @include mx.sp {
+            width: 10%;
+          }
         }
 
         &:nth-child(n + 2) {
           width: calc((100% - 18%) / 3);
+
+          @include mx.sp {
+            width: calc((100% - 10%) / 3);
+          }
         }
       }
 
@@ -738,10 +836,19 @@ span,
       th[scope="row"] {
         width: 18%;
         font-weight: 400;
+
+        @include mx.sp {
+          width: 10%;
+          font-size: 1.6rem;
+        }
       }
 
       td {
         width: calc((100% - 18%) / 3);
+
+        @include mx.sp {
+          width: calc((100% - 10%) / 3);
+        }
 
         .small {
           display: block;
@@ -777,6 +884,10 @@ span,
     .box-inner {
       padding-inline: 15%;
 
+      @include mx.sp {
+        padding-inline: 2%;
+      }
+
       .flex {
         display: flex;
         justify-content: space-between;
@@ -784,9 +895,18 @@ span,
         gap: 2.4rem;
         margin-bottom: 20px;
 
+        @include mx.sp {
+          flex-direction: column;
+          align-items: center;
+        }
+
         .text-box {
           width: 50%;
           color: $navy;
+
+          @include mx.sp {
+            width: 100%
+          }
 
           .sub {
             margin-bottom: 0;
@@ -801,6 +921,10 @@ span,
             padding: 5px 30px;
             border-radius: 10px;
             margin-top: 5px;
+
+            @include mx.sp {
+              width: 100%
+            }
           }
 
           .info {
@@ -809,6 +933,11 @@ span,
             margin-bottom: 0;
             letter-spacing: 0.4rem;
             position: relative;
+            overflow-x: hidden;
+
+            @include mx.sp {
+              font-size: 2.3rem;
+            }
 
             &:before {
               position: absolute;
@@ -830,6 +959,10 @@ span,
 
         .icon {
           max-width: 180px;
+
+          @include mx.sp {
+            width: 100%;
+          }
         }
       }
 
@@ -844,17 +977,34 @@ span,
   padding-block: 80px;
   background-color: $light-grey;
 
+  @include mx.sp {
+    padding-block: 40px;
+  }
+
   .flex {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 
+    @include mx.sp {
+      flex-direction: column;
+      margin-bottom: 0;
+    }
+
     .flex-left {
       width: 30%;
+
+      @include mx.sp {
+        width: 100%;
+      }
     }
 
     .flex-right {
       width: 70%;
+
+      @include mx.sp {
+        width: 100%;
+      }
 
       .faq-item {
         border-bottom: 1px solid $border-grey;
