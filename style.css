@@ -706,11 +706,33 @@ header {
   margin-top: 40px;
   gap: 24px;
 }
-#teacher .section-title,
-#teacher span,
-#teacher .text,
-#teacher .name,
-#teacher .words {
+#teacher .teacher-grid .items {
+  position: relative;
+}
+#teacher .teacher-grid .items .teacher_more_button {
+  position: absolute;
+  right: 0;
+  bottom: -30px;
+  color: #FFFFFF;
+  display: block;
+  width: 100%;
+}
+#teacher .teacher-grid .items .teacher_more_button:hover {
+  color: #db8405;
+}
+#teacher .teacher-grid .items .teacher_more_button span {
+  margin-left: 160px;
+  color: #FFFFFF;
+}
+#teacher .teacher-grid .items img {
+  line-height: 0;
+}
+
+.section-title,
+span,
+.text,
+.name,
+.words {
   color: #FFFFFF;
 }
 
@@ -828,6 +850,7 @@ header {
   background-color: #db8405;
   border-left: 1px solid #db8405;
   border-right: 1px solid #db8405;
+  color: #FFFFFF;
 }
 #comparison .compare-table thead th.right {
   border-left: 1px solid #a6a6a6;
@@ -917,6 +940,9 @@ header {
 }
 #comparison .cooling-off .box-inner .flex .icon {
   max-width: 180px;
+}
+#comparison .cooling-off .box-inner small {
+  font-size: 1.2rem;
 }
 
 #faq {

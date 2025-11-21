@@ -1,43 +1,43 @@
 $(function () {
 
 
-$(window).on('load', function() {
-  setTimeout(function() {
-    $('#loading').fadeOut(300); // フェードアウトで自然に消す
-    $('#content').fadeIn(300);
-  }, 4000);
-});
+  $(window).on('load', function () {
+    setTimeout(function () {
+      $('#loading').fadeOut(300); // フェードアウトで自然に消す
+      $('#content').fadeIn(300);
+    }, 4000);
+  });
 
 
   // ------------------------------------
   // header ハンバーガー
   // ------------------------------------
-const header = document.querySelector("header");
-const toggle = document.querySelector(".hamburger_toggle");
-const mask = document.querySelector(".menu-bg");
-const hamburgerMenu = document.querySelector(".hamburger-menu");
+  const header = document.querySelector("header");
+  const toggle = document.querySelector(".hamburger_toggle");
+  const mask = document.querySelector(".menu-bg");
+  const hamburgerMenu = document.querySelector(".hamburger-menu");
 
-// ハンバーガークリック
-toggle.addEventListener("click", () => {
-  header.classList.toggle("active");
-});
-
-// 黒い背景(mask)クリック → 閉じる
-mask.addEventListener("click", () => {
-  header.classList.remove("active");
-});
-
-// 白背景（メニュー外側）クリック → 閉じる
-hamburgerMenu.addEventListener("click", () => {
-  header.classList.remove("active");
-});
-
-// メニューの中の要素（リンクなど）は閉じないようにする
-hamburgerMenu.querySelectorAll("*").forEach(el => {
-  el.addEventListener("click", (e) => {
-    e.stopPropagation();
+  // ハンバーガークリック
+  toggle.addEventListener("click", () => {
+    header.classList.toggle("active");
   });
-});
+
+  // 黒い背景(mask)クリック → 閉じる
+  mask.addEventListener("click", () => {
+    header.classList.remove("active");
+  });
+
+  // 白背景（メニュー外側）クリック → 閉じる
+  hamburgerMenu.addEventListener("click", () => {
+    header.classList.remove("active");
+  });
+
+  // メニューの中の要素（リンクなど）は閉じないようにする
+  hamburgerMenu.querySelectorAll("*").forEach(el => {
+    el.addEventListener("click", (e) => {
+      e.stopPropagation();
+    });
+  });
 
 
   // ------------------------------------
@@ -140,14 +140,14 @@ window.addEventListener("scroll", () => {
 // --------------------------------------
 // 
 // --------------------------------------
-$(document).ready(function(){
+$(document).ready(function () {
   $('.vertical-slider').slick({
     vertical: true,
     verticalSwiping: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: false,          
-    dots: false,           
+    arrows: false,
+    dots: false,
     autoplay: true,
     autoplaySpeed: 0,       // 自動再生の間隔を0に
     speed: 7000,            // スクロールにかける時間(ms)
@@ -159,7 +159,7 @@ $(document).ready(function(){
 // 
 // 
 // スクロールを監視
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
   const fixed = document.querySelector('.fixed');
 
   // 例えば50pxスクロールしたら背景色をつける
@@ -173,7 +173,7 @@ window.addEventListener('scroll', function() {
   // -----------------------------------------------
   // fadein
   // -----------------------------------------------
-    function fadeInOnScroll() {
+  function fadeInOnScroll() {
     $(".fadein").each(function () {
       const elemTop = $(this).offset().top;
       const scroll = $(window).scrollTop();
