@@ -110,69 +110,63 @@ $(function () {
     $item.find('.faq-a').stop().slideToggle(200);
   });
 
-// ----------------------------------------
-// // meetupセクション
-// ----------------------------------------
-const cards = document.querySelectorAll(".meetup");
-const speed = 3;
-
-  // セクション開始位置を取得
+  // ----------------------------------------
+  // meetupセクション
+  // ----------------------------------------
+  const cards = document.querySelectorAll(".meetup");
   const section = document.querySelector(".meetup-section");
-  const sectionTop = section.offsetTop;
+  const speed = 3; // 使ってないけど、必要ならこのまま
 
-  window.addEventListener("scroll", () => {
-    const scrollY = window.scrollY;
+  // meetup があるページだけ動かす
+  if (cards.length && section) {
+    // セクション開始位置を取得
+    const sectionTop = section.offsetTop;
 
-    // セクションに入った後のスクロール量
-    const localScroll = scrollY - sectionTop;
+    window.addEventListener("scroll", () => {
+      const scrollY = window.scrollY;
 
-    // セクションに入る前は全部リセット
-    if (localScroll < 0) {
-  cards.forEach((card, i) => {
-    const fill = card.querySelector(".fill");
-    fill.style.height = "0%";
+      // セクションに入った後のスクロール量
+      const localScroll = scrollY - sectionTop;
 
-    // ★ここがポイント
-    card.classList.toggle("active", i === 0);
-  });
-  return;
-}
+      // セクションに入る前は全部リセット
+      if (localScroll < 0) {
+        cards.forEach((card, i) => {
+          const fill = card.querySelector(".fill");
+          if (fill) {
+            fill.style.height = "0%";
+          }
+          // 最初のカードだけ active
+          card.classList.toggle("active", i === 0);
+        });
+        return;
+      }
 
-    const sectionHeight = window.innerHeight;
+      const sectionHeight = window.innerHeight;
 
-    // どのカードを表示するか
-    const index = Math.min(
-      Math.floor(localScroll / sectionHeight),
-      cards.length - 1
-    );
+      // どのカードを表示するか
+      const index = Math.min(
+        Math.floor(localScroll / sectionHeight),
+        cards.length - 1
+      );
 
-    cards.forEach((card, i) => {
-      card.classList.toggle("active", i === index);
+      cards.forEach((card, i) => {
+        card.classList.toggle("active", i === index);
+      });
+
+      // メーター計算
+      cards.forEach((card, i) => {
+        const fill = card.querySelector(".fill");
+        if (!fill) return;
+
+        const cardStart = i * sectionHeight;
+
+        let progress = (localScroll - cardStart) / sectionHeight;
+        progress = Math.min(Math.max(progress, 0), 1);
+
+        fill.style.height = `${progress * 100}%`;
+      });
     });
-
-    // メーター計算
-    cards.forEach((card, i) => {
-      const fill = card.querySelector(".fill");
-      const cardStart = i * sectionHeight;
-
-      let progress = (localScroll - cardStart) / sectionHeight;
-      progress = Math.min(Math.max(progress, 0), 1);
-
-      fill.style.height = `${progress * 100}%`;
-    });
-  });
-
-    cards.forEach((card, i) => {
-      const fill = card.querySelector(".scroll-meter .fill");
-
-      const cardStart = i * sectionHeight;
-
-      let progress = (scrollY - cardStart) / sectionHeight;
-      progress = Math.min(Math.max(progress, 0), 1);
-
-      fill.style.height = `${progress * 100}%`;
-    });
-  });
+  }
 
   // --------------------------------------
   // ハッカソンスライダー
