@@ -2120,6 +2120,7 @@ header {
   background-color: #80A0B1;
   border-radius: 3px;
   color: #FFFFFF;
+  border: 2px solid transparent;
 }
 .company #media ul li .info a:hover {
   background-color: #FFFFFF;
