@@ -51,7 +51,10 @@ footer {
         align-items: center;
         gap: 2%;
         width: 100%;
-        border-bottom: 1px solid $white;
+
+        @include mx.tb {
+            width: 80%;
+        }
 
         @include mx.sp {
             flex-direction: column;
@@ -124,9 +127,16 @@ footer {
         }
     }
 
+    .copy {
+        color: $white;
+        text-align: center;
+        border-top: 1px solid $white;
+        padding-top: 20px;
+    }
+
     .page-top {
         position: absolute;
-        right: 40px;
+        right: 1%;
         top: 50%;
         transform: translateY(-50%);
         width: 120px;

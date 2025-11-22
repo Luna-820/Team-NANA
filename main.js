@@ -137,27 +137,27 @@ window.addEventListener("scroll", () => {
     fill.style.height = `${progress * 100}%`;
   });
 });
+
 // --------------------------------------
-// 
+// ハッカソンスライダー
 // --------------------------------------
-$(document).ready(function () {
-  $('.vertical-slider').slick({
-    vertical: true,
-    verticalSwiping: true,
-    slidesToShow: 1,
+if ($(".vertical-slider").length) {
+  $(".vertical-slider").slick({
+    slidesToShow: 2.5,
     slidesToScroll: 1,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 10000,
+    cssEase: "linear",
     arrows: false,
     dots: false,
-    autoplay: true,
-    autoplaySpeed: 0,       // 自動再生の間隔を0に
-    speed: 7000,            // スクロールにかける時間(ms)
-    cssEase: 'linear',      // 線形で止まらずスムーズ
-    infinite: true          // 無限ループ
+    vertical: true,
   });
-});
-// 
-// 
-// 
+}
+// -----------------------------------------
+// ヘッダー背景
+// -----------------------------------------
 // スクロールを監視
 window.addEventListener('scroll', function () {
   const fixed = document.querySelector('.fixed');
@@ -169,6 +169,14 @@ window.addEventListener('scroll', function () {
     fixed.classList.remove('scrolled');
   }
 
+  // -----------------------------------------------
+  // fadein 遷移してすぐに
+  // -----------------------------------------------
+  $(window).on("load", function () {
+    setTimeout(function () {
+      $(".fadein2").addClass("active2");
+    }, 50); // 50〜200msで調整
+  });
 
   // -----------------------------------------------
   // fadein
@@ -192,6 +200,4 @@ window.addEventListener('scroll', function () {
   $(window).on("scroll", function () {
     fadeInOnScroll();
   });
-
-
 });

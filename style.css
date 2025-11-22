@@ -192,6 +192,16 @@ img {
   transform: translateY(0);
 }
 
+.fadein2 {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: 1s ease;
+}
+.fadein2.active2 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 #loading {
   position: fixed;
   top: 0;
@@ -1784,6 +1794,13 @@ header {
 .company .flex-right {
   width: 70%;
 }
+.company video {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -100;
+  opacity: 0.4;
+}
 .company #fv {
   position: relative;
   padding-block: 50px;
@@ -1797,6 +1814,11 @@ header {
   left: -10px;
   bottom: -20px;
   z-index: 0;
+}
+@media (max-width: 1100px) {
+  .company #fv .section-title__en {
+    font-size: 100px;
+  }
 }
 .company #fv .section-title {
   color: #333333;
@@ -1812,7 +1834,7 @@ header {
   background-color: #db8405;
   border-radius: 2px;
 }
-.company .flex-left .box-title {
+.company .flex-left .section-title {
   margin-bottom: 0;
 }
 .company .flex-left span {
@@ -2520,7 +2542,11 @@ footer .footer-bottom {
   align-items: center;
   gap: 2%;
   width: 100%;
-  border-bottom: 1px solid #FFFFFF;
+}
+@media (max-width: 900px) {
+  footer .footer-bottom {
+    width: 80%;
+  }
 }
 @media (max-width: 425px) {
   footer .footer-bottom {
@@ -2584,9 +2610,15 @@ footer .footer-bottom .right ul li a {
 footer .footer-bottom .right ul li a:hover {
   opacity: 0.6;
 }
+footer .copy {
+  color: #FFFFFF;
+  text-align: center;
+  border-top: 1px solid #FFFFFF;
+  padding-top: 20px;
+}
 footer .page-top {
   position: absolute;
-  right: 40px;
+  right: 1%;
   top: 50%;
   transform: translateY(-50%);
   width: 120px;
