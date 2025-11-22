@@ -192,6 +192,16 @@ img {
   transform: translateY(0);
 }
 
+.fadein2 {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: 1s ease;
+}
+.fadein2.active2 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 #loading {
   position: fixed;
   top: 0;
@@ -431,44 +441,26 @@ header {
   transform: rotate(-45deg);
 }
 
-.video-bg-wrap {
-  position: relative;
-  padding-top: 100px;
-}
-.video-bg-wrap .video-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: -1;
-}
-.video-bg-wrap .video-bg video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.video-bg-wrap .before-after .wrapper {
+.before-after .wrapper {
   margin-bottom: 100px;
 }
-.video-bg-wrap .before-after .list {
+.before-after .list {
   display: flex;
   justify-content: space-between;
 }
 @media (max-width: 900px) {
-  .video-bg-wrap .before-after .list {
+  .before-after .list {
     width: 70%;
     flex-direction: column;
     margin-inline: auto;
   }
 }
 @media (max-width: 425px) {
-  .video-bg-wrap .before-after .list {
+  .before-after .list {
     width: 100%;
   }
 }
-.video-bg-wrap .before-after .list li {
+.before-after .list li {
   position: relative;
   flex: 1;
   background-color: #FFFFFF;
@@ -478,61 +470,62 @@ header {
   margin-right: 20px;
 }
 @media (max-width: 900px) {
-  .video-bg-wrap .before-after .list li {
+  .before-after .list li {
     margin-right: 0;
     margin-bottom: 20px;
   }
 }
-.video-bg-wrap .before-after .list li:last-child {
+.before-after .list li:last-child {
   margin-right: 0;
 }
-.video-bg-wrap .before-after .list li img {
+.before-after .list li img {
   height: 200px;
   object-fit: cover;
   border-radius: 5px;
 }
-.video-bg-wrap .before-after .list li .middle {
+.before-after .list li .middle {
   width: 100%;
 }
-.video-bg-wrap .before-after .list li .middle .label {
+.before-after .list li .middle .label {
   display: block;
   font-size: 1.2rem;
 }
-.video-bg-wrap .before-after .list li .middle .text {
+.before-after .list li .middle .text {
   display: inline-block;
   border-bottom: 1px solid #db8405;
 }
-.video-bg-wrap .before-after .list li .right {
+.before-after .list li .right {
   text-align: right;
 }
-.video-bg-wrap .before-after .list li .arrow {
+.before-after .list li .arrow {
   width: 50px;
   height: 30px;
   position: absolute;
   left: 10px;
   bottom: 60px;
 }
-.video-bg-wrap .before-after .list li .arrow img {
+.before-after .list li .arrow img {
   height: 100%;
   object-fit: cover;
 }
-.video-bg-wrap .before-after .list li .small {
+.before-after .list li .small {
   text-align: center;
 }
-.video-bg-wrap .reason {
+
+.reason {
   padding-bottom: 100px;
 }
-.video-bg-wrap .reason .wrapper {
+.reason .wrapper {
   margin-bottom: 0;
 }
-.video-bg-wrap .reason .section-title span {
+.reason .section-title span {
   position: relative;
   display: block;
   font-size: 1.2rem;
   margin-top: 10px;
   margin-left: 20px;
 }
-.video-bg-wrap .reason .section-title span::before {
+.reason .section-title span::before {
   width: 8px;
   height: 8px;
   content: "";
@@ -543,38 +536,38 @@ header {
   background-color: #db8405;
   border-radius: 50%;
 }
-.video-bg-wrap .reason .list {
+.reason .list {
   margin-top: 50px;
 }
-.video-bg-wrap .reason .list .item {
+.reason .list .item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 25px;
 }
 @media (max-width: 900px) {
-  .video-bg-wrap .reason .list .item {
+  .reason .list .item {
     flex-direction: column;
   }
 }
-.video-bg-wrap .reason .list .item .left {
+.reason .list .item .left {
   width: 30%;
   margin-right: 15px;
 }
 @media (max-width: 900px) {
-  .video-bg-wrap .reason .list .item .left {
+  .reason .list .item .left {
     width: 50%;
   }
 }
-.video-bg-wrap .reason .list .item .right {
+.reason .list .item .right {
   width: 70%;
 }
 @media (max-width: 900px) {
-  .video-bg-wrap .reason .list .item .right {
+  .reason .list .item .right {
     width: 100%;
   }
 }
-.video-bg-wrap .reason .list .item .right .box-title {
+.reason .list .item .right .box-title {
   color: #db8405;
 }
 
