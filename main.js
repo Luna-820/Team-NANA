@@ -283,5 +283,36 @@ $(function () {
     });
   }
 
+  // -----------------------------------------------
+  // TopのFlow-Teacher - スクロールで背景色切り替え
+  // -----------------------------------------------
+  function handleThemeSections() {
+    const flowSection = document.getElementById('flow');
+    const teacherSection = document.getElementById('teacher');
+
+    if (!flowSection || !teacherSection) return;
+
+    const flowRect = flowSection.getBoundingClientRect();
+    const teacherRect = teacherSection.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    // flowセクションの上部が画面の70%あたりに来たら、flowとteacherの両方をアクティブに
+    // teacherセクションが画面を抜けたら、両方を非アクティブに
+    if (flowRect.top < windowHeight * 0.2 && teacherRect.bottom > windowHeight * 0.3) {
+      flowSection.classList.add('is-active');
+      teacherSection.classList.add('is-active');
+    } else {
+      flowSection.classList.remove('is-active');
+      teacherSection.classList.remove('is-active');
+    }
+  }
+
+  // 初回実行
+  handleThemeSections();
+
+  // スクロール時に実行
+  $(window).on('scroll', function () {
+    handleThemeSections();
+  });
 
 });

@@ -630,12 +630,38 @@ header {
   border-radius: 50%;
 }
 
-#flow {
+.theme-section {
+  position: relative;
+  transition: background-color 0.6s ease, color 0.6s ease;
+  background-color: transparent;
+}
+.theme-section.is-active {
   background-color: #80A0B1;
+}
+.theme-section.is-active .section-title,
+.theme-section.is-active .section-title-deco,
+.theme-section.is-active .text-top,
+.theme-section.is-active span,
+.theme-section.is-active .name,
+.theme-section.is-active .words,
+.theme-section.is-active .position,
+.theme-section.is-active .teacher_more_button,
+.theme-section.is-active .teacher_more_button span {
+  color: #FFFFFF !important;
+}
+
+#flow {
   margin-top: 100px;
-  padding-block: 60px 40px;
+  padding-block: 100px 40px;
+  border-radius: 0;
+}
+#flow.is-active {
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
+  background-color: #80A0B1;
+}
+#flow.is-active .text {
+  color: #333333 !important;
 }
 @media (max-width: 425px) {
   #flow {
@@ -652,11 +678,6 @@ header {
   #flow .wrapper {
     margin-bottom: 40px;
   }
-}
-#flow .wrapper .section-title,
-#flow .wrapper span,
-#flow .wrapper .text-top {
-  color: #FFFFFF;
 }
 #flow ul {
   background-color: #E8E8E8;
@@ -692,10 +713,15 @@ header {
 #flow ul li .card .middle {
   margin-bottom: 0;
   font-weight: 600;
+  color: #333333 !important;
 }
 #flow ul li .card img {
   max-width: 80px;
   max-height: 80px;
+}
+#flow ul li .text {
+  color: #FFFFFF;
+  transition: color 0.6s ease;
 }
 #flow .scroll-divider {
   overflow: hidden;
@@ -724,10 +750,13 @@ header {
   }
 }
 #teacher {
-  background-color: #80A0B1;
   padding-block: 10px 40px;
+  border-radius: 0;
+}
+#teacher.is-active {
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
+  background-color: #80A0B1;
 }
 #teacher .teacher-grid {
   display: grid;
@@ -767,12 +796,11 @@ header {
   position: absolute;
   right: 0;
   bottom: -40px;
-  color: #FFFFFF;
   display: block;
   width: 100%;
 }
 #teacher .teacher-grid .items .teacher_more_button:hover {
-  color: #db8405;
+  color: #db8405 !important;
 }
 @media (max-width: 1100px) {
   #teacher .teacher-grid .items .teacher_more_button {
@@ -781,10 +809,9 @@ header {
 }
 #teacher .teacher-grid .items .teacher_more_button span {
   margin-left: 72%;
-  color: #FFFFFF;
 }
 #teacher .teacher-grid .items .teacher_more_button span:hover {
-  color: #db8405;
+  color: #db8405 !important;
 }
 @media (max-width: 1100px) {
   #teacher .teacher-grid .items .teacher_more_button span {
@@ -793,13 +820,6 @@ header {
 }
 #teacher .teacher-grid .items img {
   line-height: 0;
-}
-#teacher .section-title,
-#teacher span,
-#teacher .text,
-#teacher .name,
-#teacher .words {
-  color: #FFFFFF;
 }
 
 .teacher-modal {

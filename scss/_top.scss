@@ -445,12 +445,43 @@ header {
   }
 }
 
+// テーマセクションの基本スタイル
+.theme-section {
+  position: relative;
+  transition: background-color 0.6s ease, color 0.6s ease;
+  background-color: transparent;
+
+  &.is-active {
+    background-color: $blue;
+
+    .section-title,
+    .section-title-deco,
+    .text-top,
+    span,
+    .name,
+    .words,
+    .position,
+    .teacher_more_button,
+    .teacher_more_button span {
+      color: $white !important;
+    }
+  }
+}
+
 #flow {
-  background-color: $blue;
   margin-top: 100px;
-  padding-block: 60px 40px;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
+  padding-block: 100px 40px;
+  border-radius: 0;
+
+  &.is-active {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    background-color: $blue;
+
+    .text {
+      color: $black !important;
+    }
+  }
 
   @include mx.sp {
     padding-block: 60px 0;
@@ -458,22 +489,14 @@ header {
   }
 
   .wrapper {
-
     @include mx.tb-1100 {
       max-width: 880px;
-    } 
+    }
 
     @include mx.tb {
       margin-bottom: 40px;
     }
-
-    .section-title,
-    span,
-    .text-top {
-      color: $white;
-    }
   }
-
 
   ul {
     background-color: $grey;
@@ -508,12 +531,18 @@ header {
         .middle {
           margin-bottom: 0;
           font-weight: 600;
+          color: $black !important;
         }
 
         img {
           max-width: 80px;
           max-height: 80px;
         }
+      }
+
+      .text {
+        color: $white;
+        transition: color 0.6s ease;
       }
     }
   }
@@ -548,10 +577,14 @@ header {
 }
 
 #teacher {
-  background-color: $blue;
   padding-block: 10px 40px;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
+  border-radius: 0;
+
+  &.is-active {
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: $blue;
+  }
 
   .teacher-grid {
     display: grid;
@@ -592,12 +625,11 @@ header {
         position: absolute;
         right: 0;
         bottom: -40px;
-        color: $white;
         display: block;
         width: 100%;
 
         &:hover {
-          color: $yellow;
+          color: $yellow !important;
         }
 
         @include mx.tb-1100 {
@@ -606,31 +638,21 @@ header {
 
         span {
           margin-left: 72%;
-          color: $white;
 
           &:hover {
-            color: $yellow;
+            color: $yellow !important;
           }
 
           @include mx.tb-1100 {
             margin-left: 80%;
           }
         }
-
       }
 
       img {
         line-height: 0;
       }
     }
-  }
-
-  .section-title,
-  span,
-  .text,
-  .name,
-  .words {
-    color: $white;
   }
 }
 
