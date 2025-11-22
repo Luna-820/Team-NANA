@@ -110,7 +110,6 @@ $(function () {
     $item.find('.faq-a').stop().slideToggle(200);
   });
 
-});
 // ----------------------------------------
 // // meetupセクション
 // ----------------------------------------
@@ -159,45 +158,48 @@ if ($(".vertical-slider").length) {
 // ヘッダー背景
 // -----------------------------------------
 // スクロールを監視
-window.addEventListener('scroll', function () {
-  const fixed = document.querySelector('.fixed');
+window.addEventListener('scroll', function() {
+const fixed = document.querySelector('.fixed');
 
-  // 例えば50pxスクロールしたら背景色をつける
-  if (window.scrollY > 50) {
-    fixed.classList.add('scrolled');
-  } else {
-    fixed.classList.remove('scrolled');
-  }
+// 例えば50pxスクロールしたら背景色をつける
+if (window.scrollY > 50) {
+  fixed.classList.add('scrolled');
+} else {
+  fixed.classList.remove('scrolled');
+}
 
-  // -----------------------------------------------
-  // fadein 遷移してすぐに
-  // -----------------------------------------------
-  $(window).on("load", function () {
-    setTimeout(function () {
-      $(".fadein2").addClass("active2");
-    }, 50); // 50〜200msで調整
+}); // ← ここが抜けていた！
+
+// -----------------------------------------------
+// fadein 遷移してすぐに
+// -----------------------------------------------
+$(window).on("load", function () {
+  setTimeout(function () {
+    $(".fadein2").addClass("active2");
+  }, 50); // 50〜200msで調整
+});
+
+// -----------------------------------------------
+// fadein
+// -----------------------------------------------
+function fadeInOnScroll() {
+  $(".fadein").each(function () {
+    const elemTop = $(this).offset().top;
+    const scroll = $(window).scrollTop();
+    const windowHeight = $(window).height();
+
+    if (scroll > elemTop - windowHeight + 100) {
+      $(this).addClass("active");
+    }
   });
+}
 
-  // -----------------------------------------------
-  // fadein
-  // -----------------------------------------------
-  function fadeInOnScroll() {
-    $(".fadein").each(function () {
-      const elemTop = $(this).offset().top;
-      const scroll = $(window).scrollTop();
-      const windowHeight = $(window).height();
+// 最初の実行
+fadeInOnScroll();
 
-      if (scroll > elemTop - windowHeight + 100) {
-        $(this).addClass("active");
-      }
-    });
-  }
-
-  // 最初の実行
+// スクロールごとに実行
+$(window).on("scroll", function () {
   fadeInOnScroll();
+});
 
-  // スクロールごとに実行
-  $(window).on("scroll", function () {
-    fadeInOnScroll();
-  });
 });
