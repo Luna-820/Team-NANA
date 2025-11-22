@@ -116,13 +116,50 @@ $(function () {
 const cards = document.querySelectorAll(".meetup");
 const speed = 3;
 
-window.addEventListener("scroll", () => {
-  const scrollY = window.scrollY;
-  const sectionHeight = window.innerHeight;
+  // セクション開始位置を取得
+  const section = document.querySelector(".meetup-section");
+  const sectionTop = section.offsetTop;
 
-  const index = Math.min(Math.floor(scrollY / sectionHeight), cards.length - 1);
+  window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+
+    // セクションに入った後のスクロール量
+    const localScroll = scrollY - sectionTop;
+
+    // セクションに入る前は全部リセット
+    if (localScroll < 0) {
   cards.forEach((card, i) => {
-    card.classList.toggle("active", i === index);
+    const fill = card.querySelector(".fill");
+    fill.style.height = "0%";
+
+    // ★ここがポイント
+    card.classList.toggle("active", i === 0);
+  });
+  return;
+}
+
+    const sectionHeight = window.innerHeight;
+
+    // どのカードを表示するか
+    const index = Math.min(
+      Math.floor(localScroll / sectionHeight),
+      cards.length - 1
+    );
+
+    cards.forEach((card, i) => {
+      card.classList.toggle("active", i === index);
+    });
+
+    // メーター計算
+    cards.forEach((card, i) => {
+      const fill = card.querySelector(".fill");
+      const cardStart = i * sectionHeight;
+
+      let progress = (localScroll - cardStart) / sectionHeight;
+      progress = Math.min(Math.max(progress, 0), 1);
+
+      fill.style.height = `${progress * 100}%`;
+    });
   });
 
   cards.forEach((card, i) => {
@@ -202,4 +239,4 @@ $(window).on("scroll", function () {
   fadeInOnScroll();
 });
 
-});
+// });
