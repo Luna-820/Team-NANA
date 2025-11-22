@@ -687,6 +687,7 @@ header {
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   margin-top: 40px;
   gap: 24px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
 }
 @media (max-width: 900px) {
   #flow ul {
@@ -709,6 +710,7 @@ header {
   align-items: center;
   padding: 24px 16px;
   border-radius: 8px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
 }
 #flow ul li .card .middle {
   margin-bottom: 0;

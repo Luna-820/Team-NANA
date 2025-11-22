@@ -296,9 +296,9 @@ $(function () {
     const teacherRect = teacherSection.getBoundingClientRect();
     const windowHeight = window.innerHeight;
 
-    // flowセクションの上部が画面の70%あたりに来たら、flowとteacherの両方をアクティブに
+    // flowセクションの上部が画面の30%あたりに来たら、flowとteacherの両方をアクティブに
     // teacherセクションが画面を抜けたら、両方を非アクティブに
-    if (flowRect.top < windowHeight * 0.2 && teacherRect.bottom > windowHeight * 0.3) {
+    if (flowRect.top < windowHeight * 0.3 && teacherRect.bottom > windowHeight * 0.5) {
       flowSection.classList.add('is-active');
       teacherSection.classList.add('is-active');
     } else {
