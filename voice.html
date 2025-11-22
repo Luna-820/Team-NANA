@@ -92,7 +92,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
@@ -232,6 +232,10 @@
       </nav>
     </header>
 
+    <div class="video-bg">   
+      <video src="img/leaf_bg_landscape.mp4" autoplay muted loop playsinline></video>
+    </div>
+
     <main>
       <section id="voice-fv" class="wrapper voice-fv">
         <span class="section-title__en">VOICE</span>
@@ -241,34 +245,40 @@
       <section class="voice">
         <div class="wrapper">
           <h4 class="message">
-            Pronaviで多くの受講生が、<br /><span>“実践的な”</span
+            Pronaviで多くの受講生が、<br /><span class="fadein">“実践的な”</span
             >プログラミングスキル<br />を身につけています。
           </h4>
 
           <ul class="list">
             <li>
               <img src="img/voice-1.png" alt="" class="fadein" />
-              <p class="text-1">2023年4月入会</p>
-              <p class="text-2">
-                マンツーマン授業で、疑問を一緒に解決してもらえるだけでなく、自分で調べたり考える力もついたと思います。
-              </p>
-              <p class="small">N・Yさん｜30歳｜会社員</p>
+              <div class="text-right">
+                <p class="text-1">2023年4月入会</p>
+                <p class="text-2">
+                  マンツーマン授業で、疑問を一緒に解決してもらえるだけでなく、自分で調べたり考える力もついたと思います。
+                </p>
+                <p class="small">N・Yさん｜30歳｜会社員</p>
+              </div>
             </li>
             <li>
               <img src="img/before-after-2.png" alt="" class="fadein" />
-              <p class="text-1">2023年5月入会</p>
-              <p class="text-2">
-                プログラミングは全くの未経験でしたが、短期間で自分でWebサイトを作れるようになりました。
-              </p>
-              <p class="small">K・Hさん｜20代｜専業主婦</p>
+              <div class="text-right">
+                <p class="text-1">2023年5月入会</p>
+                <p class="text-2">
+                  プログラミングは全くの未経験でしたが、短期間で自分でWebサイトを作れるようになりました。
+                </p>
+                <p class="small">K・Hさん｜20代｜専業主婦</p>
+              </div>
             </li>
             <li>
               <img src="img/before-after-3.png" alt="" class="fadein" />
-              <p class="text-1">2023年8月入会</p>
-              <p class="text-2">
-                副業からフリーランスになりたいと思って入会。初心者の僕でも挫折せず挫折せずに進められました。
-              </p>
-              <p class="small">M・Hさん｜30代｜会社員</p>
+              <div class="text-right">
+                <p class="text-1">2023年8月入会</p>
+                <p class="text-2">
+                  副業からフリーランスになりたいと思って入会。初心者の僕でも挫折せず挫折せずに進められました。
+                </p>
+                <p class="small">M・Hさん｜30代｜会社員</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -277,6 +287,7 @@
       <section class="meetup-section">
         <div class="wrapper">
           <ul class="meetups">
+
             <li class="meetup">
               <div class="left">
                 <h3 class="section-title">
@@ -285,7 +296,11 @@
                     >Meetup</span
                   >
                 </h3>
-                <p class="text">開催地：名古屋<br />参加人数：　人</p>
+                <p class="text">開催地：名古屋<br />参加人数：30人</p>
+                <dl class="comment">
+                  <dt class="text">「オンラインでしか話したことがなかった人たちと直接会えて、一気に距離が縮まりました。とても刺激になる時間でした。」</dt>
+                  <dd>K.Yさん（30代/女性）</dd>
+                </dl>
               </div>
               <div class="right">
                 <img src="img/meetup-1.png" alt="" />
@@ -303,7 +318,12 @@
                     >Meetup</span
                   >
                 </h3>
-                <p class="text">開催地：名古屋<br />参加人数：　人</p>
+                <p class="text">開催地：東京<br />参加人数：50人</p>
+                <dl class="comment">
+                  <dt class="text">「最初は緊張していましたが、同じ目標を持った人ばかりで、すぐに打ち解けることができました。また参加したいと思えるイベントでした。」</dt>
+                  <dd>T.Oさん（20代/女性）</dd>
+                </dl>
+
               </div>
               <div class="right">
                 <img src="img/meetup-2.png" alt="" />
@@ -316,12 +336,14 @@
             <li class="meetup">
               <div class="left">
                 <h3 class="section-title">
-                  <span class="yellow">第３回</span>プロナビオフ会<span
-                    class="small"
-                    >Meetup</span
-                  >
+                  <span class="yellow">第３回</span>プロナビオフ会<span class="small">Meetup</span>
                 </h3>
-                <p class="text">開催地：名古屋<br />参加人数：　人</p>
+                <p class="text">開催地：名古屋<br />参加人数：130人</p>
+                <dl class="comment">
+                  <dt class="text">「年齢関係なく話せる雰囲気がとてもよかったです。同じように頑張っている人の話を聞けて、モチベーションが上がりました。」</dt>
+                  <dd>Y.Sさん（30代/男性）</dd>
+                </dl>
+
               </div>
               <div class="right">
                 <img src="img/meetup-3.png" alt="" />
@@ -372,19 +394,25 @@
 
       <section class="hackathon">
         <div class="wrapper">
-          <h3 class="section-title">Hackathon <span>ハッカソンの様子</span></h3>
+          <div class="left">
+            <h3 class="section-title">Hackathon <span>実践型イベント「ハッカソン」</span></h3>
+            <p class="text">ハッカソンは、初心者から上級者まで、学習段階に関係なく誰でも参加できる開発イベントです。
+              チームにはさまざまなレベルのメンバーが集まり、それぞれの得意分野を活かしながら、一つのアイデアを形にしていきます。<br>
+              <span>「まだ自信がない」という方でも、先輩メンバーや講師のサポートがあるので安心して参加できます。</span></p>
+              <a href="https://pronavi-board.noe-p.com/event/" class="btn">これまでのイベント</a>
+          </div>
 
           <div class="slider-container">
-            <div class="vertical-slider">
-              <div><img src="img/hackathon-1.png" alt="Meetup1" /></div>
-              <div><img src="img/hackathon-1.png" alt="Meetup2" /></div>
-              <div><img src="img/hackathon-1.png" alt="Meetup3" /></div>
+            <div class="vertical-slider slider-up">
+              <div><img src="img/hackathon-1-1.png" alt="Meetup1" /></div>
+              <div><img src="img/hackathon-1-2.png" alt="Meetup2" /></div>
+              <div><img src="img/hackathon-voice-1.png" alt="Meetup3" /></div>
             </div>
 
-            <div class="vertical-slider">
-              <div><img src="img/hackathon-1.png" alt="Meetup4" /></div>
-              <div><img src="img/hackathon-1.png" alt="Meetup5" /></div>
-              <div><img src="img/hackathon-1.png" alt="Meetup6" /></div>
+            <div class="vertical-slider slider-down">
+              <div><img src="img/hackathon-2-1.png" alt="Meetup4" /></div>
+              <div><img src="img/hackathon-2-2.png" alt="Meetup5" /></div>
+              <div><img src="img/hackathon-voice-2.png" alt="Meetup6" /></div>
             </div>
           </div>
         </div>
