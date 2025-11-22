@@ -1,43 +1,43 @@
 $(function () {
 
 
-$(window).on('load', function() {
-  setTimeout(function() {
-    $('#loading').fadeOut(300); // フェードアウトで自然に消す
-    $('#content').fadeIn(300);
-  }, 4000);
-});
+  $(window).on('load', function () {
+    setTimeout(function () {
+      $('#loading').fadeOut(300); // フェードアウトで自然に消す
+      $('#content').fadeIn(300);
+    }, 4000);
+  });
 
 
   // ------------------------------------
   // header ハンバーガー
   // ------------------------------------
-const header = document.querySelector("header");
-const toggle = document.querySelector(".hamburger_toggle");
-const mask = document.querySelector(".menu-bg");
-const hamburgerMenu = document.querySelector(".hamburger-menu");
+  const header = document.querySelector("header");
+  const toggle = document.querySelector(".hamburger_toggle");
+  const mask = document.querySelector(".menu-bg");
+  const hamburgerMenu = document.querySelector(".hamburger-menu");
 
-// ハンバーガークリック
-toggle.addEventListener("click", () => {
-  header.classList.toggle("active");
-});
-
-// 黒い背景(mask)クリック → 閉じる
-mask.addEventListener("click", () => {
-  header.classList.remove("active");
-});
-
-// 白背景（メニュー外側）クリック → 閉じる
-hamburgerMenu.addEventListener("click", () => {
-  header.classList.remove("active");
-});
-
-// メニューの中の要素（リンクなど）は閉じないようにする
-hamburgerMenu.querySelectorAll("*").forEach(el => {
-  el.addEventListener("click", (e) => {
-    e.stopPropagation();
+  // ハンバーガークリック
+  toggle.addEventListener("click", () => {
+    header.classList.toggle("active");
   });
-});
+
+  // 黒い背景(mask)クリック → 閉じる
+  mask.addEventListener("click", () => {
+    header.classList.remove("active");
+  });
+
+  // 白背景（メニュー外側）クリック → 閉じる
+  hamburgerMenu.addEventListener("click", () => {
+    header.classList.remove("active");
+  });
+
+  // メニューの中の要素（リンクなど）は閉じないようにする
+  hamburgerMenu.querySelectorAll("*").forEach(el => {
+    el.addEventListener("click", (e) => {
+      e.stopPropagation();
+    });
+  });
 
 
   // ------------------------------------
@@ -110,7 +110,6 @@ hamburgerMenu.querySelectorAll("*").forEach(el => {
     $item.find('.faq-a').stop().slideToggle(200);
   });
 
-});
 // ----------------------------------------
 // // meetupセクション
 // ----------------------------------------
@@ -137,61 +136,70 @@ window.addEventListener("scroll", () => {
     fill.style.height = `${progress * 100}%`;
   });
 });
+
 // --------------------------------------
-// 
+// ハッカソンスライダー
 // --------------------------------------
-$(document).ready(function(){
-  $('.vertical-slider').slick({
-    vertical: true,
-    verticalSwiping: true,
-    slidesToShow: 1,
+if ($(".vertical-slider").length) {
+  $(".vertical-slider").slick({
+    slidesToShow: 2.5,
     slidesToScroll: 1,
-    arrows: false,          
-    dots: false,           
+    infinite: true,
     autoplay: true,
-    autoplaySpeed: 0,       // 自動再生の間隔を0に
-    speed: 7000,            // スクロールにかける時間(ms)
-    cssEase: 'linear',      // 線形で止まらずスムーズ
-    infinite: true          // 無限ループ
+    autoplaySpeed: 0,
+    speed: 10000,
+    cssEase: "linear",
+    arrows: false,
+    dots: false,
+    vertical: true,
   });
-});
-// 
-// 
-// 
+}
+// -----------------------------------------
+// ヘッダー背景
+// -----------------------------------------
 // スクロールを監視
 window.addEventListener('scroll', function() {
-  const fixed = document.querySelector('.fixed');
+const fixed = document.querySelector('.fixed');
 
-  // 例えば50pxスクロールしたら背景色をつける
-  if (window.scrollY > 50) {
-    fixed.classList.add('scrolled');
-  } else {
-    fixed.classList.remove('scrolled');
-  }
+// 例えば50pxスクロールしたら背景色をつける
+if (window.scrollY > 50) {
+  fixed.classList.add('scrolled');
+} else {
+  fixed.classList.remove('scrolled');
+}
 
+}); // ← ここが抜けていた！
 
-  // -----------------------------------------------
-  // fadein
-  // -----------------------------------------------
-    function fadeInOnScroll() {
-    $(".fadein").each(function () {
-      const elemTop = $(this).offset().top;
-      const scroll = $(window).scrollTop();
-      const windowHeight = $(window).height();
+// -----------------------------------------------
+// fadein 遷移してすぐに
+// -----------------------------------------------
+$(window).on("load", function () {
+  setTimeout(function () {
+    $(".fadein2").addClass("active2");
+  }, 50); // 50〜200msで調整
+});
 
-      if (scroll > elemTop - windowHeight + 100) {
-        $(this).addClass("active");
-      }
-    });
-  }
+// -----------------------------------------------
+// fadein
+// -----------------------------------------------
+function fadeInOnScroll() {
+  $(".fadein").each(function () {
+    const elemTop = $(this).offset().top;
+    const scroll = $(window).scrollTop();
+    const windowHeight = $(window).height();
 
-  // 最初の実行
-  fadeInOnScroll();
-
-  // スクロールごとに実行
-  $(window).on("scroll", function () {
-    fadeInOnScroll();
+    if (scroll > elemTop - windowHeight + 100) {
+      $(this).addClass("active");
+    }
   });
+}
 
+// 最初の実行
+fadeInOnScroll();
+
+// スクロールごとに実行
+$(window).on("scroll", function () {
+  fadeInOnScroll();
+});
 
 });

@@ -244,3 +244,14 @@ img {
         transform: translateY(0);
     }
 }
+
+.fadein2 {
+    transform: translateY( 20px);
+    opacity: 0;
+    transition: 1s ease;
+
+    &.active2 {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
