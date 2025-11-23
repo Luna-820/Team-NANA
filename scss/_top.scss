@@ -1,7 +1,8 @@
 @use "./_mixin" as mx;
 @use "./base" as *;
 
-#loading {  //鈴木追加
+#loading {
+  //鈴木追加
   position: fixed;
   top: 0;
   left: 0;
@@ -13,12 +14,14 @@
   align-items: center;
   font-size: 24px;
   z-index: 9999;
-  img{
+
+  img {
     width: 500px;
   }
 }
 
-.video-bg {  //鈴木追加
+.video-bg {
+  //鈴木追加
   position: fixed;
   left: 0;
   top: 0;
@@ -26,7 +29,8 @@
   opacity: 0.4;
 }
 
-header{  //鈴木追加
+header {
+  //鈴木追加
   background-color: $white;
 }
 
@@ -128,7 +132,7 @@ header{  //鈴木追加
   position: relative;
   overflow: hidden;
   padding-top: 100px;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));   //鈴木追加
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); //鈴木追加
 
   .scroll-divider {
     position: absolute;
@@ -353,6 +357,7 @@ header{  //鈴木追加
     }
   }
 }
+
 .reason {
   padding-bottom: 100px;
 
@@ -456,17 +461,57 @@ header{  //鈴木追加
   }
 }
 
-#flow {
-  background-color: $blue;
-  margin-top: 100px;
-  padding-block: 60px 40px;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
+// テーマセクションの基本スタイル
+.theme-section {
+  position: relative;
+  transition: background-color 0.6s ease, color 0.6s ease;
+  background-color: transparent;
 
-  .section-title,
-  span,
-  .text-top {
-    color: $white;
+  &.is-active {
+    background-color: $blue;
+
+    .section-title,
+    .section-title-deco,
+    .text-top,
+    span,
+    .name,
+    .words,
+    .position,
+    .teacher_more_button,
+    .teacher_more_button span {
+      color: $white !important;
+    }
+  }
+}
+
+#flow {
+  margin-top: 100px;
+  padding-block: 100px 40px;
+  border-radius: 0;
+
+  &.is-active {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    background-color: $blue;
+
+    .text {
+      color: $black !important;
+    }
+  }
+
+  @include mx.sp {
+    padding-block: 60px 0;
+    margin-top: 0;
+  }
+
+  .wrapper {
+    @include mx.tb-1100 {
+      max-width: 880px;
+    }
+
+    @include mx.tb {
+      margin-bottom: 40px;
+    }
   }
 
   ul {
@@ -474,9 +519,22 @@ header{  //鈴木追加
     border-radius: 8px;
     padding: 32px 24px;
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     margin-top: 40px;
     gap: 24px;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+
+    @include mx.tb {
+      grid-template-columns: 1fr 1fr 1fr;
+      padding: 32px 40px;
+      margin-inline: 20px;
+    }
+
+    @include mx.sp {
+      grid-template-columns: 1fr;
+      padding: 32px 40px;
+      margin-inline: 0 20px 0 20px;
+    }
 
     li {
       .card {
@@ -486,15 +544,23 @@ header{  //鈴木追加
         align-items: center;
         padding: 24px 16px;
         border-radius: 8px;
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
 
         .middle {
           margin-bottom: 0;
+          font-weight: 600;
+          color: $black !important;
         }
 
         img {
-          width: 80px;
-          height: 80px;
+          max-width: 80px;
+          max-height: 80px;
         }
+      }
+
+      .text {
+        color: $white;
+        transition: color 0.6s ease;
       }
     }
   }
@@ -510,6 +576,10 @@ header{  //鈴木追加
       opacity: 0.08;
       white-space: nowrap;
       animation: marquee 12s linear infinite;
+
+      @include mx.sp {
+        font-size: 100px;
+      }
     }
   }
 }
@@ -525,29 +595,206 @@ header{  //鈴木追加
 }
 
 #teacher {
-  background-color: $blue;
   padding-block: 10px 40px;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
+  border-radius: 0;
+
+  &.is-active {
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: $blue;
+  }
 
   .teacher-grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     margin-top: 40px;
-    gap: 24px;
+    gap: 32px;
+
+    @include mx.tb-1100 {
+      grid-template-columns: 1fr 1fr;
+      gap: 120px 25px;
+    }
+
+    @include mx.sp {
+      grid-template-columns: 1fr;
+      gap: 120px;
+    }
+
+    .items {
+      position: relative;
+
+      .pic {
+        border-radius: 5px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      }
+
+      .position {
+        display: block;
+        margin-top: 10px;
+        font-size: 1.4rem;
+      }
+
+      .name,
+      .words {
+        margin-top: 0;
+      }
+
+      .teacher_more_button {
+        position: absolute;
+        right: 0;
+        bottom: -40px;
+        display: block;
+        width: 100%;
+
+        &:hover {
+          color: $yellow !important;
+        }
+
+        @include mx.tb-1100 {
+          bottom: -60px;
+        }
+
+        span {
+          margin-left: 72%;
+
+          &:hover {
+            color: $yellow !important;
+          }
+
+          @include mx.tb-1100 {
+            margin-left: 80%;
+          }
+        }
+      }
+
+      img {
+        line-height: 0;
+      }
+    }
+  }
+}
+
+// モーダルのスタイル
+.teacher-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+
+  &.is-active {
+    display: block;
   }
 
-  .section-title,
-  span,
-  .text,
-  .name,
-  .words {
-    color: $white;
+  .teacher-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .teacher-modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $white;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 700px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+
+    @include mx.sp {
+      padding: 20px;
+      max-width: 90%;
+    }
+  }
+
+  .teacher-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+
+    &:hover {
+      color: $yellow;
+    }
+  }
+
+  .teacher-modal-inner {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @include mx.sp {
+      flex-direction: column;
+    }
+
+    .teacher-modal-pic {
+      max-width: 200px;
+      height: 320px;
+      border-radius: 5px;
+
+      @include mx.sp {
+        height: 200px;
+      }
+    }
+
+    .teacher-modal-info {
+
+      .teacher-modal-position {
+        display: block;
+        font-size: 1.4rem;
+      }
+
+      .teacher-modal-name {
+        font-size: 2.4rem;
+        font-weight: bold;
+        margin-block: 0;
+        border-bottom: 1px solid $yellow;
+      }
+
+      .teacher-modal-message {
+        font-size: 14px;
+        line-height: 1.8;
+      }
+    }
   }
 }
 
 #works {
   padding-block: 100px;
+
+  @include mx.tb {
+    padding-block: 40px;
+  }
+
+  .wrapper {
+
+    @include mx.sp {
+      margin-bottom: 40px;
+    }
+
+    .section-title {
+      @include mx.sp {
+        margin-bottom: 0;
+      }
+    }
+  }
 
   .flip-slider__inner {
     perspective: 1000px;
@@ -605,6 +852,10 @@ header{  //鈴木追加
     display: flex;
     flex-direction: row-reverse;
 
+    @include mx.tb {
+      margin-bottom: 0;
+    }
+
     a {
       display: block;
       padding: 5px 20px;
@@ -620,10 +871,14 @@ header{  //鈴木追加
 }
 
 #comparison {
-  background-color: $white;
+  background-color: transparent;
   z-index: 0;
   position: relative;
   padding-bottom: 80px;
+
+  @include mx.sp {
+    padding-bottom: 0;
+  }
 
   &:before {
     content: "";
@@ -636,6 +891,34 @@ header{  //鈴木追加
     z-index: -10;
   }
 
+  .wrapper {
+    @include mx.sp {
+      margin-bottom: 40px;
+    }
+  }
+
+  .sp-icon {
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-bottom: 20px;
+    margin-inline: auto;
+
+    img {
+      width: 30px;
+    }
+
+    span {
+      color: $yellow;
+      font-size: 1.2rem;
+    }
+
+    @include mx.sp {
+      visibility: visible;
+    }
+  }
+
   .compare-table {
     width: 100%;
     border-collapse: collapse;
@@ -646,6 +929,21 @@ header{  //鈴木追加
     font-size: 1.8rem;
     border: 1px solid $border-grey;
     margin-bottom: 100px;
+    padding-inline: 0;
+
+    @include mx.tb {
+      width: 90%;
+    }
+
+    @include mx.sp {
+      display: block;
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      max-width: 320px;
+      font-size: 1.6rem;
+      margin-inline: auto;
+    }
 
     th,
     td {
@@ -653,6 +951,11 @@ header{  //鈴木追加
       border-bottom: 1px solid $border-grey;
       text-align: center;
       vertical-align: middle;
+
+      @include mx.sp {
+        white-space: nowrap;
+        padding: 16px 10px;
+      }
     }
 
     thead {
@@ -665,13 +968,25 @@ header{  //鈴木追加
         position: relative;
         height: 80px;
 
+        @include mx.sp {
+          height: 50px;
+        }
+
         &:first-child {
           background-color: $white;
           width: 18%;
+
+          @include mx.sp {
+            width: 10%;
+          }
         }
 
         &:nth-child(n + 2) {
           width: calc((100% - 18%) / 3);
+
+          @include mx.sp {
+            width: calc((100% - 10%) / 3);
+          }
         }
       }
 
@@ -679,6 +994,7 @@ header{  //鈴木追加
         background-color: $yellow;
         border-left: 1px solid $yellow;
         border-right: 1px solid $yellow;
+        color: $white;
       }
 
       th.right {
@@ -699,10 +1015,19 @@ header{  //鈴木追加
       th[scope="row"] {
         width: 18%;
         font-weight: 400;
+
+        @include mx.sp {
+          width: 10%;
+          font-size: 1.6rem;
+        }
       }
 
       td {
         width: calc((100% - 18%) / 3);
+
+        @include mx.sp {
+          width: calc((100% - 10%) / 3);
+        }
 
         .small {
           display: block;
@@ -738,6 +1063,10 @@ header{  //鈴木追加
     .box-inner {
       padding-inline: 15%;
 
+      @include mx.sp {
+        padding-inline: 2%;
+      }
+
       .flex {
         display: flex;
         justify-content: space-between;
@@ -745,9 +1074,18 @@ header{  //鈴木追加
         gap: 2.4rem;
         margin-bottom: 20px;
 
+        @include mx.sp {
+          flex-direction: column;
+          align-items: center;
+        }
+
         .text-box {
           width: 50%;
           color: $navy;
+
+          @include mx.sp {
+            width: 100%
+          }
 
           .sub {
             margin-bottom: 0;
@@ -762,6 +1100,10 @@ header{  //鈴木追加
             padding: 5px 30px;
             border-radius: 10px;
             margin-top: 5px;
+
+            @include mx.sp {
+              width: 100%
+            }
           }
 
           .info {
@@ -770,6 +1112,11 @@ header{  //鈴木追加
             margin-bottom: 0;
             letter-spacing: 0.4rem;
             position: relative;
+            overflow-x: hidden;
+
+            @include mx.sp {
+              font-size: 2.3rem;
+            }
 
             &:before {
               position: absolute;
@@ -786,11 +1133,20 @@ header{  //鈴木追加
               margin-right: 5px;
             }
           }
+
         }
 
         .icon {
           max-width: 180px;
+
+          @include mx.sp {
+            width: 100%;
+          }
         }
+      }
+
+      small {
+        font-size: 1.2rem;
       }
     }
   }
@@ -800,17 +1156,34 @@ header{  //鈴木追加
   padding-block: 80px;
   background-color: $light-grey;
 
+  @include mx.sp {
+    padding-block: 40px;
+  }
+
   .flex {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 
+    @include mx.sp {
+      flex-direction: column;
+      margin-bottom: 0;
+    }
+
     .flex-left {
       width: 30%;
+
+      @include mx.sp {
+        width: 100%;
+      }
     }
 
     .flex-right {
       width: 70%;
+
+      @include mx.sp {
+        width: 100%;
+      }
 
       .faq-item {
         border-bottom: 1px solid $border-grey;

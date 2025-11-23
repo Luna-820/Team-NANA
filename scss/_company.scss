@@ -2,25 +2,60 @@
 @use './base' as *;
 
 .company {
+
+    header {
+        background-color: transparent;
+    }
+    
     .wrapper {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
         gap: 4.0rem;
+
+        @include mx.tb {
+            flex-direction: column;
+        }
+
+        @include mx.sp {
+            gap: 1.5%;
+            margin-bottom: 60px;
+        }
     }
 
     .flex-left {
-        width: 30%
+        width: 30%;
+
+        @include mx.tb {
+            width: 100%
+        }
     }
 
     .flex-right {
-        width: 70%
+        width: 70%;
+
+        @include mx.tb {
+            width: 100%
+        }
+    }
+
+    video {
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: -100;
+        opacity: 0.4;
     }
 
     #fv {
         position: relative;
         padding-block: 50px;
-        margin-top:80px;
+        margin-top: 80px;
+
+        @include mx.tb {
+            margin-block: 5px 30px;
+            padding-block: 0;
+        }
 
         .section-title__en {
             font-size: 150px;
@@ -30,6 +65,18 @@
             left: -10px;
             bottom: -20px;
             z-index: 0;
+
+            @include mx.tb {
+                font-size: 100px;
+                left: 10px;
+                bottom: -40px;
+            }
+
+            @include mx.sp {
+                font-size: 50px;
+                left: 10px;
+                bottom: -10px;
+            }
         }
 
         .section-title {
@@ -39,19 +86,23 @@
             &::before {
                 content: "";
                 position: absolute;
-                left: 5%;
+                left: 3%;
                 bottom: -10px;
-                width: 30%;
+                width: 100px;
                 height: 2px;
                 background-color: $yellow;
                 border-radius: 2px;
+
+                @include mx.tb {
+                    left: 1%;
+                }
             }
         }
     }
 
     // ページ全体共通
     .flex-left {
-        .box-title {
+        .section-title {
             margin-bottom: 0;
         }
 
@@ -86,7 +137,23 @@
                 align-items: flex-start;
 
                 .items {
-                    width: 30%;
+                    width: 25%;
+
+                    .pic {
+                        border-radius: 5px;
+                        box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
+                        margin-bottom: 10px;
+                    }
+
+                    .position {
+                        @include mx.sp {
+                            font-size: 1.2rem;
+                        }
+                    }
+
+                    .name {
+                        margin-block: 0;
+                    }
 
                 }
             }
@@ -102,20 +169,36 @@
                     justify-content: space-between;
                     align-items: center;
                     gap: 5%;
-                    margin-bottom: 24px;
+                    margin-bottom: 62px;
 
                     .icon {
                         width: 30%;
 
+
                         img {
-                            height: 160px;
-                            width: 160px;
+                            height: 120px;
+                            max-width: 160px;
                             object-fit: contain;
                         }
                     }
 
                     .text {
-                        width: 70%
+                        width: 70%;
+
+
+                        a {
+                            padding: 4px 12px;
+                            background-color: $blue;
+                            border-radius: 3px;
+                            color: $white;
+                            border: 2px solid transparent;
+
+                            &:hover {
+                                background-color: $white;
+                                color: $blue;
+                                border: 2px solid $blue;
+                            }
+                        }
                     }
                 }
             }
@@ -146,6 +229,7 @@
                         background-color: $blue;
                         border-radius: 3px;
                         color: $white;
+                        border: 2px solid transparent;
 
                         &:hover {
                             background-color: $white;
@@ -163,11 +247,15 @@
             margin-top: 24px;
             width: 70%;
             border-collapse: collapse;
-            border-top: 1px solid $grey;
-            border-bottom: 1px solid $grey;
+            border-top: 1px solid $border-grey;
+            border-bottom: 1px solid $border-grey;
+
+            @include mx.tb {
+                width: 100%;
+            }
 
             tr {
-                border-bottom: 1px solid $grey;
+                border-bottom: 1px solid $border-grey;
             }
 
 
@@ -193,5 +281,4 @@
             }
         }
     }
-
 }
