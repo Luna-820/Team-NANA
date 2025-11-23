@@ -1,5 +1,6 @@
 $tb-1100: 1100px;
 $tb: 900px;
+$sp-650: 650px;
 $sp: 425px;
 
 @mixin tb-1100 {
@@ -10,6 +11,12 @@ $sp: 425px;
 
 @mixin tb {
     @media (max-width: $tb) {
+        @content;
+    }    
+}
+
+@mixin sp-650 {
+    @media (max-width: $sp-650) {
         @content;
     }    
 }

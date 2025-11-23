@@ -86,7 +86,6 @@
             &::before {
                 content: "";
                 position: absolute;
-                left: 3%;
                 bottom: -10px;
                 width: 100px;
                 height: 2px;
@@ -192,6 +191,7 @@
                             border-radius: 3px;
                             color: $white;
                             border: 2px solid transparent;
+                            transition: all 0.5s ease;
 
                             &:hover {
                                 background-color: $white;
@@ -230,6 +230,7 @@
                         border-radius: 3px;
                         color: $white;
                         border: 2px solid transparent;
+                        transition: all 0.5s ease;
 
                         &:hover {
                             background-color: $white;

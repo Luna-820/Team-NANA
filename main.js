@@ -5,7 +5,7 @@ $(function () {
     setTimeout(function () {
       $('#loading').fadeOut(300); // フェードアウトで自然に消す
       $('#content').fadeIn(300);
-    }, 4000);
+    }, 2900);
   });
 
 
@@ -20,23 +20,19 @@ $(function () {
   // ハンバーガークリック
   toggle.addEventListener("click", () => {
     header.classList.toggle("active");
+    document.body.classList.toggle("no-scroll");
   });
 
   // 黒い背景(mask)クリック → 閉じる
   mask.addEventListener("click", () => {
     header.classList.remove("active");
+    document.body.classList.toggle("no-scroll");
   });
 
   // 白背景（メニュー外側）クリック → 閉じる
   hamburgerMenu.addEventListener("click", () => {
     header.classList.remove("active");
-  });
-
-  // メニューの中の要素（リンクなど）は閉じないようにする
-  hamburgerMenu.querySelectorAll("*").forEach(el => {
-    el.addEventListener("click", (e) => {
-      e.stopPropagation();
-    });
+    document.body.classList.toggle("no-scroll");
   });
 
 
