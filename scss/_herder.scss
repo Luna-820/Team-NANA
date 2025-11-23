@@ -3,14 +3,22 @@
 
 header {
   width: 100%;
-  height: 80px;
+  height: 120px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline:30px;
+  padding-inline: 30px;
+
   // padding-bottom: 40px;
-  .logo {
-    width: 150px;
+  h1 {
+    line-height: 0;
+    .logo {
+      width: 150px;
+
+      @include mx.sp {
+        width: 100px;
+      }
+    }
   }
 
   .menu-bg {
@@ -244,11 +252,13 @@ header {
       right: 20px;
       border-radius: 10px;
       transition: 0.4s ease;
-      padding: 15px;
+      padding:15px;
+      margin-block: 20px;
       z-index: 1;
 
       &.scrolled {
-        background-color: rgba(255, 255, 255, 0.5); /* お好みの色に変更 */
+        background-color: rgba(255, 255, 255, 0.5);
+        /* お好みの色に変更 */
         box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.25);
 
         .line {
@@ -258,15 +268,16 @@ header {
       }
 
       .line {
-        border: 1px solid $black;
+        border: 1px solid $white;
         border-radius: 20px;
         transition: 0.4s ease;
         padding: 5px 15px;
         margin-right: 20px;
 
         &:hover {
-          background: $yellow;
-          color: $white;
+          background: $white;
+          color: $yellow;
+          border: 1px solid $yellow;
         }
       }
 
@@ -278,6 +289,7 @@ header {
 
         &:hover {
           span {
+
             &:nth-child(1),
             &:nth-child(3) {
               transform: translateX(-5px);
@@ -301,10 +313,12 @@ header {
             &:nth-child(1) {
               top: 5px;
             }
+
             &:nth-child(2) {
               top: 50%;
               transform: translateY(-50%);
             }
+
             &:nth-child(3) {
               bottom: 5px;
             }
@@ -334,4 +348,9 @@ header {
       pointer-events: none;
     }
   }
+  
+}
+
+.no-scroll {
+  overflow: hidden;
 }

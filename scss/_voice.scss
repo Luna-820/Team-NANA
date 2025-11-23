@@ -1,212 +1,221 @@
 @use "./_mixin" as mx;
 @use "./base" as *;
 
-.voice-fv {
-  position: relative;
-  padding-block: 50px;
-  margin-top: 80px;
-
-  .section-title__en {
-    font-size: 150px;
-    font-weight: 900;
-    color: $light-grey;
-    position: absolute;
-    left: 0;
-    bottom: -20px;
-    z-index: 0;
-
-    @include mx.tb {
-      font-size: 70px;
-    }
-
-    @include mx.sp {
-      font-size: 50px;
-    }
-  }
-
-  .section-title {
-    display: inline-block;
-    position: relative;
-    color: $black;
-
-    &::before {
-      width: 90%;
-      height: 2px;
-      content: "";
-      position: absolute;
-      left: 5%;
-      bottom: -10px;
-      background-color: $yellow;
-      border-radius: 2px;
-    }
-  }
-}
-
 .voice {
-  margin-top: 100px;
 
-  .wrapper {
-    margin-bottom: 0px;
+  header {
+    background-color: transparent;
   }
 
-  .list {
-    display: flex;
-    justify-content: space-between;
-    margin-inline: auto;
-    padding: 0;
+  .voice-fv {
+    position: relative;
+    padding-block: 50px;
+    margin-top: 80px;
 
-    @include mx.tb {
-      flex-direction: column;
-    }
-
-    @include mx.sp {
-      width: 100%;
-    }
-
-    li {
-      position: relative;
-      flex: 1;
-      background-color: $white;
-      box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.25);
-      border-radius: 5px;
-      padding: 10px 15px;
-      margin-right: 20px;
+    .section-title__en {
+      font-size: 150px;
+      font-weight: 900;
+      color: $light-grey;
+      position: absolute;
+      left: 0;
+      bottom: -20px;
+      z-index: 0;
 
       @include mx.tb {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-right: 0;
-        margin-bottom: 20px;
+        font-size: 70px;
       }
 
-      &:last-child {
-        margin-right: 0;
+      @include mx.sp {
+        font-size: 50px;
       }
+    }
 
-      img {
-        height: 200px;
-        object-fit: cover;
-        border-radius: 5px;
+    .section-title {
+      display: inline-block;
+      position: relative;
+      color: $black;
 
-        @include mx.tb {
-          width: 50%;
-          // height: auto;
-        }
-      }
-
-      .text-right {
-        @include mx.tb {
-          margin-left: 15px;
-        }
-
-        .text-1 {
-          font-size: $fs-small;
-        }
-
-        .text-1,
-        .text-2 {
-          border-bottom: 0.8px solid $yellow;
-          padding-bottom: 15px;
-        }
-
-        .small {
-          text-align: center;
-
-          @include mx.tb {
-            text-align: right;
-          }
-        }
+      &::before {
+        content: "";
+        position: absolute;
+        width: 90%;
+        height: 2px;
+        left: 5%;
+        bottom: -10px;
+        background-color: $yellow;
+        border-radius: 2px;
       }
     }
   }
-}
 
-.meetup-section {
-  height: calc(400vh);
-  position: relative;
-  color: $white;
-  padding-top: 350px;
-
-  @include mx.tb {
-    padding-top: 350px;
-  }
-
-  .wrapper {
-    height: 70vh;
-    position: sticky;
-    top: 50%;
-    transform: translateY(-50%);
-    overflow: hidden;
-    background-color: $blue;
-    border-radius: 20px;
-    padding-inline: 100px;
-
-    @include mx.tb {
-      height: 90vh;
-      padding-inline: 50px;
-      margin-inline: 20px;
+  .voices {
+    margin-block: 100px 150px;
+    @include mx.sp {
+      margin-block: 80px ;
     }
-  }
 
-  .meetups {
-    width: 100%;
-    height: 100%;
-    position: relative;
+    .wrapper {
+      margin-bottom: 0px;
+    }
 
-    .meetup {
-      position: absolute;
-      inset: 0;
+    .list {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      opacity: 0;
-      transform: translateY(40px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-      padding: 40px 0;
+      margin-inline: auto;
+      padding: 0;
 
       @include mx.tb {
         flex-direction: column;
       }
 
-      &.active {
-        opacity: 1;
-        transform: translateY(0);
+      @include mx.sp {
+        width: 100%;
       }
 
-      .left {
-        width: 30%;
+      li {
+        position: relative;
+        flex: 1;
+        background-color: $white;
+        box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+        padding: 10px 15px;
         margin-right: 20px;
 
         @include mx.tb {
-          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
           margin-right: 0;
-          margin-bottom: 30px;
+          margin-bottom: 20px;
         }
 
-        @include mx.sp {
+        &:last-child {
+          margin-right: 0;
+        }
+
+        img {
+          height: 200px;
+          object-fit: cover;
+          border-radius: 5px;
+
+          @include mx.tb {
+            width: 50%;
+            // height: auto;
+          }
+        }
+
+        .text-right {
+          @include mx.tb {
+            margin-left: 15px;
+          }
+
+          .text-1 {
+            font-size: $fs-small;
+          }
+
+          .text-1,
+          .text-2 {
+            border-bottom: 0.8px solid $yellow;
+            padding-bottom: 15px;
+          }
+
+          .small {
+            text-align: center;
+
+            @include mx.tb {
+              text-align: right;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .meetup-section {
+    height: calc(400vh);
+    position: relative;
+    color: $white;
+    padding-top: 350px;
+
+    @include mx.tb {
+      padding-top: 350px;
+    }
+
+    .wrapper {
+      height: 70vh;
+      position: sticky;
+      top: 50%;
+      transform: translateY(-50%);
+      overflow: hidden;
+      background-color: $blue;
+      border-radius: 20px;
+      padding-inline: 100px;
+
+      @include mx.tb {
+        height: 90vh;
+        padding-inline: 50px;
+        margin-inline: 20px;
+      }
+    }
+
+    .meetups {
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      .meetup {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        opacity: 0;
+        transform: translateY(40px);
+        transition: opacity 0.7s ease, transform 0.7s ease;
+        padding: 40px 0;
+
+        @include mx.tb {
           flex-direction: column;
         }
 
+        &.active {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        .left {
+          width: 30%;
+          margin-right: 20px;
+
+          @include mx.tb {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 30px;
+          }
+
+          @include mx.sp {
+            flex-direction: column;
+          }
+
           .section-title {
             margin: 0 0 10px 0;
-            
+
             .yellow {
               display: block;
               font-size: 3.5rem;
-              
+
               @include mx.tb {
                 font-size: 3rem;
               }
             }
-            
+
             .small {
               position: relative;
               display: block;
               font-size: $fs-small;
               margin-top: 10px;
               margin-left: 20px;
-              
+
               &::before {
                 width: 8px;
                 height: 8px;
@@ -221,186 +230,99 @@
             }
           }
 
-        .comment {
-          width: 90%;
-          color: $black;
-          background: $light-grey;
-          border-radius: 20px;
-          position: relative;
-          padding: 15px 20px;
-          margin-inline: auto;
-          
-          &::after {
-            content: "";
-            position: absolute;
-            right: -53px;
-            bottom: 30px;
-            border: 15px solid transparent;
-            border-left: 50px solid $light-grey;
-            transform: rotate(-20deg);
+          .comment {
+            width: 90%;
+            color: $black;
+            background: $light-grey;
+            border-radius: 20px;
+            position: relative;
+            padding: 15px 20px;
+            margin-inline: auto;
 
-            @include mx.tb {
-              transform: rotate(100deg);
-              right: 50px;
-              bottom: -30px;
+            &::after {
+              content: "";
+              position: absolute;
+              right: -53px;
+              bottom: 30px;
+              border: 15px solid transparent;
+              border-left: 50px solid $light-grey;
+              transform: rotate(-20deg);
+
+              @include mx.tb {
+                transform: rotate(100deg);
+                right: 50px;
+                bottom: -30px;
+              }
+            }
+
+            dd {
+              text-align: right;
+              font-size: $fs-small;
+              margin-left: auto;
             }
           }
-
-          dd {
-            text-align: right;
-            font-size: $fs-small;
-            margin-left: auto;
-          }
-        }
-      }
-
-      .right {
-        width: 60%;
-        position: relative;
-
-        @include mx.tb {
-          width: 90%;
-          margin-inline: auto;
         }
 
-        img {
-          object-fit: cover;
-          box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.25);
-        }
-
-        .scroll-meter {
-          width: 2px;
-          height: 200px;
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          right: -30px;
-          background-color: #fff;
-          border-radius: 3px;
-          overflow: hidden;
+        .right {
+          width: 60%;
+          position: relative;
 
           @include mx.tb {
-            height: 150px;
+            width: 90%;
+            margin-inline: auto;
           }
 
-          @include mx.sp {
-            height: 100px;
+          img {
+            object-fit: cover;
+            box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.25);
           }
 
-          .fill {
-            height: 0%;
-            background-color: $yellow;
-            transition: 0.2s ease;
+          .scroll-meter {
+            width: 2px;
+            height: 200px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -30px;
+            background-color: #fff;
+            border-radius: 3px;
+            overflow: hidden;
+
+            @include mx.tb {
+              height: 150px;
+            }
+
+            @include mx.sp {
+              height: 100px;
+            }
+
+            .fill {
+              height: 0%;
+              background-color: $yellow;
+              transition: 0.2s ease;
+            }
           }
         }
       }
     }
   }
-}
 
-.metaleaf {
-  margin-top: -200px;
-
-  @include mx.tb {
-    margin-top: -300px;
-  }
-
-  .wrapper {
-    display: flex;
-    justify-content: space-between;
+  .metaleaf {
+    margin-top: -200px;
 
     @include mx.tb {
-      flex-direction: column;
+      margin-top: -300px;
     }
 
-    .section-title {
-      span {
-        position: relative;
-        display: block;
-        font-size: $fs-small;
-        margin-top: 10px;
-        margin-left: 20px;
-
-        &::before {
-          width: 8px;
-          height: 8px;
-          content: "";
-          position: absolute;
-          top: 50%;
-          left: -14px;
-          transform: translateY(-50%);
-          background-color: $yellow;
-          border-radius: 50%;
-        }
-      }
-    }
-
-    .list {
-      width: 70%;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 25px;
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
 
       @include mx.tb {
-        width: 100%;
-      }
-
-      img {
-        border-radius: 10px;
-        box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.25);
-      }
-
-      .text {
-        font-size: $fw-medium;
-        font-weight: bold;
-        // color: $yellow;
-
-        span {
-          display: block;
-          font-size: $fs-small;
-          font-weight: normal;
-          color: $border-grey;
-        }
-      }
-    }
-  }
-}
-
-.hackathon {
-  width: 100%;
-  height: 100vh;
-  background-color: $blue;
-  color: $white;
-  overflow: hidden;
-
-  @include mx.tb {
-    height: auto;
-    background-color: transparent;
-    color: $black;
-  }
-
-  .wrapper {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0;
-
-    @include mx.tb {
-      flex-direction: column;
-    }
-
-    .left {
-      width: 45%;
-      margin-right: 20px;
-
-      @include mx.tb {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 50px;
+        flex-direction: column;
       }
 
       .section-title {
-        margin-top: 100px;
-
         span {
           position: relative;
           display: block;
@@ -422,73 +344,160 @@
         }
       }
 
-      .text {
-        margin-bottom: 50px;
-
-        span {
-          display: block;
-          margin-top: 20px;
-        }
-      }
-
-      .btn {
-        display: inline-block;
-        color: $white;
-        border-radius: 50px;
-        border: 1px solid $white;
-        background: rgba(222, 138, 34, 0.8);
-        transition: .4s ease;
-        padding: 5px 20px;
+      .list {
+        width: 70%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
 
         @include mx.tb {
-          color: $black;
-          border: 1px solid $black;
+          width: 100%;
         }
 
-        &:hover {
-          background-color: $yellow;
+        img {
+          border-radius: 10px;
+          box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.25);
+        }
+
+        .text {
+          font-size: $fw-medium;
+          font-weight: bold;
+          // color: $yellow;
+
+          span {
+            display: block;
+            font-size: $fs-small;
+            font-weight: normal;
+            color: $border-grey;
+          }
         }
       }
     }
+  }
 
-    .slider-container {
-      width: 55%;
+  .hackathon {
+    width: 100%;
+    height: auto;
+    background-color: $blue;
+    color: $white;
+    overflow: hidden;
+
+    @include mx.tb {
+      height: auto;
+      background-color: transparent;
+      color: $black;
+    }
+
+    .wrapper {
       display: flex;
+      justify-content: space-between;
+      margin-bottom: 0;
 
       @include mx.tb {
-        width: 100%;
-        height: 100vh;
-        background: $blue;
-        border-radius: 20px;
+        flex-direction: column;
       }
 
-      .vertical-slider {
-        width: 50%;
-        height: 100%; /* 好きな高さ */
-        overflow: hidden;
+      .left {
+        width: 45%;
+        margin-right: 20px;
 
         @include mx.tb {
-          width: 40%;
-          margin-inline: auto;
-        }
-
-        &:last-child {
-          margin-left: 20px;
-        }
-
-        img {
           width: 100%;
-          display: block;
-          object-fit: cover;
-          margin-bottom: 20px;
+          margin-right: 0;
+          margin-bottom: 50px;
+        }
+
+        .section-title {
+          margin-top: 100px;
+
+          span {
+            position: relative;
+            display: block;
+            font-size: $fs-small;
+            margin-top: 10px;
+            margin-left: 20px;
+
+            &::before {
+              width: 8px;
+              height: 8px;
+              content: "";
+              position: absolute;
+              top: 50%;
+              left: -14px;
+              transform: translateY(-50%);
+              background-color: $yellow;
+              border-radius: 50%;
+            }
+          }
+        }
+
+        .text {
+          margin-bottom: 50px;
+
+          span {
+            display: block;
+            margin-top: 20px;
+          }
+        }
+
+        .btn {
+          display: inline-block;
+          color: $white;
+          border-radius: 50px;
+          border: 1px solid $white;
+          background: $yellow;
+          transition: .4s ease;
+          padding: 5px 20px;
+          transition: all 0.5s ease;
+
+          &:hover {
+            background-color: $white;
+            border: 1px solid $yellow;
+            color: $yellow;
+          }
         }
       }
 
-      .slider-down {
-        transform: rotate(180deg) !important;
+      .slider-container {
+        width: 55%;
+        display: flex;
 
-        img {
-          transform: rotate(180deg);
+        @include mx.tb {
+          width: 100%;
+          height: 100vh;
+          background: $blue;
+          border-radius: 20px;
+        }
+
+        .vertical-slider {
+          width: 50%;
+          height: 100%;
+          /* 好きな高さ */
+          overflow: hidden;
+
+          @include mx.tb {
+            width: 40%;
+            margin-inline: auto;
+          }
+
+          &:last-child {
+            margin-left: 20px;
+          }
+
+          img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+            margin-bottom: 20px;
+          }
+        }
+
+        .slider-down {
+          transform: rotate(180deg) !important;
+
+          img {
+            transform: rotate(180deg);
+          }
         }
       }
     }
