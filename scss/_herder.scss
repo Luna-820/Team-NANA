@@ -39,7 +39,7 @@ header {
     width: 90%;
     height: 300px;
     position: fixed;
-    top: 80px;
+    top: 10%;
     left: 0;
     right: 0;
     display: flex;
@@ -56,6 +56,16 @@ header {
     padding: 10px 80px;
     margin-inline: auto;
 
+    @include mx.tb {
+      height: 70%;
+      flex-direction: column-reverse;
+      padding-inline: 0;
+    }
+
+    @include mx.sp {
+      height: 80%;
+    }
+
     &::after {
       width: 35px;
       height: 1px;
@@ -65,6 +75,11 @@ header {
       right: 50px;
       background-color: $black;
       transform: rotate(45deg);
+
+      @include mx.tb {
+        top: 40px;
+        right: 30px;
+      }
     }
 
     &::before {
@@ -76,111 +91,155 @@ header {
       right: 50px;
       background-color: $black;
       transform: rotate(-45deg);
+
+      @include mx.tb {
+        top: 40px;
+        right: 30px;
+      }
     }
 
     .company {
-      flex: 1;
+      width: 35%;
+
+      @include mx.tb {
+        width: 100%;
+        height: 50%;
+        font-size: $fs-small;
+        margin-top: 50px;
+      }
+
+      @include mx.sp {
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+      }
 
       .active-logo {
         width: 200px;
         text-align: center;
         margin-block: 20px;
         margin-inline: auto;
+
+        @include mx.tb {
+          width: 130px;
+        }
       }
     }
 
-    .menu {
-      flex: 1;
+    .right {
+      width: 65%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-      li {
-        width: 150px;
-        overflow: hidden;
-        margin-inline: auto;
-        margin-bottom: 10px;
+      @include mx.tb {
+        width: 90%;
+        height: 50%;
+        margin-top: 20px;
+      }
 
-        &:last-child {
-          margin-bottom: 0;
+      @include mx.sp {
+        flex-direction: column;
+      }
+
+      .menu {
+        width: 50%;
+
+        @include mx.sp {
+          margin-bottom: 30px;
         }
 
-        a {
-          position: relative;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          transform: uppercase;
-          transition: 0.4s ease;
+        li {
+          width: 150px;
+          overflow: hidden;
+          margin-inline: auto;
+          margin-bottom: 10px;
 
-          span {
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          a {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transform: uppercase;
             transition: 0.4s ease;
-          }
 
-          .en {
-            transform: translateY(0);
-          }
+            span {
+              transition: 0.4s ease;
+            }
 
-          .ja {
-            position: absolute;
-            top: 0;
-            transform: translateY(100%);
-            opacity: 0;
-          }
-
-          &:hover {
             .en {
-              transform: translateY(-100%);
-              opacity: 0;
+              transform: translateY(0);
             }
 
             .ja {
-              transform: translateY(0);
-              opacity: 1;
+              position: absolute;
+              top: 0;
+              transform: translateY(100%);
+              opacity: 0;
+            }
+
+            &:hover {
+              .en {
+                transform: translateY(-100%);
+                opacity: 0;
+              }
+
+              .ja {
+                transform: translateY(0);
+                opacity: 1;
+              }
             }
           }
         }
       }
-    }
 
-    .link {
-      flex: 1;
+      .link {
+        width: 50%;
+        margin-inline: auto;
 
-      li {
-        position: relative;
-        margin-bottom: 10px;
+        li {
+          position: relative;
+          margin-bottom: 10px;
 
-        &:last-child {
-          margin-bottom: 0;
-        }
+          &:last-child {
+            margin-bottom: 0;
+          }
 
-        &::after {
-          width: 0%;
-          height: 1px;
-          content: "";
-          position: absolute;
-          left: 50%;
-          bottom: -5px;
-          transform: translateX(-50%);
-          background: $yellow;
-          transition: 0.4s ease;
-        }
-
-        &:hover {
           &::after {
-            width: 30%;
+            width: 0%;
+            height: 1px;
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -5px;
+            transform: translateX(-50%);
+            background: $yellow;
+            transition: 0.4s ease;
           }
-        }
 
-        a {
-          span {
-            display: block;
-            font-size: $fs-small;
-            color: $border-grey;
+          &:hover {
+            &::after {
+              width: 30%;
+            }
           }
-        }
 
-        .ig {
-          width: 15px;
-          margin-right: 6px;
-          margin-bottom: 6px;
+          a {
+            span {
+              display: block;
+              font-size: $fs-small;
+              color: $border-grey;
+            }
+          }
+
+          .ig {
+            width: 15px;
+            margin-right: 6px;
+            margin-bottom: 6px;
+          }
         }
       }
     }
@@ -252,13 +311,12 @@ header {
       right: 20px;
       border-radius: 10px;
       transition: 0.4s ease;
-      padding:15px;
+      padding: 15px;
       margin-block: 20px;
       z-index: 1;
 
       &.scrolled {
         background-color: rgba(255, 255, 255, 0.5);
-        /* お好みの色に変更 */
         box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.25);
 
         .line {
@@ -289,7 +347,6 @@ header {
 
         &:hover {
           span {
-
             &:nth-child(1),
             &:nth-child(3) {
               transform: translateX(-5px);
@@ -348,7 +405,6 @@ header {
       pointer-events: none;
     }
   }
-  
 }
 
 .no-scroll {
