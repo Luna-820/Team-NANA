@@ -8,53 +8,58 @@
 
   #fv {
     position: relative;
-    margin-top: 130px;
+    padding-block: 50px;
+    margin-block: 80px;
 
-    @include mx.sp {
-      margin-top: 50px;
+    @include mx.tb {
+        margin-block: 100px 50px;
+        padding: 0 20px;
     }
 
     .section-title__en {
-      font-size: 150px;
-      font-weight: 900;
-      color: $light-grey;
-      position: absolute;
-      left: -10px;
-      bottom: -100px;
-      z-index: 0;
+        font-size: 150px;
+        font-weight: 900;
+        color: $light-grey;
+        position: absolute;
+        left: -10px;
+        bottom: 0px;
+        z-index: 0;
 
-      @include mx.tb {
-        left: 30px;
-      }
-      @include mx.sp-650 {
-        font-size: 100px;
-      }
-      @include mx.sp {
-        font-size: 80px;
-        left: 10px;
-        bottom: -50px;
-      }
+        @include mx.tb-1100 {
+            left: 20px;
+        }
+        @include mx.tb {
+            font-size: 100px;
+            left: 10px;
+            bottom: -40px;
+        }
+        @include mx.sp-650 {
+            font-size: 80px;
+        }
+        @include mx.sp {
+            bottom: -50px;
+        }
     }
 
     .section-title {
-      color: $black;
-      position: relative;
+        color: $black;
+        position: relative;
 
-      &::before {
-        content: "";
-        position: absolute;
-        bottom: -10px;
-        width: 150px;
-        height: 2px;
-        background-color: $yellow;
-        border-radius: 2px;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            width: 100px;
+            height: 2px;
+            background-color: $yellow;
+            border-radius: 2px;
 
-        @include mx.tb {
-          left: 1%;
+            @include mx.tb {
+                left: 1%;
+            }
         }
-      }
     }
-  }
+}
 
   .voices {
     margin-block: 100px 150px;
