@@ -7,13 +7,12 @@
         background-color: transparent;
     }
 
-
     // ページ全体共通
     section {
         margin-bottom: 120px;
 
-        @include mx.tb {
-            margin-bottom: 80px;
+        @include mx.tb-1100 {
+            margin-bottom: 100px;
         }
 
         @include mx.sp {
@@ -84,10 +83,12 @@
     // 各セクション
     #fv {
         position: relative;
-        margin-top: 130px;
+        padding-block: 50px;
+        margin-block: 80px;
 
-        @include mx.sp {
-            margin-top: 50px;
+        @include mx.tb {
+            margin-block: 100px 50px;
+            padding: 0 20px;
         }
 
         .section-title__en {
@@ -96,15 +97,21 @@
             color: $light-grey;
             position: absolute;
             left: -10px;
-            bottom: -100px;
+            bottom: 0px;
             z-index: 0;
 
+            @include mx.tb-1100 {
+                left: 20px;
+            }
             @include mx.tb {
-                left: 30px;
+                font-size: 100px;
+                left: 10px;
+                bottom: -40px;
+            }
+            @include mx.sp-650 {
+                font-size: 80px;
             }
             @include mx.sp {
-                font-size: 80px;
-                left: 10px;
                 bottom: -50px;
             }
         }
@@ -117,7 +124,7 @@
                 content: "";
                 position: absolute;
                 bottom: -10px;
-                width: 150px;
+                width: 100px;
                 height: 2px;
                 background-color: $yellow;
                 border-radius: 2px;
@@ -159,7 +166,7 @@
             border-color: $blue transparent transparent transparent;
 
             @include mx.sp {
-                border-width:30px 50px 0px 50px;
+                border-width: 30px 50px 0px 50px;
             }
 
 
@@ -176,8 +183,14 @@
             padding: 30px 180px;
             position: relative;
 
+            @include mx.tb {
+                padding-inline: 150px;
+            }
+            @include mx.sp-650 {
+                padding-inline: 60px;
+            }
             @include mx.sp {
-                padding: 25px;
+                padding: 30px 10px;
             }
 
             &::after {
@@ -192,8 +205,14 @@
                 border-width: 60px 380px 0 380px;
                 border-color: $light-yellow transparent transparent transparent;
 
+                @include mx.tb {
+                    border-width: 60px 280px 0 280px;
+                }
+                @include mx.sp-650 {
+                    border-width: 40px 200px 0 200px;
+                }
                 @include mx.sp {
-                    border-width: 40px 170px 0 170px;
+                    border-width: 40px 190px 0 190px;
                 }
             }
 
@@ -225,6 +244,13 @@
             font-size: 2.5rem;
             background-color: $yellow;
             margin-top: 0;
+            @include mx.tb-1100 {
+                font-size: 2.4rem;
+            }
+            @include mx.tb {
+                font-size: 2.0rem;
+            }
+
         }
 
         ul {
@@ -234,23 +260,34 @@
             gap: 0px 40px;
             padding-inline: 80px;
 
-
-            @include mx.sp {
+            @include mx.tb {
+                margin-top: 20px;
                 gap: 0px 10px;
+             padding-inline: 80px;
+            }
+            @include mx.sp-650 {
+             padding-inline: 20px;
+            }
+
+            h3{
+                margin-top: 10px;
             }
         }
     }
 
+
     #about {
         padding: 50px 100px;
 
-        @include mx.tb {
+        @include mx.tb-1100 {
             padding: 40px 30px 130px;
             margin-inline: 20px;
         }
-
+        @include mx.sp-650 {
+            padding-bottom: 180px;
+        }
         @include mx.sp {
-            padding: 40px 10px 150px;
+            padding: 40px 15px 150px;
         }
 
         .flex-box {
@@ -258,7 +295,7 @@
             grid-template-columns: 1fr 1fr;
             gap: 30px 10px;
 
-            @include mx.sp {
+            @include mx.sp-650 {
                 grid-template-columns: 1fr;
                 justify-items: center;
             }
@@ -404,13 +441,15 @@
         .step {
             display: grid;
             grid-template-columns: 25% 75%;
-            gap: 5px 20px;
+            gap: 5px 50px;
             margin-bottom: 40px;
+            padding: 0;
 
+            @include mx.tb {
+                gap: 5px 15px;
+            }
             @include mx.sp {
-                grid-template-columns: 25% 75%;
-                gap: 7px;
-                padding: 0;
+                grid-template-columns: 30% 70%;
             }
 
             .month {
@@ -424,9 +463,12 @@
                 @include mx.tb {
                     padding: 40px 0;
                 }
-
-                @include mx.sp {
+                @include mx.sp-650 {
                     padding: 30px 0;
+                    font-size: 1.2rem;
+                }
+                @include mx.sp {
+                    padding: 10px 0;
                     font-size: 1.2rem;
                 }
 
@@ -443,16 +485,18 @@
                     border-color: #c8d6df transparent transparent transparent;
                     z-index: 5;
 
-                    @include mx.tb-1100{
+                    @include mx.tb-1100 {
                         border-width: 15px 90px 0px 90px;
                     }
+
                     @include mx.tb {
-                        border-width: 15px 75px 0px 75px;
+                        border-width: 15px 60px 0px 60px;
                     }
 
-                    @include mx.sp-650{
+                    @include mx.sp-650 {
                         border-width: 15px 50px 0px 50px;
                     }
+
                     @include mx.sp {
                         border-width: 15px 40px 0px 40px;
                     }
@@ -475,214 +519,225 @@
                         1
                     );
 
-                background: nth($colors, $i - 1);
-                z-index: nth($z, $i - 1);
+                     background: nth($colors, $i - 1);
+                     z-index: nth($z, $i - 1);
 
-                &::after {
+                      &::after {
                     border-color: nth($colors, $i - 1) transparent transparent transparent;
                     z-index: nth($z, $i - 1);
+                      }
+                  }
                 }
             }
-        }
 
-    }
 
-    .content {
-        border-bottom: 1px solid #ccc;
-        padding: 5px 10px;
+            .content {
+                border-bottom: 1px solid #ccc;
+                padding: 5px 10px;
+                margin: 0;
 
-        @include mx.sp {
-            margin-left: 0;
-        }
+                @include mx.sp {
+                    margin-left: 0;
+                }
 
-        &:first-of-type {
-            border-top: 1px solid #ccc;
-        }
+                &:first-of-type {
+                    border-top: 1px solid #ccc;
+                }
 
-        span {
-            @include mx.sp {
-                padding: 2px 10px;
-                font-size: 1.5rem;
-            }
-        }
+                span {
+                    @include mx.sp {
+                        padding: 2px 10px;
+                        font-size: 1.5rem;
+                    }
+                }
 
-        h3 {
-            @include mx.sp {
-                font-size: 1.4rem;
-                margin-block: 10px;
-            }
-        }
+                h3 {
+                    @include mx.sp-650 {
+                        font-size: 1.4rem;
+                        margin-block: 10px;
+                    }
+                    @include mx.sp {
+                        font-size: 1.4rem;
+                        margin-block: 10px;
+                    }
+                }
 
-        .small {
-            margin-top: 0;
-        }
-    }
+                .small {
+                    margin-top: 0;
+                }
 
-    .label {
-        display: inline-block;
-        background: $blue;
-        color: #fff;
-        font-weight: 700;
-        padding: 4px 10px;
-        margin-right: 8px;
-    }
+                .label {
+                    display: inline-block;
+                    background: $blue;
+                    color: #fff;
+                    font-weight: 700;
+                    padding: 4px 10px;
+                    margin-right: 8px;
+                }
 
-    h3 {
-        display: inline-block;
-        font-weight: 700;
-    }
-}
-}
-
-#price {
-    .shadow-box {
-        text-align: center;
-        position: relative;
-        padding-inline: 100px;
-
-        @include mx.tb {
-            padding: 40px 20px 30px;
-        }
-
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 20px;
-            background-color: $blue;
-            border-top-left-radius: 24px;
-            border-top-right-radius: 24px;
-        }
-
-        .box-title {
-            border-bottom: 2px solid $yellow;
-            display: inline-block;
-            margin-bottom: 0;
-        }
-
-        .middle {
-            font-size: 3.75rem;
-            font-weight: 700;
-        }
-
-        ul {
-            text-align: left;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin-block: 40px;
-
-            @include mx.sp {
-                grid-template-columns: 1fr;
-                gap: 0px;
+                h3 {
+                    display: inline-block;
+                    font-weight: 700;
+                }
             }
 
-            li {
-                position: relative;
-                margin-left:     80px;
+        }
+    }
 
+
+    #price {
+        .shadow-box {
+            text-align: center;
+            position: relative;
+            padding-inline: 100px;
 
             @include mx.tb {
-                margin-left:     40px;
+                padding: 40px 20px 30px;
             }
 
-                &:before {
-                    content: "";
-                    position: absolute;
-                    left: -30px;
-                    bottom: 50%;
-                    transform: translateY(50%);
-                    width: 15px;
-                    height: 15px;
-                    background-color: $yellow;
-                    border-radius: 50%;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 20px;
+                background-color: $blue;
+                border-top-left-radius: 24px;
+                border-top-right-radius: 24px;
+            }
+
+            .box-title {
+                border-bottom: 2px solid $yellow;
+                display: inline-block;
+                margin-bottom: 0;
+            }
+
+            .middle {
+                font-size: 3.75rem;
+                font-weight: 700;
+            }
+
+            ul {
+                text-align: left;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+                margin-block: 40px;
+
+                @include mx.sp-650 {
+                    grid-template-columns: 1fr;
+                    gap: 0px;
+                    margin-left: 70px;
+                }
+                @include mx.sp {
+                    margin-left: 30px;
+                }
+
+
+                li {
+                    position: relative;
+                    margin-left: 80px;
+
+                    @include mx.tb {
+                        margin-left: 40px;
+                    }
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        left: -30px;
+                        bottom: 50%;
+                        transform: translateY(50%);
+                        width: 15px;
+                        height: 15px;
+                        background-color: $yellow;
+                        border-radius: 50%;
+                    }
+                }
+            }
+
+            .small {
+                text-align: left;
+                font-size: 1.2rem;
+                opacity: 0.5;
+            }
+        }
+    }
+
+    #works {
+
+        .flip-slider__inner {
+            padding-block: 80px;
+            perspective: 1000px;
+
+            a {
+                display: block;
+                padding: 20px;
+            }
+
+            .slick-slide {
+                padding: 0 20px;
+
+                &:nth-child(odd) {
+                    padding-top: 40px;
+                }
+
+                &:nth-child(even) {
+                    padding-top: -40px;
                 }
             }
         }
 
-        .small {
-            text-align: left;
-            font-size: 1.2rem;
-            opacity: 0.5;
-        }
-    }
-}
-
-#works {
-
-    .flip-slider__inner {
-        padding-block: 80px;
-        perspective: 1000px;
-
-        a {
-            display: block;
-            padding: 20px;
-        }
-
-        .slick-slide {
-            padding: 0 20px;
-
-            &:nth-child(odd) {
-                padding-top: 40px;
-            }
-
-            &:nth-child(even) {
-                padding-top: -40px;
-            }
-        }
-    }
-
-    .slider-inner {
-        position: relative;
-        width: 100%;
-        aspect-ratio: 4 / 3;
-        transform-style: preserve-3d;
-        transition: transform 0.6s ease;
-        cursor: pointer;
-
-        &:hover {
-            transform: rotateY(180deg)
-        }
-
-        .front,
-        .back {
-            position: absolute;
-            backface-visibility: hidden;
-            border-radius: 10px;
-            inset: 0;
-            overflow: hidden;
-
-            img {
-                height: 100%;
-                display: block;
-            }
-        }
-
-        .back {
-            transform: rotateY(180deg);
-        }
-    }
-
-    .viewmore {
-        display: flex;
-        flex-direction: row-reverse;
-
-        a {
-            display: block;
-            padding: 10px 35px;
-            border-radius: 50px;
-            border: 1px solid $black;
-            transition: all 0.5s ease;
-            letter-spacing: 0.15em;
+        .slider-inner {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            transform-style: preserve-3d;
+            transition: transform 0.6s ease;
+            cursor: pointer;
 
             &:hover {
-                background-color: $yellow;
-                color: $white;
-                border: 1px solid $white;
+                transform: rotateY(180deg)
+            }
+
+            .front,
+            .back {
+                position: absolute;
+                backface-visibility: hidden;
+                border-radius: 10px;
+                inset: 0;
+                overflow: hidden;
+
+                img {
+                    height: 100%;
+                    display: block;
+                }
+            }
+
+            .back {
+                transform: rotateY(180deg);
+            }
+        }
+
+        .viewmore {
+            display: flex;
+            flex-direction: row-reverse;
+
+            a {
+                display: block;
+                padding: 10px 35px;
+                border-radius: 50px;
+                border: 1px solid $black;
+                transition: all 0.5s ease;
+                letter-spacing: 0.15em;
+
+                &:hover {
+                    background-color: $yellow;
+                    color: $white;
+                    border: 1px solid $white;
+                }
             }
         }
     }
-}
 }

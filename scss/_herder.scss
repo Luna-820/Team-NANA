@@ -7,9 +7,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: 30px;
+  padding-inline: 4%;
 
-  // padding-bottom: 40px;
   h1 {
     line-height: 0;
     .logo {
@@ -308,7 +307,7 @@ header {
       align-items: center;
       position: fixed;
       top: 8px;
-      right: 20px;
+      right: 2%;
       border-radius: 10px;
       transition: 0.4s ease;
       padding: 15px;
@@ -326,7 +325,7 @@ header {
       }
 
       .line {
-        border: 1px solid $white;
+        border: 1px solid none;
         border-radius: 20px;
         transition: 0.4s ease;
         padding: 5px 15px;

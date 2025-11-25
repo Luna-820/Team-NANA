@@ -13,9 +13,9 @@
   align-items: center;
   font-size: 24px;
   z-index: 9999;
-
-  img {
-    width: 500px;
+  object-fit: cover;
+  video {
+      height: 100vh;
   }
 }
 
@@ -43,8 +43,6 @@ header {
   overflow: hidden;
   position: relative;
   background-color: $white;
-
-
   @include mx.tb-1100 {
     height: 800px;
   }
@@ -54,7 +52,7 @@ header {
   }
 
   @include mx.sp {
-    height: 500px;
+    height: 480px;
   }
 
   video {
@@ -63,62 +61,48 @@ header {
     display: block;
     border-radius: 20px;
     object-fit: cover;
+    bottom: 0;
     margin-inline: auto;
     z-index: -1;
     background-color: $white;
 
-    // @include mx.sp {
-    //   height: 50%;
-    // }
+    @include mx.tb-1100 {
+      height: 800px;
+    }
+
+    @include mx.tb {
+      height: 700px;
+    }
+
+    @include mx.sp {
+      height: 480px;
+    }
   }
 
   .titles {
-    // font-size: 5.5rem;
+    position: absolute;
+    top: 0;
+    left: 2.5%;
+    display: flex;
+    flex-direction: column;
     font-size: clamp(2.7rem, 5vw, 6.0rem);
     font-weight: $fw-medium;
+    margin-block: 0;
+    align-items: flex-start;
 
     .title {
-      display: inline-block;
+      display: flex;
       background-color: $white;
       letter-spacing: 0.15rem;
-      padding: 2% 3%;
+      padding: 10px 50px 10px 20px;
+      border-radius: 0 0 20px 0;
+
+      @include mx.sp {
+        padding: 10px 20px;
+      }
 
       .yellow {
         color: $yellow;
-      }
-
-      &:nth-child(1) {
-        position: absolute;
-        top: -1px;
-        left: 1%;
-        border-radius: 0 0 20px 0;
-
-        @include mx.tb {
-          left: 10px;
-        }
-      }
-
-      &:nth-child(3) {
-        position: absolute;
-        top: 16%;
-        left: 1%;
-        border-radius: 0 0 20px 0;
-
-        @include mx.tb-1100 {
-          top: 13%;
-        }
-
-        @include mx.tb {
-          top: 10%;
-        }
-
-        @include mx.sp-650 {
-          top: 7.5%;
-        }
-
-        @include mx.sp {
-          top: 9%;
-        }
       }
     }
   }
@@ -169,6 +153,7 @@ header {
   overflow: hidden;
   padding-top: 100px;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); //鈴木追加
+  margin-bottom: 120px;
 
   @include mx.sp {
     padding-top: 50px;
@@ -302,7 +287,7 @@ header {
 
 .before-after {
   .wrapper {
-    margin-bottom: 100px;
+    margin-bottom: 170px;
   }
 
   .list {

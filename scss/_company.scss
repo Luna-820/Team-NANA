@@ -12,9 +12,11 @@
         justify-content: space-between;
         align-items: flex-start;
         gap: 4.0rem;
+        margin-bottom: 150px;
 
         @include mx.tb {
             flex-direction: column;
+            margin-bottom: 120px;
         }
 
         @include mx.sp {
@@ -102,7 +104,7 @@
     // ページ全体共通
     .flex-left {
         .section-title {
-            margin-bottom: 0;
+            margin-block:15px 5px;
         }
 
         span {

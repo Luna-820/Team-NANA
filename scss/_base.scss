@@ -197,7 +197,7 @@ img {
         max-width: 1000px;
         padding-inline: 80px;
     }
-    @include mx.sp {
+    @include mx.sp-650 {
         max-width: 1000px;
         padding-inline: 20px;
     }
@@ -266,5 +266,19 @@ img {
     &.active2 {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+// --------------------------------------
+// レスポンシブで動画の差し替え
+// --------------------------------------
+.pc-only{
+    @include mx.tb {
+        display: none;
+    }
+}
+.tb-only{
+    display: none;
+    @include mx.tb {
+        display: block;
     }
 }
