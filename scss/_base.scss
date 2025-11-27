@@ -76,7 +76,7 @@ body {
     margin: 0;
 }
 
-ul{
+ul {
     padding-left: 0;
 }
 
@@ -197,6 +197,7 @@ img {
         max-width: 1000px;
         padding-inline: 80px;
     }
+
     @include mx.sp-650 {
         max-width: 1000px;
         padding-inline: 20px;
@@ -212,7 +213,7 @@ img {
 // --------------------------------------
 // チャットボット
 // --------------------------------------
-.chatbot {
+typebot-bubble::part(button) {
     position: fixed;
     right: 24px;
     bottom: 24px;
@@ -221,34 +222,22 @@ img {
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background-color: $yellow; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-    cursor: pointer;
-    transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
     opacity: 0.95;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+}
 
-    img {
-        width: 32px;
-        height: 32px;
-        object-fit: contain;
-        display: block;
-    }
-
-    &:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-        opacity: 1;
-    }
+/* hover 時のふわっと感 */
+typebot-bubble::part(button):hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    opacity: 1;
 }
 
 // fadein
 
 .fadein {
-    transform: translateY( 20px);
+    transform: translateY(20px);
     opacity: 0;
     transition: 1s ease;
 
@@ -259,7 +248,7 @@ img {
 }
 
 .fadein2 {
-    transform: translateY( 20px);
+    transform: translateY(20px);
     opacity: 0;
     transition: 1s ease;
 
@@ -268,16 +257,19 @@ img {
         transform: translateY(0);
     }
 }
+
 // --------------------------------------
 // レスポンシブで動画の差し替え
 // --------------------------------------
-.pc-only{
+.pc-only {
     @include mx.tb {
         display: none;
     }
 }
-.tb-only{
+
+.tb-only {
     display: none;
+
     @include mx.tb {
         display: block;
     }
