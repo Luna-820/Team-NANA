@@ -1420,6 +1420,8 @@ header {
   cursor: pointer;
   text-align: left;
   position: relative;
+  -webkit-appearance: none;
+  color: #333333;
 }
 #faq .flex .flex-right .faq-item .faq-q .faq-label {
   font-size: 2.4rem;
@@ -1430,6 +1432,7 @@ header {
 #faq .flex .flex-right .faq-item .faq-q .faq-question {
   font-size: 1.8rem;
   flex: 1;
+  color: inherit;
 }
 #faq .flex .flex-right .faq-item .faq-a {
   display: none;
