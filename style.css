@@ -176,7 +176,7 @@ img {
   padding-inline: 20px;
 }
 
-.chatbot {
+typebot-bubble::part(button) {
   position: fixed;
   right: 24px;
   bottom: 24px;
@@ -184,22 +184,13 @@ img {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background-color: #db8405;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
   opacity: 0.95;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
 }
-.chatbot img {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
-  display: block;
-}
-.chatbot:hover {
+
+/* hover 時のふわっと感 */
+typebot-bubble::part(button):hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
   opacity: 1;
@@ -2226,11 +2217,25 @@ header {
   bottom: -20px;
   z-index: 0;
 }
+@media (max-width: 1100px) {
+  .company #fv .section-title__en {
+    font-size: 120px;
+    left: 10px;
+    bottom: 5px;
+  }
+}
 @media (max-width: 900px) {
   .company #fv .section-title__en {
     font-size: 100px;
     left: 10px;
-    bottom: -40px;
+    bottom: -30px;
+  }
+}
+@media (max-width: 650px) {
+  .company #fv .section-title__en {
+    font-size: 70px;
+    left: 10px;
+    bottom: -20px;
   }
 }
 @media (max-width: 430px) {
@@ -2281,12 +2286,30 @@ header {
   padding-left: 0;
 }
 .company #member .flex-right ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 40px;
+  gap: 32px;
+  padding: 30px;
 }
-.company #member .flex-right ul .items {
-  width: 25%;
+@media (max-width: 1100px) {
+  .company #member .flex-right ul {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px 25px;
+    padding: 40px;
+  }
+}
+@media (max-width: 425px) {
+  .company #member .flex-right ul {
+    grid-template-columns: 1fr;
+    gap: 80px;
+    padding: 20px;
+  }
+}
+@media (max-width: 425px) {
+  .company #member .flex-right ul .items {
+    width: 100%;
+  }
 }
 .company #member .flex-right ul .items .pic {
   border-radius: 5px;

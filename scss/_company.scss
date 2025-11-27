@@ -6,7 +6,7 @@
     header {
         background-color: transparent;
     }
-    
+
     .wrapper {
         display: flex;
         justify-content: space-between;
@@ -68,10 +68,22 @@
             bottom: -20px;
             z-index: 0;
 
+            @include mx.tb-1100 {
+                font-size: 120px;
+                left: 10px;
+                bottom: 5px;
+            }
+
             @include mx.tb {
                 font-size: 100px;
                 left: 10px;
-                bottom: -40px;
+                bottom: -30px;
+            }
+
+            @include mx.sp-650 {
+                font-size: 70px;
+                left: 10px;
+                bottom: -20px;
             }
 
             @include mx.sp {
@@ -104,7 +116,7 @@
     // ページ全体共通
     .flex-left {
         .section-title {
-            margin-block:15px 5px;
+            margin-block: 15px 5px;
         }
 
         span {
@@ -133,12 +145,29 @@
     #member {
         .flex-right {
             ul {
-                display: flex;
-                justify-content: space-between;
-                align-items: flex-start;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                margin-top: 40px;
+                gap: 32px;
+                padding: 30px;
+
+                @include mx.tb-1100 {
+                    grid-template-columns: 1fr 1fr;
+                    gap: 80px 25px;
+                    padding: 40px;
+                }
+
+                @include mx.sp {
+                    grid-template-columns: 1fr;
+                    gap: 80px;
+                    padding: 20px;
+                }
 
                 .items {
-                    width: 25%;
+
+                    @include mx.sp {
+                        width: 100%;
+                    }
 
                     .pic {
                         border-radius: 5px;
