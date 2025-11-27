@@ -2,6 +2,16 @@
 <html lang="ja">
 
 <head>
+  <!-- Google Tag Manager -->
+  <!-- <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-MLFWZH7D');</script> -->
+  <!-- End Google Tag Manager -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -74,7 +84,7 @@
 
   <div id="loading">
     <div class="pc-only">
-      <video  src="img/loading.mp4" autoplay muted playsinline></video>
+      <video src="img/loading.mp4" autoplay muted playsinline></video>
     </div>
     <div class="tb-only">
       <video src="img/loading_sp.mp4" autoplay muted playsinline></video>
@@ -926,16 +936,54 @@
           <span class="to-top-text">PAGE TOP</span>
         </button>
       </a>
-
-      <a href="#" class="chatbot" aria-label="チャットで相談">
-        <img src="img/footer_icon-chatbot.png" alt="chatbot-icon" />
-      </a>
     </div>
   </footer>
   <!-- js -->
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="main.js"></script>
+  <script type="module">
+    import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0/dist/web.js'
+
+    Typebot.initBubble({
+      typebot: "customer-support-sxcmv66",
+      theme: {
+        button: {
+          backgroundColor: "#db8405",
+          iconColor: "#ffffff",
+          size: "64px",
+        },
+        chatWindow: {
+          backgroundColor: "#F8F8F8",
+          maxWidth: "420px",
+          maxHeight: "70vh",
+        },
+        placement: "right",
+      },
+    });
+
+
+    // ===== スクロールで自動オープン =====
+    let hasOpenedOnScroll = false;
+
+    window.addEventListener("scroll", () => {
+      if (hasOpenedOnScroll) return;
+
+      const footer = document.querySelector("footer"); // ← ここを好きなセクションに変えてOK
+      if (!footer) return;
+
+      const rect = footer.getBoundingClientRect();
+      const vh = window.innerHeight || document.documentElement.clientHeight;
+
+      // footerの上端が 画面下から ちょっと上 に入ってきたら発火
+      if (rect.top < vh - 100) {
+        Typebot.open();
+        hasOpenedOnScroll = true; // 1回だけ
+      }
+    });
+  </script>
+
 </body>
 
 </html>
