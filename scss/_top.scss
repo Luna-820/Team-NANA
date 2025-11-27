@@ -39,7 +39,7 @@ header {
 
 .fv {
   width: 100%;
-  height: calc(100vh - 120px);
+  height: calc(100vh - 160px);
   overflow: hidden;
   position: relative;
   background-color: $white;
@@ -52,12 +52,12 @@ header {
   }
 
   @include mx.sp {
-    height: 480px;
+    height: 520px;
   }
 
   video {
     width: 92%;
-    height: 100%;
+    height: calc(100vh - 160px);
     display: block;
     border-radius: 20px;
     object-fit: cover;
@@ -75,7 +75,7 @@ header {
     }
 
     @include mx.sp {
-      height: 480px;
+      height: 520px;
     }
   }
 
@@ -161,11 +161,11 @@ header {
 
   .scroll-divider {
     position: absolute;
-    top: -60px;
+    top: 10px;
     z-index: -1;
 
     .scroll-text {
-      color: $light-grey;
+      color: $border-grey;
       font-size: 200px;
       font-weight: 700;
       opacity: 0.4;
