@@ -5,7 +5,7 @@ $(function () {
     setTimeout(function () {
       $('#loading').fadeOut(300); // フェードアウトで自然に消す
       $('#content').fadeIn(300);
-    }, 2900);
+    }, 2300);
   });
 
 
@@ -60,7 +60,10 @@ $(function () {
   // WORKS フリップスライダー（slick）
   // ------------------------------------
   if ($(".js-flip-slider").length) {
-    $(".js-flip-slider").slick({
+    // ★ ここで変数に入れておく
+    const $slider = $(".js-flip-slider");
+
+    $slider.slick({
       slidesToShow: 3,
       slidesToScroll: 1,
       infinite: true,
@@ -70,7 +73,10 @@ $(function () {
       cssEase: "linear",
       arrows: false,
       dots: false,
-      pauseOnHover: true,
+      pauseOnHover: false,
+      swipe: false, // タッチスワイプ無効化
+      touchMove: false, // タッチ移動無効化
+      draggable: false, // ドラッグ無効化
       responsive: [
         {
           breakpoint: 1024,
@@ -92,7 +98,39 @@ $(function () {
         },
       ],
     });
+
+
+    // ★ 自動フリップ処理(波のように順番に)
+    function autoFlip() {
+      const $slides = $slider.find(".slick-slide:not(.slick-cloned) .slider-inner");
+      let index = 0;
+
+      function flipNext() {
+        if (index < $slides.length) {
+          const $card = $slides.eq(index);
+          $card.addClass("is-flipped");
+
+          setTimeout(() => {
+            $card.removeClass("is-flipped");
+          }, 2500);
+
+          index++;
+          setTimeout(flipNext, 2000);
+        } else {
+          setTimeout(() => {
+            index = 0;
+            flipNext();
+          }, 800);
+        }
+      }
+
+      flipNext();
+    }
+
+    // スライダー初期化後に自動フリップ開始
+    setTimeout(autoFlip, 800);
   }
+
   // ------------------------------------
   // FAQ アコーディオン
   // ------------------------------------

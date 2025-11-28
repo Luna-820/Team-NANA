@@ -14,8 +14,9 @@
   font-size: 24px;
   z-index: 9999;
   object-fit: cover;
+
   video {
-      height: 100vh;
+    height: 100vh;
   }
 }
 
@@ -43,6 +44,7 @@ header {
   overflow: hidden;
   position: relative;
   background-color: $white;
+
   @include mx.tb-1100 {
     height: 800px;
   }
@@ -837,7 +839,7 @@ header {
 
     a {
       display: block;
-      padding: 20px;
+      height: 100%;
     }
 
     .slick-slide {
@@ -848,65 +850,73 @@ header {
       }
 
       &:nth-child(even) {
-        padding-top: -40px;
-      }
-    }
-  }
-
-  .slider-inner {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    transform-style: preserve-3d;
-    transition: transform 0.6s ease;
-    cursor: pointer;
-
-    &:hover {
-      transform: rotateY(180deg);
-    }
-
-    .front,
-    .back {
-      position: absolute;
-      backface-visibility: hidden;
-      border-radius: 10px;
-      inset: 0;
-      overflow: hidden;
-
-      img {
-        height: 100%;
-        display: block;
+        padding-top: 0;
       }
     }
 
-    .back {
-      transform: rotateY(180deg);
-    }
-  }
-
-  .viewmore {
-    display: flex;
-    flex-direction: row-reverse;
-
-    @include mx.tb {
-      margin-bottom: 0;
-    }
-
-    a {
-      display: block;
-      padding: 5px 20px;
-      border-radius: 50px;
-      border: 1px solid $black;
-      transition: all 0.5s ease;
-
-      &:hover {
-        background-color: $yellow;
-        color: $white;
-        border: 1px solid $white;
-      }
+    .slick-track {
+      transform: translate3d(0, 0, 0);
+      will-change: transform;
     }
   }
 }
+
+.slider-inner {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+  cursor: pointer;
+  will-change: transform;
+  backface-visibility: hidden;
+
+  &.is-flipped {
+    transform: rotateY(180deg);
+  }
+
+  .front,
+  .back {
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    inset: 0;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+      display: block;
+    }
+  }
+
+  .back {
+    transform: rotateY(180deg);
+  }
+}
+
+.viewmore {
+  display: flex;
+  flex-direction: row-reverse;
+
+  @include mx.tb {
+    margin-bottom: 0;
+  }
+
+  a {
+    display: block;
+    padding: 5px 20px;
+    border-radius: 50px;
+    border: 1px solid $black;
+    transition: all 0.5s ease;
+
+    &:hover {
+      background-color: $yellow;
+      color: $white;
+      border: 1px solid $white;
+    }
+  }
+}
+
 
 #comparison {
   background-color: transparent;

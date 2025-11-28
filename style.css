@@ -219,7 +219,7 @@ typebot-bubble::part(button):hover {
   transform: translateY(0);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 650px) {
   .pc-only {
     display: none;
   }
@@ -228,7 +228,7 @@ typebot-bubble::part(button):hover {
 .tb-only {
   display: none;
 }
-@media (max-width: 900px) {
+@media (max-width: 650px) {
   .tb-only {
     display: block;
   }
@@ -1038,7 +1038,7 @@ header {
 }
 #works .flip-slider__inner a {
   display: block;
-  padding: 20px;
+  height: 100%;
 }
 #works .flip-slider__inner .slick-slide {
   padding: 0 20px;
@@ -1047,52 +1047,60 @@ header {
   padding-top: 40px;
 }
 #works .flip-slider__inner .slick-slide:nth-child(even) {
-  padding-top: -40px;
+  padding-top: 0;
 }
-#works .slider-inner {
+#works .flip-slider__inner .slick-track {
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
+.slider-inner {
   position: relative;
   width: 100%;
   aspect-ratio: 4/3;
   transform-style: preserve-3d;
   transition: transform 0.6s ease;
   cursor: pointer;
+  will-change: transform;
+  backface-visibility: hidden;
 }
-#works .slider-inner:hover {
+.slider-inner.is-flipped {
   transform: rotateY(180deg);
 }
-#works .slider-inner .front,
-#works .slider-inner .back {
+.slider-inner .front,
+.slider-inner .back {
   position: absolute;
   backface-visibility: hidden;
   border-radius: 10px;
   inset: 0;
   overflow: hidden;
 }
-#works .slider-inner .front img,
-#works .slider-inner .back img {
+.slider-inner .front img,
+.slider-inner .back img {
   height: 100%;
   display: block;
 }
-#works .slider-inner .back {
+.slider-inner .back {
   transform: rotateY(180deg);
 }
-#works .viewmore {
+
+.viewmore {
   display: flex;
   flex-direction: row-reverse;
 }
 @media (max-width: 900px) {
-  #works .viewmore {
+  .viewmore {
     margin-bottom: 0;
   }
 }
-#works .viewmore a {
+.viewmore a {
   display: block;
   padding: 5px 20px;
   border-radius: 50px;
   border: 1px solid #333333;
   transition: all 0.5s ease;
 }
-#works .viewmore a:hover {
+.viewmore a:hover {
   background-color: #db8405;
   color: #FFFFFF;
   border: 1px solid #FFFFFF;
