@@ -273,7 +273,7 @@ typebot-bubble::part(button):hover {
 // レスポンシブで動画の差し替え
 // --------------------------------------
 .pc-only {
-    @include mx.tb {
+    @include mx.sp-650 {
         display: none;
     }
 }
@@ -281,7 +281,7 @@ typebot-bubble::part(button):hover {
 .tb-only {
     display: none;
 
-    @include mx.tb {
+    @include mx.sp-650 {
         display: block;
     }
 }
