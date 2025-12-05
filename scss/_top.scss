@@ -13,10 +13,12 @@
   align-items: center;
   font-size: 24px;
   z-index: 9999;
-  object-fit: cover;
 
   video {
-    height: 100vh;
+    object-fit: center;
+    @include mx.tb {
+      height: 100vh;
+    }
   }
 }
 
@@ -154,7 +156,7 @@ header {
   position: relative;
   overflow: hidden;
   padding-top: 100px;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); //鈴木追加
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); 
   margin-bottom: 120px;
 
   @include mx.sp {
@@ -904,10 +906,11 @@ header {
 
   a {
     display: block;
-    padding: 5px 20px;
+    padding: 12px 35px;
     border-radius: 50px;
     border: 1px solid $black;
     transition: all 0.5s ease;
+    letter-spacing: 0.1em;
 
     &:hover {
       background-color: $yellow;

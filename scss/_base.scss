@@ -76,7 +76,7 @@ body {
     margin: 0;
 }
 
-ul {
+ul{
     padding-left: 0;
 }
 
@@ -88,17 +88,6 @@ a {
     text-decoration: none;
     color: $black;
     display: inline-block;
-}
-
-button,
-a,
-input,
-textarea {
-    -webkit-tap-highlight-color: transparent; /* iOS Safariのタップ時ハイライト消す */
-    -webkit-appearance: none;
-    color: inherit;                           
-    font: inherit; 
-        
 }
 
 img {
@@ -208,7 +197,6 @@ img {
         max-width: 1000px;
         padding-inline: 80px;
     }
-
     @include mx.sp-650 {
         max-width: 1000px;
         padding-inline: 20px;
@@ -224,7 +212,7 @@ img {
 // --------------------------------------
 // チャットボット
 // --------------------------------------
-typebot-bubble::part(button) {
+.chatbot {
     position: fixed;
     right: 24px;
     bottom: 24px;
@@ -233,22 +221,34 @@ typebot-bubble::part(button) {
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-    opacity: 0.95;
-    transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
-}
+    background-color: $yellow; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-/* hover 時のふわっと感 */
-typebot-bubble::part(button):hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-    opacity: 1;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+    opacity: 0.95;
+
+    img {
+        width: 32px;
+        height: 32px;
+        object-fit: contain;
+        display: block;
+    }
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+        opacity: 1;
+    }
 }
 
 // fadein
 
 .fadein {
-    transform: translateY(20px);
+    transform: translateY( 20px);
     opacity: 0;
     transition: 1s ease;
 
@@ -259,7 +259,7 @@ typebot-bubble::part(button):hover {
 }
 
 .fadein2 {
-    transform: translateY(20px);
+    transform: translateY( 20px);
     opacity: 0;
     transition: 1s ease;
 
@@ -268,20 +268,17 @@ typebot-bubble::part(button):hover {
         transform: translateY(0);
     }
 }
-
 // --------------------------------------
 // レスポンシブで動画の差し替え
 // --------------------------------------
-.pc-only {
-    @include mx.sp-650 {
+.pc-only{
+    @include mx.tb {
         display: none;
     }
 }
-
-.tb-only {
+.tb-only{
     display: none;
-
-    @include mx.sp-650 {
+    @include mx.tb {
         display: block;
     }
 }
