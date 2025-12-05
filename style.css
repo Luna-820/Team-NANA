@@ -46,16 +46,6 @@ a {
   display: inline-block;
 }
 
-button,
-a,
-input,
-textarea {
-  -webkit-tap-highlight-color: transparent; /* iOS Safariのタップ時ハイライト消す */
-  -webkit-appearance: none;
-  color: inherit;
-  font: inherit;
-}
-
 img {
   width: 100%;
   vertical-align: bottom;
@@ -179,7 +169,7 @@ img {
   padding-inline: 20px;
 }
 
-typebot-bubble::part(button) {
+.chatbot {
   position: fixed;
   right: 24px;
   bottom: 24px;
@@ -187,13 +177,22 @@ typebot-bubble::part(button) {
   width: 64px;
   height: 64px;
   border-radius: 50%;
+  background-color: #db8405;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-  opacity: 0.95;
+  cursor: pointer;
   transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+  opacity: 0.95;
 }
-
-/* hover 時のふわっと感 */
-typebot-bubble::part(button):hover {
+.chatbot img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  display: block;
+}
+.chatbot:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
   opacity: 1;
@@ -219,7 +218,7 @@ typebot-bubble::part(button):hover {
   transform: translateY(0);
 }
 
-@media (max-width: 650px) {
+@media (max-width: 900px) {
   .pc-only {
     display: none;
   }
@@ -228,7 +227,7 @@ typebot-bubble::part(button):hover {
 .tb-only {
   display: none;
 }
-@media (max-width: 650px) {
+@media (max-width: 900px) {
   .tb-only {
     display: block;
   }
@@ -246,10 +245,14 @@ typebot-bubble::part(button):hover {
   align-items: center;
   font-size: 24px;
   z-index: 9999;
-  object-fit: cover;
 }
 #loading video {
-  height: 100vh;
+  object-fit: center;
+}
+@media (max-width: 900px) {
+  #loading video {
+    height: 100vh;
+  }
 }
 
 .video-bg {
@@ -1095,10 +1098,11 @@ header {
 }
 .viewmore a {
   display: block;
-  padding: 5px 20px;
+  padding: 12px 35px;
   border-radius: 50px;
   border: 1px solid #333333;
   transition: all 0.5s ease;
+  letter-spacing: 0.1em;
 }
 .viewmore a:hover {
   background-color: #db8405;
@@ -1658,26 +1662,10 @@ header {
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 60px 380px 0 380px;
-  border-color: #FEF1DD transparent transparent transparent;
-}
-@media (max-width: 900px) {
-  .about #ideal ul::after {
-    border-width: 60px 280px 0 280px;
-  }
-}
-@media (max-width: 650px) {
-  .about #ideal ul::after {
-    border-width: 40px 200px 0 200px;
-  }
-}
-@media (max-width: 430px) {
-  .about #ideal ul::after {
-    border-width: 40px 190px 0 190px;
-  }
+  width: 100%;
+  height: 50px;
+  background-color: #FEF1DD;
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
 }
 .about #ideal ul li {
   text-align: left;
@@ -1898,9 +1886,10 @@ header {
 .about #curriculum .step .month {
   padding: 50px 0;
   text-align: center;
+  align-items: center;
   position: relative;
   color: #FFFFFF;
-  border-radius: 15px 15px 0px 0px;
+  border-radius: 15px 15px 5px 5px;
   background-color: #c8d6df;
 }
 @media (max-width: 900px) {
@@ -1916,49 +1905,28 @@ header {
 }
 @media (max-width: 430px) {
   .about #curriculum .step .month {
-    padding: 10px 0;
+    padding: 30px 0;
     font-size: 1.2rem;
   }
 }
 .about #curriculum .step .month::after {
   content: "";
   position: absolute;
-  top: 100%;
+  top: 99%;
   left: 50%;
   transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 30px 95px 0px 95px;
-  border-color: #c8d6df transparent transparent transparent;
+  width: 100%;
+  height: 20px;
+  background-color: #c8d6df;
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
   z-index: 5;
-}
-@media (max-width: 1100px) {
-  .about #curriculum .step .month::after {
-    border-width: 15px 90px 0px 90px;
-  }
-}
-@media (max-width: 900px) {
-  .about #curriculum .step .month::after {
-    border-width: 15px 60px 0px 60px;
-  }
-}
-@media (max-width: 650px) {
-  .about #curriculum .step .month::after {
-    border-width: 15px 50px 0px 50px;
-  }
-}
-@media (max-width: 430px) {
-  .about #curriculum .step .month::after {
-    border-width: 15px 40px 0px 40px;
-  }
 }
 .about #curriculum .step .month:nth-of-type(2) {
   background: #B7CEDB;
   z-index: 4;
 }
 .about #curriculum .step .month:nth-of-type(2)::after {
-  border-color: #B7CEDB transparent transparent transparent;
+  background-color: #B7CEDB;
   z-index: 4;
 }
 .about #curriculum .step .month:nth-of-type(3) {
@@ -1966,7 +1934,7 @@ header {
   z-index: 3;
 }
 .about #curriculum .step .month:nth-of-type(3)::after {
-  border-color: #acc8d8 transparent transparent transparent;
+  background-color: #acc8d8;
   z-index: 3;
 }
 .about #curriculum .step .month:nth-of-type(4) {
@@ -1974,7 +1942,7 @@ header {
   z-index: 2;
 }
 .about #curriculum .step .month:nth-of-type(4)::after {
-  border-color: #98b3c2 transparent transparent transparent;
+  background-color: #98b3c2;
   z-index: 2;
 }
 .about #curriculum .step .month:nth-of-type(5) {
@@ -1982,7 +1950,7 @@ header {
   z-index: 1;
 }
 .about #curriculum .step .month:nth-of-type(5)::after {
-  border-color: #80A0B1 transparent transparent transparent;
+  background-color: #80A0B1;
   z-index: 1;
 }
 .about #curriculum .step .content {
@@ -2107,64 +2075,6 @@ header {
 }
 .about #works .flip-slider__inner {
   padding-block: 80px;
-  perspective: 1000px;
-}
-.about #works .flip-slider__inner a {
-  display: block;
-  padding: 20px;
-}
-.about #works .flip-slider__inner .slick-slide {
-  padding: 0 20px;
-}
-.about #works .flip-slider__inner .slick-slide:nth-child(odd) {
-  padding-top: 40px;
-}
-.about #works .flip-slider__inner .slick-slide:nth-child(even) {
-  padding-top: -40px;
-}
-.about #works .slider-inner {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 4/3;
-  transform-style: preserve-3d;
-  transition: transform 0.6s ease;
-  cursor: pointer;
-}
-.about #works .slider-inner:hover {
-  transform: rotateY(180deg);
-}
-.about #works .slider-inner .front,
-.about #works .slider-inner .back {
-  position: absolute;
-  backface-visibility: hidden;
-  border-radius: 10px;
-  inset: 0;
-  overflow: hidden;
-}
-.about #works .slider-inner .front img,
-.about #works .slider-inner .back img {
-  height: 100%;
-  display: block;
-}
-.about #works .slider-inner .back {
-  transform: rotateY(180deg);
-}
-.about #works .viewmore {
-  display: flex;
-  flex-direction: row-reverse;
-}
-.about #works .viewmore a {
-  display: block;
-  padding: 10px 35px;
-  border-radius: 50px;
-  border: 1px solid #333333;
-  transition: all 0.5s ease;
-  letter-spacing: 0.15em;
-}
-.about #works .viewmore a:hover {
-  background-color: #db8405;
-  color: #FFFFFF;
-  border: 1px solid #FFFFFF;
 }
 
 .company header {
@@ -2750,7 +2660,7 @@ header {
 .voice .metaleaf {
   height: 780px;
   margin-top: -200px;
-  margin-bottom: 100px;
+  margin-bottom: 200px;
 }
 @media (max-width: 1100px) {
   .voice .metaleaf {
@@ -2826,7 +2736,7 @@ header {
   border: 1px solid #FFFFFF;
   background: #db8405;
   transition: all 0.5s ease;
-  padding: 5px 20px;
+  padding: 13px 35px;
   margin-top: 30px;
 }
 .voice .metaleaf .wrapper .left .btn:hover {
@@ -3005,7 +2915,7 @@ header {
   }
 }
 .voice .hackathon .wrapper .left {
-  width: 45%;
+  width: 38%;
   margin-right: 20px;
 }
 @media (max-width: 900px) {
@@ -3052,10 +2962,9 @@ header {
   display: inline-block;
   color: #FFFFFF;
   border-radius: 50px;
-  border: 1px solid #FFFFFF;
   background: #db8405;
   transition: 0.4s ease;
-  padding: 5px 20px;
+  padding: 13px 35px;
   transition: all 0.5s ease;
 }
 .voice .hackathon .wrapper .left .btn:hover {

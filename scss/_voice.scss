@@ -328,7 +328,7 @@
   .metaleaf {
     height: 780px;
     margin-top: -200px;
-    margin-bottom: 100px;
+    margin-bottom: 200px;
 
     @include mx.tb-1100 {
       height: 750px;
@@ -402,7 +402,7 @@
           border: 1px solid $white;
           background: $yellow;
           transition: all 0.5s ease;
-          padding: 5px 20px;
+          padding: 13px 35px;
           margin-top: 30px;
 
           &:hover {
@@ -580,7 +580,7 @@
       }
 
       .left {
-        width: 45%;
+        width: 38%;
         margin-right: 20px;
 
         @include mx.tb {
@@ -630,10 +630,9 @@
           display: inline-block;
           color: $white;
           border-radius: 50px;
-          border: 1px solid $white;
           background: $yellow;
           transition: 0.4s ease;
-          padding: 5px 20px;
+          padding: 13px 35px;
           transition: all 0.5s ease;
 
           &:hover {
