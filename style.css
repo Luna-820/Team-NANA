@@ -169,30 +169,21 @@ img {
   padding-inline: 20px;
 }
 
-.chatbot {
+typebot-bubble::part(button) {
   position: fixed;
   right: 24px;
   bottom: 24px;
-  z-index: 1000;
+  z-index: 100;
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background-color: #db8405;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
   opacity: 0.95;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
 }
-.chatbot img {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
-  display: block;
-}
-.chatbot:hover {
+
+/* hover 時のふわっと感 */
+typebot-bubble::part(button):hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
   opacity: 1;
@@ -218,17 +209,17 @@ img {
   transform: translateY(0);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 430px) {
   .pc-only {
     display: none;
   }
 }
 
-.tb-only {
+.sp-only {
   display: none;
 }
-@media (max-width: 900px) {
-  .tb-only {
+@media (max-width: 430px) {
+  .sp-only {
     display: block;
   }
 }
@@ -237,22 +228,14 @@ img {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #f6f6f6;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
-  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999999;
 }
 #loading video {
-  object-fit: center;
-}
-@media (max-width: 900px) {
-  #loading video {
-    height: 100vh;
-  }
+  object-fit: cover;
+  height: 100vh;
+  width: 100%;
 }
 
 .video-bg {
@@ -2743,6 +2726,11 @@ header {
   background-color: #FFFFFF;
   border: 1px solid #db8405;
   color: #db8405;
+}
+@media (max-width: 430px) {
+  .voice .metaleaf .wrapper .left .btn {
+    padding: 13px 15px;
+  }
 }
 .voice .metaleaf .wrapper .list {
   width: 70%;
