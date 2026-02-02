@@ -69,7 +69,9 @@ footer {
             }
 
             img {
+                width: 70px;
                 margin-block: 32px;
+                margin-left: -5%;
 
                 @include mx.sp {
                     width: 50%;

@@ -231,11 +231,87 @@ typebot-bubble::part(button):hover {
   width: 100vw;
   height: 100vh;
   z-index: 999999;
+  background: #FFFFFF;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
 }
-#loading video {
-  object-fit: cover;
-  height: 100vh;
-  width: 100%;
+#loading .loading-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#loading .loading-inner .logo {
+  display: inline-block;
+  padding-right: 50px;
+}
+#loading .loading-inner .logo .logo-flex {
+  display: flex;
+  align-items: center;
+}
+#loading .loading-inner .logo .logo-flex img {
+  width: 100px;
+  margin-right: 10px;
+}
+#loading .loading-inner .logo .logo-flex .pronavi {
+  font-size: 4.5rem;
+  font-weight: 700;
+  letter-spacing: 0.008em;
+}
+#loading .loading-inner .loading-5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -20px;
+}
+#loading .loading-inner .loading-5 span {
+  display: inline-block;
+  color: #333333;
+  font-weight: 400;
+  font-size: 1em;
+  margin-left: -2px;
+  animation: animation-loading-5 1.3s infinite;
+}
+#loading .loading-inner .loading-5 span:nth-of-type(2) {
+  animation-delay: 0.1s;
+}
+#loading .loading-inner .loading-5 span:nth-of-type(3) {
+  animation-delay: 0.2s;
+}
+#loading .loading-inner .loading-5 span:nth-of-type(4) {
+  animation-delay: 0.3s;
+}
+#loading .loading-inner .loading-5 span:nth-of-type(5) {
+  animation-delay: 0.4s;
+}
+#loading .loading-inner .loading-5 span:nth-of-type(6) {
+  animation-delay: 0.5s;
+}
+#loading .loading-inner .loading-5 span:nth-of-type(7) {
+  animation-delay: 0.6s;
+}
+#loading .loading-inner .loading-5 span:nth-of-type(8) {
+  animation-delay: 0.7s;
+}
+#loading .loading-inner .loading-5 span:nth-of-type(9) {
+  animation-delay: 0.8s;
+}
+#loading .loading-inner .loading-5 span:nth-of-type(10) {
+  animation-delay: 0.9s;
+}
+@keyframes animation-loading-5 {
+  /* 待ち */
+  40% {
+    transform: translateY(0);
+  }
+  /* ジャンプ開始 */
+  70% {
+    transform: translateY(-10px);
+  }
+  /* ここから次まで「間」 */
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .video-bg {
@@ -1583,7 +1659,7 @@ header {
 .about #moya {
   background-color: #f6f6f6;
   border-radius: 15px;
-  padding: 60px 70px 25px;
+  padding: 60px 90px 35px;
   margin-bottom: 80px;
   text-align: center;
   position: relative;
@@ -1822,7 +1898,7 @@ header {
     margin-top: 0px;
   }
 }
-.about #about .flex-box .flex-right .button button {
+.about #about .flex-box .flex-right .button .btn {
   width: 225px;
   background: #FFFFFF;
   border: #333333 1px solid;
@@ -1830,22 +1906,21 @@ header {
   margin-top: 10px;
   padding: 10px 25px;
   transition: all 0.5s ease;
-  display: inline;
+  cursor: pointer;
+  text-align: center;
 }
 @media (max-width: 430px) {
-  .about #about .flex-box .flex-right .button button {
+  .about #about .flex-box .flex-right .button .btn {
     width: 200px;
   }
 }
-.about #about .flex-box .flex-right .button button:hover {
+.about #about .flex-box .flex-right .button .btn:hover {
   background-color: #db8405;
   border: #FFFFFF 1px solid;
-}
-.about #about .flex-box .flex-right .button button:hover a {
   color: #FFFFFF;
 }
 @media (max-width: 430px) {
-  .about #about .flex-box .flex-right .button button {
+  .about #about .flex-box .flex-right .button .btn {
     padding: 10px 25px;
   }
 }
@@ -3005,13 +3080,13 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: 4%;
+  padding-inline: 3.5% 4%;
 }
 header h1 {
   line-height: 0;
 }
 header h1 .logo {
-  width: 150px;
+  width: 70px;
 }
 @media (max-width: 430px) {
   header h1 .logo {
@@ -3422,7 +3497,9 @@ footer .footer-bottom .left {
   }
 }
 footer .footer-bottom .left img {
+  width: 70px;
   margin-block: 32px;
+  margin-left: -5%;
 }
 @media (max-width: 430px) {
   footer .footer-bottom .left img {
