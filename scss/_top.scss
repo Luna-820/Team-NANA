@@ -8,13 +8,108 @@
   width: 100vw;
   height: 100vh;
   z-index: 999999;
+  background: $white;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
 
-  video {
-    object-fit:cover;
-    height: 100vh;
-    width: 100%;
+  .loading-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .logo {
+      display: inline-block;
+      padding-right: 50px;
+
+
+      .logo-flex {
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 100px;
+          margin-right: 10px;
+        }
+
+        .pronavi {
+          font-size: 4.5rem;
+          font-weight: 700;
+          letter-spacing: 0.008em;
+        }
+      }
+    }
+
+    .loading-5 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: -20px;
+      span {
+        display: inline-block;
+        color: $black;
+        font-weight: 400;
+        font-size: 1em;
+        margin-left: -2px;
+        animation: animation-loading-5 1.3s infinite;
+      
+
+        &:nth-of-type(2) {
+          animation-delay: .1s;
+        }
+
+        &:nth-of-type(3) {
+          animation-delay: .2s;
+        }
+
+        &:nth-of-type(4) {
+          animation-delay: .3s;
+        }
+
+        &:nth-of-type(5) {
+          animation-delay: .4s;
+        }
+
+        &:nth-of-type(6) {
+          animation-delay: .5s;
+        }
+
+        &:nth-of-type(7) {
+          animation-delay: .6s;
+        }
+
+        &:nth-of-type(8) {
+          animation-delay: .7s;
+        }
+
+        &:nth-of-type(9) {
+          animation-delay: .8s;
+        }
+
+        &:nth-of-type(10) {
+          animation-delay: .9s;
+        }
+      }
+
+      @keyframes animation-loading-5 {
+        /* 待ち */
+        40% {
+          transform: translateY(0);
+        }
+        /* ジャンプ開始 */
+        70% {
+          transform: translateY(-10px);
+        }
+        /* ここから次まで「間」 */
+        100% {
+          transform: translateY(0);
+        }
+      }
+      
+      }
+    }
   }
-}
+
 
 .video-bg {
   position: fixed;
@@ -150,7 +245,7 @@ header {
   position: relative;
   overflow: hidden;
   padding-top: 100px;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); 
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
   margin-bottom: 120px;
 
   @include mx.sp {
