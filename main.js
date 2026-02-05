@@ -1,13 +1,24 @@
 $(function () {
 
-
   $(window).on('load', function () {
+
+    // すでにTOPを見たか？
+    if (sessionStorage.getItem('topLoaded')) {
+      // 2回目以降は即表示
+      $('#loading').hide();
+      $('#content').show();
+      return;
+    }
+
+    // 初回のみローディング
+    sessionStorage.setItem('topLoaded', 'true');
+
     setTimeout(function () {
-      $('#loading').fadeOut(300); // フェードアウトで自然に消す
+      $('#loading').fadeOut(300);
       $('#content').fadeIn(300);
     }, 2300);
-  });
 
+  });
 
   // ------------------------------------
   // header ハンバーガー

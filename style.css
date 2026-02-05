@@ -231,9 +231,13 @@ typebot-bubble::part(button):hover {
   width: 100vw;
   height: 100vh;
   z-index: 999999;
+  background: #FFFFFF;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
 }
 #loading video {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 100vh;
   width: 100%;
 }
@@ -1583,7 +1587,7 @@ header {
 .about #moya {
   background-color: #f6f6f6;
   border-radius: 15px;
-  padding: 60px 70px 25px;
+  padding: 60px 90px 35px;
   margin-bottom: 80px;
   text-align: center;
   position: relative;
@@ -1822,7 +1826,7 @@ header {
     margin-top: 0px;
   }
 }
-.about #about .flex-box .flex-right .button button {
+.about #about .flex-box .flex-right .button .btn {
   width: 225px;
   background: #FFFFFF;
   border: #333333 1px solid;
@@ -1830,22 +1834,21 @@ header {
   margin-top: 10px;
   padding: 10px 25px;
   transition: all 0.5s ease;
-  display: inline;
+  cursor: pointer;
+  text-align: center;
 }
 @media (max-width: 430px) {
-  .about #about .flex-box .flex-right .button button {
+  .about #about .flex-box .flex-right .button .btn {
     width: 200px;
   }
 }
-.about #about .flex-box .flex-right .button button:hover {
+.about #about .flex-box .flex-right .button .btn:hover {
   background-color: #db8405;
   border: #FFFFFF 1px solid;
-}
-.about #about .flex-box .flex-right .button button:hover a {
   color: #FFFFFF;
 }
 @media (max-width: 430px) {
-  .about #about .flex-box .flex-right .button button {
+  .about #about .flex-box .flex-right .button .btn {
     padding: 10px 25px;
   }
 }
@@ -3734,13 +3737,13 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: 4%;
+  padding-inline: 3.5% 4%;
 }
 header h1 {
   line-height: 0;
 }
 header h1 .logo {
-  width: 150px;
+  width: 70px;
 }
 @media (max-width: 430px) {
   header h1 .logo {
@@ -4151,7 +4154,9 @@ footer .footer-bottom .left {
   }
 }
 footer .footer-bottom .left img {
+  width: 70px;
   margin-block: 32px;
+  margin-left: -5%;
 }
 @media (max-width: 430px) {
   footer .footer-bottom .left img {

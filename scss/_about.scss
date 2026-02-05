@@ -140,7 +140,7 @@
     #moya {
         background-color: $light-grey;
         border-radius: 15px;
-        padding: 60px 70px 25px;
+        padding: 60px 90px 35px;
         margin-bottom: 80px;
         text-align: center;
         position: relative;
@@ -393,7 +393,7 @@
                         margin-top: 0px;
                     }
 
-                    button {
+                    .btn {
                         width: 225px;
                         background: $white;
                         border: $black 1px solid;
@@ -401,8 +401,8 @@
                         margin-top: 10px;
                         padding: 10px 25px;
                         transition: all 0.5s ease;
-                        display: inline;
-
+                        cursor: pointer;
+                        text-align: center;
                         @include mx.sp {
                             width: 200px;
                         }
@@ -410,10 +410,8 @@
                         &:hover {
                             background-color: $yellow;
                             border: $white 1px solid;
-
-                            a {
-                                color: $white;
-                            }
+                            color: $white;
+    
                         }
 
                         @include mx.sp {
