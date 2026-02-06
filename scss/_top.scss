@@ -27,15 +27,12 @@
         display: flex;
         align-items: center;
 
-        img {
-          width: 100px;
-          margin-right: 10px;
+        video {
+          width: 80px;
         }
 
         .pronavi {
-          font-size: 4.5rem;
-          font-weight: 700;
-          letter-spacing: 0.008em;
+          width: 200px;
         }
       }
     }

@@ -249,14 +249,11 @@ typebot-bubble::part(button):hover {
   display: flex;
   align-items: center;
 }
-#loading .loading-inner .logo .logo-flex img {
-  width: 100px;
-  margin-right: 10px;
+#loading .loading-inner .logo .logo-flex video {
+  width: 80px;
 }
 #loading .loading-inner .logo .logo-flex .pronavi {
-  font-size: 4.5rem;
-  font-weight: 700;
-  letter-spacing: 0.008em;
+  width: 200px;
 }
 #loading .loading-inner .loading-5 {
   display: flex;
@@ -3815,7 +3812,7 @@ header h1 {
   line-height: 0;
 }
 header h1 .logo {
-  width: 70px;
+  width: 150px;
 }
 @media (max-width: 430px) {
   header h1 .logo {
@@ -4202,7 +4199,7 @@ footer .contact .flex p {
 footer .footer-bottom {
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-items: flex-end;
   gap: 2%;
   width: 100%;
 }
@@ -4226,7 +4223,7 @@ footer .footer-bottom .left {
   }
 }
 footer .footer-bottom .left img {
-  width: 70px;
+  width: 60px;
   margin-block: 32px;
   margin-left: -5%;
 }
