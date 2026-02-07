@@ -1,11 +1,11 @@
 @use './_mixin' as mx;
 @use './base' as *;
 
-.company {
+body.page-company {
 
-    header {
-        background-color: transparent;
-    }
+    // header {
+    //     background-color: transparent;
+    // }
 
     .wrapper {
         display: flex;
@@ -296,6 +296,7 @@
                 // transition: transform 0.3s, box-shadow 0.3s;
                 border-radius: 8px;
                 // background:$light-grey;
+                align-items: center;
 
                 &:hover {
                     // box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -309,6 +310,7 @@
                     flex-direction: column;
                     gap: 16px;
                     padding: 12px;
+                    align-items: flex-start;
                 }
             }
         }
@@ -381,6 +383,7 @@
             font-weight: 500;
             line-height: 1.4;
             margin: 0;
+            margin-bottom: 13px;
 
             // 2行で切り捨て
             display: -webkit-box;
@@ -388,20 +391,23 @@
             -webkit-box-orient: vertical;
             overflow: hidden;
 
+            //最低でも2行分の高さを確保する
+            min-height: 5.04rem;
+
             @include mx.sp-650 {
                 font-size: 1.6rem;
             }
         }
 
-        .video-description {
-            font-size: 1.4rem;
-            color: $black;
-            line-height: 1.6;
+        // .video-description {
+        //     font-size: 1.4rem;
+        //     color: $black;
+        //     line-height: 1.6;
 
-            @include mx.sp-650 {
-                font-size: 1.3rem;
-            }
-        }
+        //     @include mx.sp-650 {
+        //         font-size: 1.3rem;
+        //     }
+        // }
 
         .video-link {
             width: fit-content;
@@ -430,6 +436,7 @@
         ul {
             li {
                 display: flex;
+                align-items:center ;
                 gap: 24px;
 
                 @include mx.sp-650 {
@@ -471,10 +478,11 @@
                     }
 
                     .text {
-                        margin-top: 0;
+                        margin-block: 0 13px;
+                        font-size: 1.8rem;
 
                         @include mx.sp-650 {
-                            margin-bottom: 24px;
+                            margin-bottom: 13px;
                         }
                     }
 
