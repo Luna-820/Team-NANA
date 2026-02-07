@@ -65,7 +65,7 @@ function add_scripts()
         '1.8.1',
         true
     );
-
+    
     // メインスクリプト（ハンドル名は一意に）
     wp_enqueue_script(
         'main_script',
@@ -74,13 +74,17 @@ function add_scripts()
         '1.0',
         true
     );
-
-    // YouTube用スクリプト（ハンドル名を youtube_script に変更）
-    wp_enqueue_script(
-        'youtube_script',
-        get_template_directory_uri() . '/youtube.js',
-        array('jquery_script'),
-        '1.0',
-        true
-    );
 }
+
+/**
+ * body_classにページのスラッグ名（URL名）を追加する
+ */
+function add_page_slug_to_body_class($classes)
+{
+    if (is_page()) {
+        global $post;
+        $classes[] = 'page-' . $post->post_name;
+    }
+    return $classes;
+}
+add_filter('body_class', 'add_page_slug_to_body_class');

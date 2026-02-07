@@ -9,6 +9,7 @@ header {
   align-items: center;
   padding-inline:3.5%  4% ;
 
+
   h1 {
     line-height: 0;
     
@@ -409,4 +410,10 @@ header {
 
 .no-scroll {
   overflow: hidden;
+}
+
+.page {
+  header {
+      background-color: transparent;
+  }
 }

@@ -2132,61 +2132,58 @@ header {
   padding-block: 80px;
 }
 
-.company header {
-  background-color: transparent;
-}
-.company .wrapper {
+body.page-company .wrapper {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 150px;
 }
 @media (max-width: 900px) {
-  .company .wrapper {
+  body.page-company .wrapper {
     flex-direction: column;
     margin-bottom: 120px;
   }
 }
 @media (max-width: 430px) {
-  .company .wrapper {
+  body.page-company .wrapper {
     gap: 1.5%;
     margin-bottom: 60px;
   }
 }
-.company .flex-left {
+body.page-company .flex-left {
   width: 30%;
 }
 @media (max-width: 900px) {
-  .company .flex-left {
+  body.page-company .flex-left {
     width: 100%;
   }
 }
-.company .flex-right {
+body.page-company .flex-right {
   width: 70%;
 }
 @media (max-width: 900px) {
-  .company .flex-right {
+  body.page-company .flex-right {
     width: 100%;
   }
 }
-.company video {
+body.page-company video {
   position: fixed;
   left: 0;
   top: 0;
   z-index: -100;
 }
-.company #fv {
+body.page-company #fv {
   position: relative;
   padding-block: 50px;
   margin-top: 80px;
 }
 @media (max-width: 900px) {
-  .company #fv {
+  body.page-company #fv {
     margin-block: 5px 30px;
     padding-block: 0;
   }
 }
-.company #fv .section-title__en {
+body.page-company #fv .section-title__en {
   font-size: 150px;
   font-weight: 900;
   color: #f6f6f6;
@@ -2196,38 +2193,38 @@ header {
   z-index: 0;
 }
 @media (max-width: 1100px) {
-  .company #fv .section-title__en {
+  body.page-company #fv .section-title__en {
     font-size: 120px;
     left: 10px;
     bottom: 5px;
   }
 }
 @media (max-width: 900px) {
-  .company #fv .section-title__en {
+  body.page-company #fv .section-title__en {
     font-size: 100px;
     left: 10px;
     bottom: -30px;
   }
 }
 @media (max-width: 650px) {
-  .company #fv .section-title__en {
+  body.page-company #fv .section-title__en {
     font-size: 70px;
     left: 10px;
     bottom: -20px;
   }
 }
 @media (max-width: 430px) {
-  .company #fv .section-title__en {
+  body.page-company #fv .section-title__en {
     font-size: 50px;
     left: 10px;
     bottom: -10px;
   }
 }
-.company #fv .section-title {
+body.page-company #fv .section-title {
   color: #333333;
   position: relative;
 }
-.company #fv .section-title::before {
+body.page-company #fv .section-title::before {
   content: "";
   position: absolute;
   bottom: -10px;
@@ -2237,19 +2234,19 @@ header {
   border-radius: 2px;
 }
 @media (max-width: 900px) {
-  .company #fv .section-title::before {
+  body.page-company #fv .section-title::before {
     left: 1%;
   }
 }
-.company .flex-left .section-title {
+body.page-company .flex-left .section-title {
   margin-block: 15px 5px;
 }
-.company .flex-left span {
+body.page-company .flex-left span {
   font-size: 1.2rem;
   margin-left: 20px;
   position: relative;
 }
-.company .flex-left span:before {
+body.page-company .flex-left span:before {
   content: "";
   position: absolute;
   left: -15px;
@@ -2260,10 +2257,10 @@ header {
   background-color: #db8405;
   border-radius: 50%;
 }
-.company ul {
+body.page-company ul {
   padding-left: 0;
 }
-.company #member .flex-right ul {
+body.page-company #member .flex-right ul {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin-top: 40px;
@@ -2271,67 +2268,67 @@ header {
   padding: 30px;
 }
 @media (max-width: 1100px) {
-  .company #member .flex-right ul {
+  body.page-company #member .flex-right ul {
     grid-template-columns: 1fr 1fr;
     gap: 80px 25px;
     padding: 40px;
   }
 }
 @media (max-width: 430px) {
-  .company #member .flex-right ul {
+  body.page-company #member .flex-right ul {
     grid-template-columns: 1fr;
     gap: 80px;
     padding: 20px;
   }
 }
 @media (max-width: 430px) {
-  .company #member .flex-right ul .items {
+  body.page-company #member .flex-right ul .items {
     width: 100%;
   }
 }
-.company #member .flex-right ul .items .pic {
+body.page-company #member .flex-right ul .items .pic {
   border-radius: 5px;
   box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
   margin-bottom: 24px;
 }
 @media (max-width: 430px) {
-  .company #member .flex-right ul .items .pic {
+  body.page-company #member .flex-right ul .items .pic {
     margin-bottom: 20px;
   }
 }
 @media (max-width: 430px) {
-  .company #member .flex-right ul .items .position {
+  body.page-company #member .flex-right ul .items .position {
     font-size: 1.4rem;
     margin-bottom: 0;
   }
 }
-.company #member .flex-right ul .items .name {
+body.page-company #member .flex-right ul .items .name {
   margin-block: 0;
 }
 @media (max-width: 430px) {
-  .company #member .flex-right ul .items .name {
+  body.page-company #member .flex-right ul .items .name {
     font-size: 1.8rem;
   }
 }
-.company #sns .flex-right ul li {
+body.page-company #sns .flex-right ul li {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 5%;
   margin-bottom: 62px;
 }
-.company #sns .flex-right ul li .icon {
+body.page-company #sns .flex-right ul li .icon {
   width: 30%;
 }
-.company #sns .flex-right ul li .icon img {
+body.page-company #sns .flex-right ul li .icon img {
   height: 120px;
   max-width: 160px;
   object-fit: contain;
 }
-.company #sns .flex-right ul li .text {
+body.page-company #sns .flex-right ul li .text {
   width: 70%;
 }
-.company #sns .flex-right ul li .text a {
+body.page-company #sns .flex-right ul li .text a {
   padding: 4px 12px;
   background-color: #80A0B1;
   border-radius: 3px;
@@ -2339,17 +2336,17 @@ header {
   border: 2px solid transparent;
   transition: all 0.5s ease;
 }
-.company #sns .flex-right ul li .text a:hover {
+body.page-company #sns .flex-right ul li .text a:hover {
   background-color: #FFFFFF;
   color: #80A0B1;
   border: 2px solid #80A0B1;
 }
 @media (max-width: 650px) {
-  .company #sns .flex-right ul li .text a {
+  body.page-company #sns .flex-right ul li .text a {
     padding: 8px 24px;
   }
 }
-.company #youtube .video-list {
+body.page-company #youtube .video-list {
   width: 70%;
   display: flex;
   flex-direction: column;
@@ -2357,49 +2354,51 @@ header {
   padding-top: 16px;
 }
 @media (max-width: 900px) {
-  .company #youtube .video-list {
+  body.page-company #youtube .video-list {
     width: 100%;
   }
 }
 @media (max-width: 650px) {
-  .company #youtube .video-list {
+  body.page-company #youtube .video-list {
     gap: 40px;
   }
 }
-.company #youtube .video-list .loading,
-.company #youtube .video-list .error,
-.company #youtube .video-list .no-videos {
+body.page-company #youtube .video-list .loading,
+body.page-company #youtube .video-list .error,
+body.page-company #youtube .video-list .no-videos {
   text-align: center;
   color: #E8E8E8;
   padding: 40px 0;
   font-size: 1.4rem;
 }
 @media (max-width: 650px) {
-  .company #youtube .video-list .loading,
-  .company #youtube .video-list .error,
-  .company #youtube .video-list .no-videos {
+  body.page-company #youtube .video-list .loading,
+  body.page-company #youtube .video-list .error,
+  body.page-company #youtube .video-list .no-videos {
     padding: 32px 0;
     font-size: 1.3rem;
   }
 }
-.company #youtube .video-list .error {
+body.page-company #youtube .video-list .error {
   color: #db8405;
 }
-.company #youtube .video-item a {
+body.page-company #youtube .video-item a {
   display: flex;
   gap: 24px;
   text-decoration: none;
   color: inherit;
   border-radius: 8px;
+  align-items: center;
 }
 @media (max-width: 650px) {
-  .company #youtube .video-item a {
+  body.page-company #youtube .video-item a {
     flex-direction: column;
     gap: 16px;
     padding: 12px;
+    align-items: flex-start;
   }
 }
-.company #youtube .video-thumbnail {
+body.page-company #youtube .video-thumbnail {
   position: relative;
   flex-shrink: 0;
   width: 320px;
@@ -2409,20 +2408,20 @@ header {
   background: #333333;
 }
 @media (max-width: 900px) {
-  .company #youtube .video-thumbnail {
+  body.page-company #youtube .video-thumbnail {
     width: 280px;
   }
 }
 @media (max-width: 650px) {
-  .company #youtube .video-thumbnail {
+  body.page-company #youtube .video-thumbnail {
     width: 100%;
   }
 }
-.company #youtube .video-thumbnail img {
+body.page-company #youtube .video-thumbnail img {
   height: 100%;
   display: block;
 }
-.company #youtube .video-thumbnail .play-button {
+body.page-company #youtube .video-thumbnail .play-button {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -2431,16 +2430,16 @@ header {
   transition: opacity 0.3s;
   pointer-events: none;
 }
-.company #youtube .video-thumbnail .play-button svg {
+body.page-company #youtube .video-thumbnail .play-button svg {
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 @media (max-width: 650px) {
-  .company #youtube .video-thumbnail .play-button svg {
+  body.page-company #youtube .video-thumbnail .play-button svg {
     width: 56px;
     height: 40px;
   }
 }
-.company #youtube .video-info {
+body.page-company #youtube .video-info {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -2448,45 +2447,37 @@ header {
   justify-content: center;
 }
 @media (max-width: 650px) {
-  .company #youtube .video-info {
+  body.page-company #youtube .video-info {
     gap: 6px;
   }
 }
-.company #youtube .video-date {
+body.page-company #youtube .video-date {
   font-size: 1.3rem;
   color: #333333;
 }
 @media (max-width: 650px) {
-  .company #youtube .video-date {
+  body.page-company #youtube .video-date {
     font-size: 1.2rem;
   }
 }
-.company #youtube .video-title {
+body.page-company #youtube .video-title {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 1.4;
   margin: 0;
+  margin-bottom: 13px;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  min-height: 5.04rem;
 }
 @media (max-width: 650px) {
-  .company #youtube .video-title {
+  body.page-company #youtube .video-title {
     font-size: 1.6rem;
   }
 }
-.company #youtube .video-description {
-  font-size: 1.4rem;
-  color: #333333;
-  line-height: 1.6;
-}
-@media (max-width: 650px) {
-  .company #youtube .video-description {
-    font-size: 1.3rem;
-  }
-}
-.company #youtube .video-link {
+body.page-company #youtube .video-link {
   width: fit-content;
   padding: 4px 12px;
   background-color: #80A0B1;
@@ -2495,42 +2486,43 @@ header {
   border: 2px solid transparent;
   transition: all 0.5s ease;
 }
-.company #youtube .video-link:hover {
+body.page-company #youtube .video-link:hover {
   background-color: #FFFFFF;
   color: #80A0B1;
   border: 2px solid #80A0B1;
 }
 @media (max-width: 650px) {
-  .company #youtube .video-link {
+  body.page-company #youtube .video-link {
     margin-top: 4px;
     padding: 8px 24px;
   }
 }
-.company #media ul li {
+body.page-company #media ul li {
   display: flex;
+  align-items: center;
   gap: 24px;
 }
 @media (max-width: 650px) {
-  .company #media ul li {
+  body.page-company #media ul li {
     flex-direction: column;
     padding: 12px;
     gap: 16px;
   }
 }
-.company #media ul li .thumnail {
+body.page-company #media ul li .thumnail {
   width: 320px;
 }
 @media (max-width: 900px) {
-  .company #media ul li .thumnail {
+  body.page-company #media ul li .thumnail {
     width: 280px;
   }
 }
 @media (max-width: 650px) {
-  .company #media ul li .thumnail {
+  body.page-company #media ul li .thumnail {
     width: 100%;
   }
 }
-.company #media ul li .info {
+body.page-company #media ul li .info {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -2538,28 +2530,29 @@ header {
   justify-content: center;
 }
 @media (max-width: 650px) {
-  .company #media ul li .info {
+  body.page-company #media ul li .info {
     width: 100%;
   }
 }
-.company #media ul li .info .date {
+body.page-company #media ul li .info .date {
   font-size: 1.3rem;
   margin: 0;
 }
 @media (max-width: 650px) {
-  .company #media ul li .info .date {
+  body.page-company #media ul li .info .date {
     font-size: 1.2rem;
   }
 }
-.company #media ul li .info .text {
-  margin-top: 0;
+body.page-company #media ul li .info .text {
+  margin-block: 0 13px;
+  font-size: 1.8rem;
 }
 @media (max-width: 650px) {
-  .company #media ul li .info .text {
-    margin-bottom: 24px;
+  body.page-company #media ul li .info .text {
+    margin-bottom: 13px;
   }
 }
-.company #media ul li .info a {
+body.page-company #media ul li .info a {
   padding: 4px 12px;
   background-color: #80A0B1;
   border-radius: 3px;
@@ -2568,17 +2561,17 @@ header {
   transition: all 0.5s ease;
   width: fit-content;
 }
-.company #media ul li .info a:hover {
+body.page-company #media ul li .info a:hover {
   background-color: #FFFFFF;
   color: #80A0B1;
   border: 2px solid #80A0B1;
 }
 @media (max-width: 650px) {
-  .company #media ul li .info a {
+  body.page-company #media ul li .info a {
     padding: 8px 24px;
   }
 }
-.company #overview .company-table {
+body.page-company #overview .company-table {
   margin-top: 24px;
   width: 70%;
   border-collapse: collapse;
@@ -2586,27 +2579,27 @@ header {
   border-bottom: 1px solid #a6a6a6;
 }
 @media (max-width: 900px) {
-  .company #overview .company-table {
+  body.page-company #overview .company-table {
     width: 100%;
   }
 }
-.company #overview .company-table tr {
+body.page-company #overview .company-table tr {
   border-bottom: 1px solid #a6a6a6;
 }
-.company #overview .company-table th,
-.company #overview .company-table td {
+body.page-company #overview .company-table th,
+body.page-company #overview .company-table td {
   text-align: left;
   padding: 3rem 1rem;
   vertical-align: top;
 }
-.company #overview .company-table th {
+body.page-company #overview .company-table th {
   width: 30%;
   font-weight: 400;
 }
-.company #overview .company-table td {
+body.page-company #overview .company-table td {
   line-height: 1.6;
 }
-.company #overview .company-table a {
+body.page-company #overview .company-table a {
   text-decoration: underline;
   word-break: break-all;
 }
@@ -4156,6 +4149,10 @@ header.active .fixed {
 
 .no-scroll {
   overflow: hidden;
+}
+
+.page header {
+  background-color: transparent;
 }
 
 footer {
