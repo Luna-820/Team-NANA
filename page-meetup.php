@@ -5,6 +5,11 @@ $page_description = "ページの説明文";
 get_header();
 ?>
 
+<div class="video-bg">
+    <video src="<?php echo get_template_directory_uri(); ?>/img/leaf_bg_landscape.mp4" autoplay muted loop playsinline></video>
+</div>
+
+
 <main>
 </main>
 

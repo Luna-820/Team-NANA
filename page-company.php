@@ -57,7 +57,7 @@ get_header();
                 </li>
                 <li class="items">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/member_pic_sasaki.png" class="pic" alt="member_pic">
-                    <span class="position">コミュニティー運営</span>
+                    <span class="position">サポート統括</span>
                     <p class="name">SASAKI</p>
                     <img src="<?php echo get_template_directory_uri(); ?>/img/company_underline_deco.png" class="underline" alt="message_deco">
                     <p class="words">受講生が実務で使える開発環境と教材を整え、学習の土台づくりを担当しています。</p>
