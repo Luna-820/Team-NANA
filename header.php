@@ -22,7 +22,7 @@
     <meta property="og:title" content="<?php echo isset($page_title) ? $page_title : $default_title; ?>" />
     <meta property="og:description" content="<?php echo isset($page_description) ? $page_description : $default_desc; ?>" />
     <meta property="og:url" content="<?php echo $current_url; ?>" />
-    <meta property="og:image" content="<?php echo $theme_url; ?>/img/ogp.png" />
+    <meta property="og:image" content="<?php echo $theme_url; ?>/img/ogp-new.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="ja_JP" />
@@ -31,14 +31,14 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="<?php echo isset($page_title) ? $page_title : $default_title; ?>" />
     <meta name="twitter:description" content="<?php echo isset($page_description) ? $page_description : $default_desc; ?>" />
-    <meta name="twitter:image" content="<?php echo $theme_url; ?>/img/ogp.png" />
+    <meta name="twitter:image" content="<?php echo $theme_url; ?>/img/ogp-new.png" />
 
     <!-- Canonical URL -->
     <link rel="canonical" href="<?php echo $current_url; ?>" />
 
     <!-- Favicon & App Icon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo $theme_url; ?>/img/favicon.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo $theme_url; ?>/img/favicon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo $theme_url; ?>/img/favicon-new.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo $theme_url; ?>/img/favicon-new.png" />
 
     <!-- 構造化データ（Organization） -->
     <script type="application/ld+json">
