@@ -3535,28 +3535,28 @@ body.page-company #overview .company-table a {
   background-color: #db8405;
 }
 
-.tokushoho header {
+body.page-tokushoho header {
   background-color: transparent;
 }
-.tokushoho video {
+body.page-tokushoho video {
   position: fixed;
   left: 0;
   top: 0;
   z-index: -100;
 }
-.tokushoho #fv {
+body.page-tokushoho #fv {
   position: relative;
   padding-block: 50px;
   margin-top: 80px;
   margin-bottom: 0;
 }
 @media (max-width: 900px) {
-  .tokushoho #fv {
+  body.page-tokushoho #fv {
     margin-block: 5px 30px;
     padding-block: 25px;
   }
 }
-.tokushoho #fv .section-title__en {
+body.page-tokushoho #fv .section-title__en {
   font-size: 150px;
   font-weight: 900;
   color: #f6f6f6;
@@ -3566,38 +3566,38 @@ body.page-company #overview .company-table a {
   z-index: 0;
 }
 @media (max-width: 1100px) {
-  .tokushoho #fv .section-title__en {
+  body.page-tokushoho #fv .section-title__en {
     font-size: 120px;
     left: 60px;
     bottom: 5px;
   }
 }
 @media (max-width: 900px) {
-  .tokushoho #fv .section-title__en {
+  body.page-tokushoho #fv .section-title__en {
     font-size: 100px;
     left: 70px;
     bottom: -10px;
   }
 }
 @media (max-width: 650px) {
-  .tokushoho #fv .section-title__en {
+  body.page-tokushoho #fv .section-title__en {
     font-size: 70px;
     left: 10px;
     bottom: 0px;
   }
 }
 @media (max-width: 430px) {
-  .tokushoho #fv .section-title__en {
+  body.page-tokushoho #fv .section-title__en {
     font-size: 50px;
     left: 10px;
     bottom: 10px;
   }
 }
-.tokushoho #fv .section-title {
+body.page-tokushoho #fv .section-title {
   color: #333333;
   position: relative;
 }
-.tokushoho #fv .section-title::before {
+body.page-tokushoho #fv .section-title::before {
   content: "";
   position: absolute;
   bottom: -10px;
@@ -3607,103 +3607,103 @@ body.page-company #overview .company-table a {
   border-radius: 2px;
 }
 @media (max-width: 900px) {
-  .tokushoho #fv .section-title::before {
+  body.page-tokushoho #fv .section-title::before {
     left: 1%;
     width: 320px;
   }
 }
 @media (max-width: 430px) {
-  .tokushoho #fv .section-title::before {
+  body.page-tokushoho #fv .section-title::before {
     left: 1%;
     width: 270px;
   }
 }
-.tokushoho #overview .company-table {
+body.page-tokushoho #overview .company-table {
   margin-top: 24px;
   width: 90%;
   border-collapse: collapse;
   border-bottom: 1px solid #a6a6a6;
 }
 @media (max-width: 900px) {
-  .tokushoho #overview .company-table {
+  body.page-tokushoho #overview .company-table {
     width: 100%;
   }
 }
 @media (max-width: 430px) {
-  .tokushoho #overview .company-table {
+  body.page-tokushoho #overview .company-table {
     display: block;
     border-bottom: none;
   }
 }
-.tokushoho #overview .company-table tr {
+body.page-tokushoho #overview .company-table tr {
   border-bottom: 1px solid #a6a6a6;
 }
 @media (max-width: 430px) {
-  .tokushoho #overview .company-table tr {
+  body.page-tokushoho #overview .company-table tr {
     display: block;
     margin-bottom: 0;
   }
 }
-.tokushoho #overview .company-table th,
-.tokushoho #overview .company-table td {
+body.page-tokushoho #overview .company-table th,
+body.page-tokushoho #overview .company-table td {
   text-align: left;
   padding: 2.4rem 1rem;
   vertical-align: top;
 }
 @media (max-width: 430px) {
-  .tokushoho #overview .company-table th,
-  .tokushoho #overview .company-table td {
+  body.page-tokushoho #overview .company-table th,
+  body.page-tokushoho #overview .company-table td {
     display: block;
     width: 100%;
   }
 }
-.tokushoho #overview .company-table th {
+body.page-tokushoho #overview .company-table th {
   width: 30%;
   font-weight: 400;
 }
 @media (max-width: 430px) {
-  .tokushoho #overview .company-table th {
+  body.page-tokushoho #overview .company-table th {
     width: 100%;
     padding-bottom: 1rem;
     border-bottom: none;
     font-weight: bold;
   }
 }
-.tokushoho #overview .company-table td {
+body.page-tokushoho #overview .company-table td {
   line-height: 1.6;
 }
 @media (max-width: 430px) {
-  .tokushoho #overview .company-table td {
+  body.page-tokushoho #overview .company-table td {
     padding-top: 0;
     padding-bottom: 2.4rem;
   }
 }
-.tokushoho #overview .company-table a {
+body.page-tokushoho #overview .company-table a {
   text-decoration: underline;
   word-break: break-all;
 }
 
-.policy header {
+body.page-policy header {
   background-color: transparent;
 }
-.policy video {
+body.page-policy video {
   position: fixed;
   left: 0;
   top: 0;
   z-index: -100;
 }
-.policy #fv {
+body.page-policy #fv {
   position: relative;
   padding-block: 50px;
   margin-top: 80px;
 }
 @media (max-width: 900px) {
-  .policy #fv {
+  body.page-policy #fv {
     margin-block: 5px 30px;
     padding-block: 25px;
   }
 }
-.policy #fv .section-title__en {
+body.page-policy #fv .section-title__en {
   font-size: 150px;
   font-weight: 900;
   color: #f6f6f6;
@@ -3713,38 +3713,38 @@ body.page-company #overview .company-table a {
   z-index: 0;
 }
 @media (max-width: 1100px) {
-  .policy #fv .section-title__en {
+  body.page-policy #fv .section-title__en {
     font-size: 120px;
     left: 60px;
     bottom: 5px;
   }
 }
 @media (max-width: 900px) {
-  .policy #fv .section-title__en {
+  body.page-policy #fv .section-title__en {
     font-size: 100px;
     left: 70px;
     bottom: -10px;
   }
 }
 @media (max-width: 650px) {
-  .policy #fv .section-title__en {
+  body.page-policy #fv .section-title__en {
     font-size: 70px;
     left: 10px;
     bottom: 0px;
   }
 }
 @media (max-width: 430px) {
-  .policy #fv .section-title__en {
+  body.page-policy #fv .section-title__en {
     font-size: 50px;
     left: 20px;
     bottom: 10px;
   }
 }
-.policy #fv .section-title {
+body.page-policy #fv .section-title {
   color: #333333;
   position: relative;
 }
-.policy #fv .section-title::before {
+body.page-policy #fv .section-title::before {
   content: "";
   position: absolute;
   bottom: -10px;
@@ -3754,41 +3754,41 @@ body.page-company #overview .company-table a {
   border-radius: 2px;
 }
 @media (max-width: 900px) {
-  .policy #fv .section-title::before {
+  body.page-policy #fv .section-title::before {
     left: 1%;
     width: 260px;
   }
 }
 @media (max-width: 430px) {
-  .policy #fv .section-title::before {
+  body.page-policy #fv .section-title::before {
     left: 1%;
     width: 220px;
   }
 }
-.policy .section {
+body.page-policy .section {
   padding-block: 18px;
 }
-.policy .section p, .policy .section span {
+body.page-policy .section p, body.page-policy .section span {
   margin-left: 3rem;
 }
 @media (max-width: 430px) {
-  .policy .section p, .policy .section span {
+  body.page-policy .section p, body.page-policy .section span {
     margin-left: 0;
   }
 }
-.policy .section .sub-section {
+body.page-policy .section .sub-section {
   margin-left: 2.4rem;
 }
 @media (max-width: 430px) {
-  .policy .section .sub-section {
+  body.page-policy .section .sub-section {
     margin-left: 0;
   }
 }
-.policy .section .sub-section p, .policy .section .sub-section span {
+body.page-policy .section .sub-section p, body.page-policy .section .sub-section span {
   margin-left: 4.6rem;
 }
 @media (max-width: 430px) {
-  .policy .section .sub-section p, .policy .section .sub-section span {
+  body.page-policy .section .sub-section p, body.page-policy .section .sub-section span {
     margin-left: 0;
   }
 }

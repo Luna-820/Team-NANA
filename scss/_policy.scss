@@ -1,7 +1,7 @@
 @use './_mixin' as mx;
 @use './base' as *;
 
-.policy {
+body.page-policy {
 
     header {
         background-color: transparent;
