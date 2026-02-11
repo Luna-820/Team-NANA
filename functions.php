@@ -74,6 +74,10 @@ function add_scripts()
         '1.0',
         true
     );
+
+    wp_localize_script('main_script', 'wp_options', array(
+        'template_dir' => get_template_directory_uri(), // テーマのURLを渡す
+    ));
 }
 
 /**

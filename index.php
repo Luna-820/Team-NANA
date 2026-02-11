@@ -307,13 +307,13 @@ get_header();
                 </a>
             </li>
             <li class="items">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/teacher_pic_sora.png" class="pic" alt="teacher_pic3" />
+                <img src="<?php echo get_template_directory_uri(); ?>/img/teacher_pic_miya.png" class="pic" alt="teacher_pic3" />
                 <span class="position">現役エンジニア講師</span>
-                <p class="name">SORA</p>
+                <p class="name">MIYAGUCHI</p>
                 <p class="words">
                     コードだけでなく、自分で考える力も育てる授業を心がけています。
                 </p>
-                <a href="" class="teacher_more_button" data-teacher="sora">
+                <a href="" class="teacher_more_button" data-teacher="miya">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/top_underline_deco.png" class="underline" alt="message_deco" />
                     <span>more</span>
                 </a>

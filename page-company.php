@@ -49,11 +49,11 @@
                     <p class="words">お客様一人ひとりの目的や課題にあった組み合わせをカリキュラムとして提供します。</p>
                 </li>
                 <li class="items">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/member_pic_aoki.png" class="pic" alt="member_pic">
-                    <span class="position">広報・戦略企画</span>
-                    <p class="name">AOKI</p>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/member_pic_usui.png" class="pic" alt="member_pic">
+                    <span class="position">カスタマーサポート</span>
+                    <p class="name">USUI</p>
                     <img src="<?php echo get_template_directory_uri(); ?>/img/company_underline_deco.png" class="underline" alt="message_deco">
-                    <p class="words">Instagramでプログラミングの魅力を届け、ProNaviとの出会いをつくっています。</p>
+                    <p class="words">お客様の声に真摯に向き合います。迅速かつ的確な対応を心がけ、安心してご利用いただける環境を支えます。</p>
                 </li>
                 <li class="items">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/member_pic_sasaki.png" class="pic" alt="member_pic">

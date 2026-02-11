@@ -14,10 +14,10 @@
                     <a href="https://navigator-of-engineering.com/" target="_blank">運営会社｜株式会社NOE</a>
                 </li>
                 <li>
-                    <a href="<?php echo esc_url(home_url('/tokushoho/')); ?>" target="_blank">特定商取引法に基づく表記</a>
+                    <a href="<?php echo esc_url(home_url('/tokushoho/')); ?>" >特定商取引法に基づく表記</a>
                 </li>
                 <li>
-                    <a href="<?php echo esc_url(home_url('/policy/')); ?>" target="_blank">プライバシーポリシー</a>
+                    <a href="<?php echo esc_url(home_url('/policy/')); ?>">プライバシーポリシー</a>
                 </li>
             </ul>
             <nav class="right">
