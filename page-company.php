@@ -1,11 +1,11 @@
-<?php
+    <?php
 
-// ページ個別のSEO設定
-$page_title = "ProNavi｜会社概要";
-$page_description = "プログラミング学習から実装・案件獲得まで、現役エンジニアが伴走支援するコミュニティ。株式会社NOEの会社概要・メンバー紹介はこちら。";
+    // ページ個別のSEO設定
+    $page_title = "ProNavi｜会社概要";
+    $page_description = "プログラミング学習から実装・案件獲得まで、現役エンジニアが伴走支援するコミュニティ。株式会社NOEの会社概要・メンバー紹介はこちら。";
 
-get_header();
-?>
+    get_header();
+    ?>
 
 <div class="video-bg">
     <video src="<?php echo get_template_directory_uri(); ?>/img/leaf_bg_landscape.mp4" autoplay muted loop playsinline></video>

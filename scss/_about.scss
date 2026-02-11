@@ -1,7 +1,7 @@
 @use "./_mixin" as mx;
 @use "./base" as *;
 
-.about {
+body.page-about {
 
     header {
         background-color: transparent;
