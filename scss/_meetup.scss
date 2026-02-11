@@ -1,10 +1,10 @@
 @use "./_mixin" as mx;
 @use "./base" as *;
 
-#meetup {
-  header {
-    background-color: transparent;
-  }
+body.page-meetup {
+  // header {
+  //   background-color: transparent;
+  // }
 
   #fv {
     position: relative;
@@ -200,9 +200,11 @@
 
         .prev,
         .page,
+        .page-numbers,
         .next {
           width: 40px;
           height: 40px;
+          display: inline-block;
           line-height: 40px;
           background-color: $grey;
           border-radius: 50%;
