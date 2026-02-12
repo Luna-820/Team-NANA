@@ -3,23 +3,53 @@
 $page_title = "ProNavi｜仲間と一緒に成長できるコーチング型プログラミング学習";
 $page_description = "学ぶだけで終わらせない。コーチング型×コミュニティで実装と案件獲得まで伴走。現役エンジニアの継続サポートで確実にスキル定着へ。";
 
-get_header(); 
+get_header();
 ?>
 
+<div id="loading">
+    <div class="loading-inner">
+        <div class="logo fadein">
+            <div class="logo-flex">
+                <video autoplay loop muted playsinline width="500">
+                    <source src="<?php echo get_template_directory_uri(); ?>/img/logo-loading.mp4" type="video/mp4">
+                </video>
+                <img src="<?php echo get_template_directory_uri(); ?>/img/pronavi-typoonly.png" alt="プロナビ" class="pronavi">
+            </div>
+        </div>
+        <div class="loading-5">
+            <p>
+                <span>L</span>
+                <span>o</span>
+                <span>a</span>
+                <span>d</span>
+                <span>i</span>
+                <span>n</span>
+                <span>g</span>
+                <span>.</span>
+                <span>.</span>
+                <span>.</span>
+            </p>
+        </div>
+    </div>
+</div>
+
 <div class="video-bg">
-    <video src="<?php echo get_template_directory_uri(); ?>/img/leaf_bg_landscape.mp4" autoplay muted loop playsinline></video>
+    <video src="<?php echo get_template_directory_uri(); ?>/img/leaf_bg_landscape.mp4" autoplay muted loop
+        playsinline></video>
 </div>
 
 <main>
     <div class="fv">
         <div class="pc-only">
             <video autoplay muted loop playsinline class="pc-only">
-                <source src="<?php echo get_template_directory_uri(); ?>/img/Hackathon-FV03-PC_ver2.mp4" type="video/mp4" />
+                <source src="<?php echo get_template_directory_uri(); ?>/img/Hackathon-FV03-PC_ver2.mp4"
+                    type="video/mp4" />
             </video>
         </div>
         <div class="tb-only">
             <video autoplay muted loop playsinline class="tb-only">
-                <source src="<?php echo get_template_directory_uri(); ?>/img/Hackathon-FV03-SP_ver2.mp4" type="video/mp4" />
+                <source src="<?php echo get_template_directory_uri(); ?>/img/Hackathon-FV03-SP_ver2.mp4"
+                    type="video/mp4" />
             </video>
         </div>
         <p class="titles">
@@ -92,7 +122,8 @@ get_header();
 
             <ul class="list">
                 <li>
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/before-after-1.png" alt="before-after1" class="fadein" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/before-after-1.png" alt="before-after1"
+                        class="fadein" />
                     <div class="text-right">
                         <p class="middle left">
                             <span class="label fadein">before</span>
@@ -102,13 +133,15 @@ get_header();
                             <span class="label fadein">after</span>
                             <span class="text fadein">5ヶ月で初案件獲得</span>
                         </p>
-                        <div class="arrow"><img src="<?php echo get_template_directory_uri(); ?>/img/arrow1.png" alt="arrow" /></div>
+                        <div class="arrow"><img src="<?php echo get_template_directory_uri(); ?>/img/arrow1.png"
+                                alt="arrow" /></div>
                         <p class="small">ちえさん｜30歳｜専業主婦</p>
                     </div>
                 </li>
 
                 <li>
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/before-after-2.JPG" alt="before-after2" class="fadein" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/before-after-2.JPG" alt="before-after2"
+                        class="fadein" />
                     <div class="text-right">
                         <p class="middle left">
                             <span class="label fadein">before</span>
@@ -118,12 +151,14 @@ get_header();
                             <span class="label fadein">after</span>
                             <span class="text fadein">自分の制作で喜ばれるように</span>
                         </p>
-                        <div class="arrow"><img src="<?php echo get_template_directory_uri(); ?>/img/arrow1.png" alt="arrow" /></div>
+                        <div class="arrow"><img src="<?php echo get_template_directory_uri(); ?>/img/arrow1.png"
+                                alt="arrow" /></div>
                         <p class="small">みきさん｜20歳｜会社員</p>
                     </div>
                 </li>
                 <li>
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/before-after-3.JPG" alt="before-after3" class="fadein" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/before-after-3.JPG" alt="before-after3"
+                        class="fadein" />
                     <div class="text-right">
                         <p class="middle left">
                             <span class="label fadein">before</span>
@@ -133,7 +168,8 @@ get_header();
                             <span class="label fadein">after</span>
                             <span class="text fadein">毎月安定して収入に</span>
                         </p>
-                        <div class="arrow"><img src="<?php echo get_template_directory_uri(); ?>/img/arrow1.png" alt="arrow" /></div>
+                        <div class="arrow"><img src="<?php echo get_template_directory_uri(); ?>/img/arrow1.png"
+                                alt="arrow" /></div>
                         <p class="small">たくやさん｜30歳｜会社員</p>
                     </div>
                 </li>
@@ -154,7 +190,8 @@ get_header();
                 <ul class="list">
                     <li class="item">
                         <div class="left">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/reason-1.png" alt="reason1" class="fadein" />
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/reason-1.png" alt="reason1"
+                                class="fadein" />
                         </div>
                         <div class="right">
                             <h3 class="box-title fadein">コーチング型個別指導</h3>
@@ -166,7 +203,8 @@ get_header();
 
                     <li class="item">
                         <div class="left">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/reason-2.png" alt="reason2" class="fadein" />
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/reason-2.png" alt="reason2"
+                                class="fadein" />
                         </div>
                         <div class="right">
                             <h3 class="box-title fadein">24時間質問対応</h3>
@@ -178,7 +216,8 @@ get_header();
 
                     <li class="item">
                         <div class="left">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/reason-3.png" alt="reason3" class="fadein" />
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/reason-3.png" alt="reason3"
+                                class="fadein" />
                         </div>
                         <div class="right">
                             <h3 class="box-title fadein">案件獲得まで徹底サポート</h3>
@@ -190,7 +229,8 @@ get_header();
 
                     <li class="item">
                         <div class="left">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/reason-4.png" alt="reason4" class="fadein" />
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/reason-4.png" alt="reason4"
+                                class="fadein" />
                         </div>
                         <div class="right">
                             <h3 class="box-title fadein">実践重視のカリキュラム</h3>
@@ -202,7 +242,8 @@ get_header();
 
                     <li class="item">
                         <div class="left">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/reason-5.png" alt="reason5" class="fadein" />
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/reason-5.png" alt="reason5"
+                                class="fadein" />
                         </div>
                         <div class="right">
                             <h3 class="box-title fadein">卒業後も安心のコミュニティ</h3>
@@ -283,49 +324,55 @@ get_header();
         </div>
         <ul class="teacher-grid wrapper">
             <li class="items">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/teacher_pic_tetsu.png" class="pic" alt="teacher_pic1" />
+                <img src="<?php echo get_template_directory_uri(); ?>/img/teacher_pic_tetsu.png" class="pic"
+                    alt="teacher_pic1" />
                 <span class="position">現役エンジニア講師</span>
                 <p class="name">TETSU</p>
                 <p class="words">
                     継続可能かつ着実にスキルをつけられる学習方法を一緒に探します。
                 </p>
                 <a href="" class="teacher_more_button" data-teacher="tetsu">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/top_underline_deco.png" class="underline" alt="message_deco" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/top_underline_deco.png" class="underline"
+                        alt="message_deco" />
                     <span>more</span>
                 </a>
             </li>
             <li class="items">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/teacher_pic_yuriko.png" class="pic" alt="teacher_pic2" />
+                <img src="<?php echo get_template_directory_uri(); ?>/img/teacher_pic_yuriko.png" class="pic"
+                    alt="teacher_pic2" />
                 <span class="position">現役エンジニア講師</span>
                 <p class="name">YURIKO</p>
                 <p class="words">
                     未経験からでも一歩ずつ進める学習環境を一緒につくっていきましょう。
                 </p>
                 <a href="" class="teacher_more_button" data-teacher="yuriko">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/top_underline_deco.png" class="underline" alt="message_deco" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/top_underline_deco.png" class="underline"
+                        alt="message_deco" />
                     <span>more</span>
                 </a>
             </li>
             <li class="items">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/teacher_pic_miya.png" class="pic" alt="teacher_pic3" />
+                <img src="<?php echo get_template_directory_uri(); ?>/img/teacher_pic_miya.png" class="pic"
+                    alt="teacher_pic3" />
                 <span class="position">現役エンジニア講師</span>
                 <p class="name">MIYAGUCHI</p>
                 <p class="words">
                     コードだけでなく、自分で考える力も育てる授業を心がけています。
                 </p>
                 <a href="" class="teacher_more_button" data-teacher="miya">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/top_underline_deco.png" class="underline" alt="message_deco" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/top_underline_deco.png" class="underline"
+                        alt="message_deco" />
                     <span>more</span>
                 </a>
             </li>
             <li class="items">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/teacher_pic_atsuko.png" class="pic" alt="teacher_pic4" />
+                <img src="<?php echo get_template_directory_uri(); ?>/img/teacher_pic_minami.png" class="pic" alt="teacher_pic4" />
                 <span class="position">現役エンジニア講師</span>
                 <p class="name">ATSUKO</p>
                 <p class="words">
                     現場で使える実装力と、最後までやり切る継続力の両方を大事にしています。
                 </p>
-                <a href="" class="teacher_more_button" data-teacher="atsuko">
+                <a href="" class="teacher_more_button" data-teacher="minami">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/top_underline_deco.png" class="underline" alt="message_deco" />
                     <span>more</span>
                 </a>
@@ -355,40 +402,56 @@ get_header();
         </div>
         <div class="wrapper">
             <div class="flip-slider__inner js-flip-slider">
-                <a href="https://pronavi-board.noe-p.com/%e7%be%8e%e5%ae%b9%e3%82%a8%e3%82%b9%e3%83%86%e3%82%b5%e3%83%ad%e3%83%b3%e3%81%aehp/" target="_blank">
+                <a href="https://pronavi-board.noe-p.com/%e7%be%8e%e5%ae%b9%e3%82%a8%e3%82%b9%e3%83%86%e3%82%b5%e3%83%ad%e3%83%b3%e3%81%aehp/"
+                    target="_blank">
                     <div class="slider-inner">
-                        <div class="front"><img src="<?php echo get_template_directory_uri(); ?>/img/works/1-front.png" alt="works1-front" /></div>
-                        <div class="back"><img src="<?php echo get_template_directory_uri(); ?>/img/works/1-back.png" alt="works1-back" /></div>
+                        <div class="front"><img src="<?php echo get_template_directory_uri(); ?>/img/works/1-front.png"
+                                alt="works1-front" /></div>
+                        <div class="back"><img src="<?php echo get_template_directory_uri(); ?>/img/works/1-back.png"
+                                alt="works1-back" /></div>
                     </div>
                 </a>
                 <a href="https://pronavi-board.noe-p.com/quiet/ " target="_blank">
                     <div class="slider-inner">
-                        <div class="front"><img src="<?php echo get_template_directory_uri(); ?>/img/works/2-front.png" alt="works2-front" /></div>
-                        <div class="back"><img src="<?php echo get_template_directory_uri(); ?>/img/works/2-back.png" alt="works2-back" /></div>
+                        <div class="front"><img src="<?php echo get_template_directory_uri(); ?>/img/works/2-front.png"
+                                alt="works2-front" /></div>
+                        <div class="back"><img src="<?php echo get_template_directory_uri(); ?>/img/works/2-back.png"
+                                alt="works2-back" /></div>
                     </div>
                 </a>
                 <a href="https://pronavi-board.noe-p.com/trattoria-verde/" target="_blank">
                     <div class="slider-inner">
-                        <div class="front"><img src="<?php echo get_template_directory_uri(); ?>/img/works/3-front.png" alt="works3-front" /></div>
-                        <div class="back"><img src="<?php echo get_template_directory_uri(); ?>/img/works/3-back.png" alt="works3-back" /></div>
+                        <div class="front"><img src="<?php echo get_template_directory_uri(); ?>/img/works/3-front.png"
+                                alt="works3-front" /></div>
+                        <div class="back"><img src="<?php echo get_template_directory_uri(); ?>/img/works/3-back.png"
+                                alt="works3-back" /></div>
                     </div>
                 </a>
-                <a href="https://pronavi-board.noe-p.com/%e6%9d%b1%e4%ba%ac%e3%82%b5%e3%83%b3%e3%83%80%e3%83%bc%e3%82%b9ec%e3%82%b0%e3%83%83%e3%82%ba%e3%82%b5%e3%82%a4%e3%83%88/" target="_blank">
+                <a href="https://pronavi-board.noe-p.com/%e6%9d%b1%e4%ba%ac%e3%82%b5%e3%83%b3%e3%83%80%e3%83%bc%e3%82%b9ec%e3%82%b0%e3%83%83%e3%82%ba%e3%82%b5%e3%82%a4%e3%83%88/"
+                    target="_blank">
                     <div class="slider-inner">
-                        <div class="front"><img src="<?php echo get_template_directory_uri(); ?>/img/works/4-front.png" alt="works4-front" /></div>
-                        <div class="back"><img src="<?php echo get_template_directory_uri(); ?>/img/works/4-back.png" alt="works4-back" /></div>
+                        <div class="front"><img src="<?php echo get_template_directory_uri(); ?>/img/works/4-front.png"
+                                alt="works4-front" /></div>
+                        <div class="back"><img src="<?php echo get_template_directory_uri(); ?>/img/works/4-back.png"
+                                alt="works4-back" /></div>
                     </div>
                 </a>
-                <a href="https://pronavi-board.noe-p.com/%e3%82%aa%e3%83%aa%e3%82%b8%e3%83%8a%e3%83%abbarber%e3%82%b5%e3%82%a4%e3%83%88/" target="_blank">
+                <a href="https://pronavi-board.noe-p.com/%e3%82%aa%e3%83%aa%e3%82%b8%e3%83%8a%e3%83%abbarber%e3%82%b5%e3%82%a4%e3%83%88/"
+                    target="_blank">
                     <div class="slider-inner">
-                        <div class="front"><img src="<?php echo get_template_directory_uri(); ?>/img/works/5-front.png" alt="works5-front" /></div>
-                        <div class="back"><img src="<?php echo get_template_directory_uri(); ?>/img/works/5-back.png" alt="works5-back" /></div>
+                        <div class="front"><img src="<?php echo get_template_directory_uri(); ?>/img/works/5-front.png"
+                                alt="works5-front" /></div>
+                        <div class="back"><img src="<?php echo get_template_directory_uri(); ?>/img/works/5-back.png"
+                                alt="works5-back" /></div>
                     </div>
                 </a>
-                <a href="https://pronavi-board.noe-p.com/%e3%82%86%e3%81%99%e3%81%af%e3%82%89%e9%9b%b2%e3%81%ae%e4%b8%8a%e3%81%ae%e5%9b%b3%e6%9b%b8%e9%a4%a8lp/" target="_blank">
+                <a href="https://pronavi-board.noe-p.com/%e3%82%86%e3%81%99%e3%81%af%e3%82%89%e9%9b%b2%e3%81%ae%e4%b8%8a%e3%81%ae%e5%9b%b3%e6%9b%b8%e9%a4%a8lp/"
+                    target="_blank">
                     <div class="slider-inner">
-                        <div class="front"><img src="<?php echo get_template_directory_uri(); ?>/img/works/6-front.png" alt="works6-front" /></div>
-                        <div class="back"><img src="<?php echo get_template_directory_uri(); ?>/img/works/6-back.png" alt="works6-back" /></div>
+                        <div class="front"><img src="<?php echo get_template_directory_uri(); ?>/img/works/6-front.png"
+                                alt="works6-front" /></div>
+                        <div class="back"><img src="<?php echo get_template_directory_uri(); ?>/img/works/6-back.png"
+                                alt="works6-back" /></div>
                     </div>
                 </a>
             </div>
@@ -478,7 +541,8 @@ get_header();
                         <p class="middle info">8<span>日間</span>無条件返金保証</p>
                     </div>
                     <div class="icon">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/top_riskfree.png" alt="cooling-off-pic" />
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/top_riskfree.png"
+                            alt="cooling-off-pic" />
                     </div>
                 </div>
                 <p>
@@ -579,5 +643,5 @@ get_header();
 </main>
 
 <?php
-get_footer(); 
+get_footer();
 ?>
