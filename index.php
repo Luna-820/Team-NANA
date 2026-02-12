@@ -319,13 +319,13 @@ get_header();
                 </a>
             </li>
             <li class="items">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/teacher_pic_minami.png" class="pic" alt="teacher_pic4" />
+                <img src="<?php echo get_template_directory_uri(); ?>/img/teacher_pic_atsuko.png" class="pic" alt="teacher_pic4" />
                 <span class="position">現役エンジニア講師</span>
-                <p class="name">MINAMI</p>
+                <p class="name">ATSUKO</p>
                 <p class="words">
                     現場で使える実装力と、最後までやり切る継続力の両方を大事にしています。
                 </p>
-                <a href="" class="teacher_more_button" data-teacher="minami">
+                <a href="" class="teacher_more_button" data-teacher="atsuko">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/top_underline_deco.png" class="underline" alt="message_deco" />
                     <span>more</span>
                 </a>
