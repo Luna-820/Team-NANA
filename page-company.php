@@ -109,11 +109,6 @@
 
                 // RSSを取得
                 $rss = fetch_feed($rss_url);
-
-                if (is_wp_error($rss)) {
-                    echo '<p style="color:red; background:#fff; padding:10px; border:2px solid red;">RSS Error: ' . $rss->get_error_message() . '</p>';
-                }
-
                 $max_videos = 3;
                 $videos = array();
 
