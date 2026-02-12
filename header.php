@@ -72,33 +72,6 @@
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
 
-    <div id="loading">
-        <div class="loading-inner">
-            <div class="logo fadein">
-                <div class="logo-flex">
-                    <video autoplay loop muted playsinline width="500">
-                        <source src="<?php echo $theme_url; ?>/img/logo-loading.mp4" type="video/mp4">
-                    </video>
-                    <img src="<?php echo $theme_url; ?>/img/pronavi-typoonly.png" alt="プロナビ" class="pronavi">
-                </div>
-            </div>
-            <div class="loading-5">
-                <p>
-                    <span>L</span>
-                    <span>o</span>
-                    <span>a</span>
-                    <span>d</span>
-                    <span>i</span>
-                    <span>n</span>
-                    <span>g</span>
-                    <span>.</span>
-                    <span>.</span>
-                    <span>.</span>
-                </p>
-            </div>
-        </div>
-    </div>
-
     <header>
         <h1>
             <a href="<?php echo $home_url; ?>"><img src="<?php echo $theme_url; ?>/img/logo.png" alt="ロゴ" class="logo" /></a>
