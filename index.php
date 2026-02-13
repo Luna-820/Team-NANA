@@ -6,32 +6,6 @@ $page_description = "学ぶだけで終わらせない。コーチング型×コ
 get_header();
 ?>
 
-<div id="loading">
-    <div class="loading-inner">
-        <div class="logo fadein">
-            <div class="logo-flex">
-                <video autoplay loop muted playsinline width="500">
-                    <source src="<?php echo get_template_directory_uri(); ?>/img/logo-loading.mp4" type="video/mp4">
-                </video>
-                <img src="<?php echo get_template_directory_uri(); ?>/img/pronavi-typoonly.png" alt="プロナビ" class="pronavi">
-            </div>
-        </div>
-        <div class="loading-5">
-            <p>
-                <span>L</span>
-                <span>o</span>
-                <span>a</span>
-                <span>d</span>
-                <span>i</span>
-                <span>n</span>
-                <span>g</span>
-                <span>.</span>
-                <span>.</span>
-                <span>.</span>
-            </p>
-        </div>
-    </div>
-</div>
 
 <div class="video-bg">
     <video src="<?php echo get_template_directory_uri(); ?>/img/leaf_bg_landscape.mp4" autoplay muted loop
