@@ -2783,7 +2783,7 @@ body.page-voice .meetup-section .wrapper {
 }
 @media (max-width: 650px) {
   body.page-voice .meetup-section .wrapper {
-    height: 75vh;
+    height: 80vh;
   }
 }
 body.page-voice .meetup-section .wrapper .wrapper-inner {
@@ -2822,6 +2822,7 @@ body.page-voice .meetup-section .wrapper .wrapper-inner .meetups .meetup {
 @media (max-width: 900px) {
   body.page-voice .meetup-section .wrapper .wrapper-inner .meetups .meetup {
     flex-direction: column;
+    padding: 20px 0;
   }
 }
 body.page-voice .meetup-section .wrapper .wrapper-inner .meetups .meetup.active {
@@ -2882,6 +2883,11 @@ body.page-voice .meetup-section .wrapper .wrapper-inner .meetups .meetup .left .
   position: relative;
   padding: 15px 20px;
   margin-inline: auto;
+}
+@media (max-width: 430px) {
+  body.page-voice .meetup-section .wrapper .wrapper-inner .meetups .meetup .left .comment {
+    width: 100%;
+  }
 }
 body.page-voice .meetup-section .wrapper .wrapper-inner .meetups .meetup .left .comment::after {
   content: "";

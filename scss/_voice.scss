@@ -178,7 +178,7 @@ body.page-voice {
       }
 
       @include mx.sp-650 {
-        height: 75vh;
+        height: 80vh;
       }
       
       .wrapper-inner {
@@ -215,6 +215,7 @@ body.page-voice {
             
             @include mx.tb {
               flex-direction: column;
+              padding: 20px 0;
             }
             
             &.active {
@@ -277,6 +278,10 @@ body.page-voice {
                 position: relative;
                 padding: 15px 20px;
                 margin-inline: auto;
+
+                @include mx.sp {
+                  width: 100%;
+                }
                 
                 &::after {
                   content: "";
