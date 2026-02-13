@@ -42,6 +42,7 @@
       justify-content: center;
       align-items: center;
       margin-top: -20px;
+
       span {
         display: inline-block;
         color: $black;
@@ -49,7 +50,7 @@
         font-size: 1em;
         margin-left: -2px;
         animation: animation-loading-5 1.3s infinite;
-      
+
 
         &:nth-of-type(2) {
           animation-delay: .1s;
@@ -89,23 +90,33 @@
       }
 
       @keyframes animation-loading-5 {
+
         /* 待ち */
         40% {
           transform: translateY(0);
         }
+
         /* ジャンプ開始 */
         70% {
           transform: translateY(-10px);
         }
+
         /* ここから次まで「間」 */
         100% {
           transform: translateY(0);
         }
       }
-      
-      }
+
     }
   }
+}
+
+/* 非表示状態 JavaScriptで制御 */
+#loading.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
 
 
 .video-bg {

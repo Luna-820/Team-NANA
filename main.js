@@ -1,24 +1,63 @@
 $(function () {
 
-  $(window).on('load', function () {
+  // ------------------------------------
+  // ローディング
+  // ------------------------------------
+  // #loading というIDを持つ要素を取得
+  const loading = document.getElementById("loading");
+  // もし #loading が存在する場合のみ実行（＝トップページだけにHTMLを書いているため安全対策）
+  if (loading) {
+    // sessionStorage から「visited」というデータを取得
+    // 初回訪問なら null、2回目以降は "true" が入る(下層→TOPでローディング表示しない)
+    const hasVisited = sessionStorage.getItem("visited");
 
-    // すでにTOPを見たか？
-    if (sessionStorage.getItem('topLoaded')) {
-      // 2回目以降は即表示
-      $('#loading').hide();
-      $('#content').show();
-      return;
+    // すでに訪問済みなら（2回目以降なら）
+    if (hasVisited) {
+      // ローディングを即削除（表示しない）
+      loading.remove();
+    } else {
+
+      // 初回訪問なので visited を保存
+      // 同じタブ内では次回以降ローディングを出さないため
+      sessionStorage.setItem("visited", "true");
+
+      // ローディング開始時刻を保存
+      // これで「最低3秒表示」を計算できる
+      const startTime = Date.now();
+      // 最低表示時間（ミリ秒）
+      const minDisplayTime = 3000; // 3000ms = 3秒
+      // ローディングを終了させる関数
+      function hideLoading() {
+
+        // 今まで表示されていた時間を計算
+        const elapsed = Date.now() - startTime;
+        // 3秒に足りない残り時間を計算
+        const remaining = minDisplayTime - elapsed;
+        // 足りない時間があればその分待つ
+        // すでに3秒以上経っていれば即実行
+        setTimeout(() => {
+
+          // フェードアウト用のクラスを追加
+          // （CSSで opacity:0 などを書いている想定）
+          loading.classList.add("is-hidden");
+          // フェードアウトアニメーション完了後に削除
+          // （CSS transition が0.7秒の場合）
+          setTimeout(() => {
+            // DOMから完全に削除
+            loading.remove();
+          }, 700); // ← フェード時間と合わせる
+        }, remaining > 0 ? remaining : 0);
+        // remaining がマイナスなら 0 にする
+      }
+
+      // ページの全読み込み完了（画像など含む）で終了処理開始
+      $(window).on("load", hideLoading);
+
+      // 万が一 load が発火しない場合の保険
+      // 5秒経ったら強制終了
+      setTimeout(hideLoading, 5000);
     }
-
-    // 初回のみローディング
-    sessionStorage.setItem('topLoaded', 'true');
-
-    setTimeout(function () {
-      $('#loading').fadeOut(300);
-      $('#content').fadeIn(300);
-    }, 2300);
-
-  });
+  }
 
   // ------------------------------------
   // header ハンバーガー
@@ -300,10 +339,10 @@ $(function () {
       name: 'MIYAGUCHI',
       message: 'プログラミングは「正解を覚える」よりも、「自分で考えて調べて形にする力」が大切だと考えています。授業ではコードを書くことはもちろん、なぜそう書くのか、エラーが出た時にどう考えるのかを一緒に言語化していきます。最初は難しく感じても、考え方の型が身につけば、一人でも問題を解決できるようになります。「自分でできた！」という成功体験を増やしながら、実務でも通用する思考力を育てていきましょう。'
     },
-    minami: {
-      img: `${wp_options.template_dir}/img/teacher_pic_minami.png`,
+    atsuko: {
+      img: `${wp_options.template_dir}/img/teacher_pic_atsuko.png`,
       position: '現役エンジニア講師',
-      name: 'MINAMI',
+      name: 'ATSUKO',
       message: '現場では「知っている」より「ちゃんと動くものをつくれるか」が求められます。そのため授業では、実際の案件をイメージした課題や、小さくても完成させる制作を大事にしています。途中でつまずいたとしても、原因を一緒に整理しながら、最後までやり切る経験を積んでいきましょう。実装力と継続力の両方を育てることで、卒業後も自分の力で成長し続けられるエンジニアを目指していきます。'
     }
   };
