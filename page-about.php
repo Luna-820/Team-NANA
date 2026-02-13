@@ -82,7 +82,7 @@ get_header();
           <p class="small">Pro Naviは、「コーチング型プログラミングスクール」。 専属コーチがあなたの課題に合わせて1対1で伴走し、 同じ目標を持つ仲間と切磋琢磨できるコミュニティも完備。
             技術だけでなく、営業・案件獲得・継続サポートまでサポート。 「一人では不安」という方でも、一緒に頑張る仲間と共に安心してスキルを仕事に変えられます。</p>
             <div class="button">
-              <a href="voice.html" class="btn small">コミュニティを詳しく知る 〉</a>
+            <a href="<?php echo esc_url(home_url('/voice/')); ?>" class="btn small">コミュニティを詳しく知る 〉</a>
               <a href="https://line.me/R/ti/p/@420zidsx?oat_content=url" target="_blank" class="btn small">無料体験に申し込む 〉</a>
             </div>
         </div>
