@@ -47,7 +47,7 @@ get_header();
               </dl>
             </div>
             <div class="right">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/meetup-1.png" alt="オフ会写真1" />
+                <img src="<?php echo get_template_directory_uri(); ?>/img/meetup-1.webp" alt="オフ会写真1" />
             </div>
           </li>
           <?php
