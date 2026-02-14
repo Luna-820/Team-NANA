@@ -96,7 +96,7 @@ get_header();
 
             <ul class="list">
                 <li>
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/before-after-1.png" alt="before-after1"
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/before-after-1.webp" alt="before-after1"
                         class="fadein" />
                     <div class="text-right">
                         <p class="middle left">
@@ -114,7 +114,7 @@ get_header();
                 </li>
 
                 <li>
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/before-after-2.JPG" alt="before-after2"
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/before-after-2.webp" alt="before-after2"
                         class="fadein" />
                     <div class="text-right">
                         <p class="middle left">
@@ -251,7 +251,7 @@ get_header();
             </li>
             <li class="step2">
                 <div class="card">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/top_step2.png" alt="flow_step1" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/top_step2.webp" alt="flow_step1" />
                     <p class="middle">講師決定</p>
                 </div>
                 <p class="text">
@@ -278,7 +278,7 @@ get_header();
             </li>
             <li class="step5">
                 <div class="card">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/top_step5.png" alt="flow_step1" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/top_step5.webp" alt="flow_step1" />
                     <p class="middle">案件獲得サポート</p>
                 </div>
                 <p class="text">
@@ -515,7 +515,7 @@ get_header();
                         <p class="middle info">8<span>日間</span>無条件返金保証</p>
                     </div>
                     <div class="icon">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/top_riskfree.png"
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/top_riskfree.webp"
                             alt="cooling-off-pic" />
                     </div>
                 </div>

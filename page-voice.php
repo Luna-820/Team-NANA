@@ -23,7 +23,7 @@ get_header();
 
         <ul class="list">
           <li>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/voice-1.png" alt="student1" class="fadein" />
+            <img src="<?php echo get_template_directory_uri(); ?>/img/voice-1.webp" alt="student1" class="fadein" />
             <div class="text-right">
               <p class="text-1">2023年4月入会</p>
               <p class="text-2">
@@ -33,7 +33,7 @@ get_header();
             </div>
           </li>
           <li>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/voice-2.png" alt="student2" class="fadein" />
+            <img src="<?php echo get_template_directory_uri(); ?>/img/voice-2.webp" alt="student2" class="fadein" />
             <div class="text-right">
               <p class="text-1">2023年5月入会</p>
               <p class="text-2">
@@ -43,7 +43,7 @@ get_header();
             </div>
           </li>
           <li>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/voice-3.png" alt="student3" class="fadein" />
+            <img src="<?php echo get_template_directory_uri(); ?>/img/voice-3.webp" alt="student3" class="fadein" />
             <div class="text-right">
               <p class="text-1">2023年8月入会</p>
               <p class="text-2">
@@ -74,7 +74,7 @@ get_header();
                 </dl>
               </div>
               <div class="right">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/meetup-1.png" alt="オフ会写真1" />
+                <img src="<?php echo get_template_directory_uri(); ?>/img/meetup-1.webp" alt="オフ会写真1" />
                 <div class="scroll-meter">
                   <div class="fill"></div>
                 </div>
@@ -94,7 +94,7 @@ get_header();
                 
               </div>
               <div class="right">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/meetup-2.png" alt="オフ会写真2" />
+                <img src="<?php echo get_template_directory_uri(); ?>/img/meetup-2.webp" alt="オフ会写真2" />
                 <div class="scroll-meter">
                   <div class="fill"></div>
                 </div>
@@ -114,7 +114,7 @@ get_header();
                 
               </div>
               <div class="right">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/meetup-3.png" alt="オフ会写真3" />
+                <img src="<?php echo get_template_directory_uri(); ?>/img/meetup-3.webp" alt="オフ会写真3" />
                 <div class="scroll-meter">
                   <div class="fill"></div>
                 </div>
@@ -133,7 +133,7 @@ get_header();
                 </dl>
               </div>
               <div class="right">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/meetup-4.png" alt="オフ会写真4" />
+                <img src="<?php echo get_template_directory_uri(); ?>/img/meetup-4.webp" alt="オフ会写真4" />
                 <div class="scroll-meter">
                   <div class="fill"></div>
                 </div>
@@ -162,7 +162,7 @@ get_header();
           </li>
 
           <li class="fadein">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/metaleaf-2.png" alt="metaleaf" />
+            <img src="<?php echo get_template_directory_uri(); ?>/img/metaleaf-2.webp" alt="metaleaf" />
             <p class="text">
               毎週月曜のセミナー <span>新しい発見や刺激が見つかる場所。</span>
             </p>
@@ -210,15 +210,15 @@ get_header();
 
         <div class="slider-container">
           <div class="vertical-slider slider-up">
-            <div><img src="<?php echo get_template_directory_uri(); ?>/img/hackathon-1-1.png" alt="Meetup1" /></div>
-            <div><img src="<?php echo get_template_directory_uri(); ?>/img/hackathon-1-2.png" alt="Meetup2" /></div>
-            <div><img src="<?php echo get_template_directory_uri(); ?>/img/hackathon-voice-1.png" alt="Meetup3" /></div>
+            <div><img src="<?php echo get_template_directory_uri(); ?>/img/hackathon-1-1.webp" alt="Meetup1" /></div>
+            <div><img src="<?php echo get_template_directory_uri(); ?>/img/hackathon-1-2.webp" alt="Meetup2" /></div>
+            <div><img src="<?php echo get_template_directory_uri(); ?>/img/hackathon-voice-1.webp" alt="Meetup3" /></div>
           </div>
 
           <div class="vertical-slider slider-down">
-            <div><img src="<?php echo get_template_directory_uri(); ?>/img/hackathon-2-1.png" alt="Meetup4" /></div>
-            <div><img src="<?php echo get_template_directory_uri(); ?>/img/hackathon-2-2.png" alt="Meetup5" /></div>
-            <div><img src="<?php echo get_template_directory_uri(); ?>/img/hackathon-voice-2.png" alt="Meetup6" /></div>
+            <div><img src="<?php echo get_template_directory_uri(); ?>/img/hackathon-2-1.webp" alt="Meetup4" /></div>
+            <div><img src="<?php echo get_template_directory_uri(); ?>/img/hackathon-2-2.webp" alt="Meetup5" /></div>
+            <div><img src="<?php echo get_template_directory_uri(); ?>/img/hackathon-voice-2.webp" alt="Meetup6" /></div>
           </div>
         </div>
       </div>
