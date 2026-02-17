@@ -150,7 +150,7 @@ get_header();
         <div class="left">
           <h3 class="section-title">Metaleaf<span>作業会の紹介</span></h3>
           <p>アバターで参加できるオンラインスペース。<br>同じフェーズの仲間と交流しながら、集中できる作業空間です。<span>※無料で参加できるビジター体験が可能です。</span></p>
-          <a href="https://line.me/R/ti/p/@420zidsx?oat_content=url" class="btn" target="_blank">ビジター体験を予約</a>
+          <a href="https://line.me/R/ti/p/@939dwake" class="btn" target="_blank">ビジター体験を予約</a>
         </div>
 
         <ul class="list">
