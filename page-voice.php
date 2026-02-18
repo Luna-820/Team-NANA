@@ -126,7 +126,7 @@ get_header();
                 <h3 class="section-title">
                   <span class="yellow">第４回</span>プロナビオフ会<span class="small">Meetup</span>
                 </h3>
-                <p class="text">開催地：名古屋<br />参加人数：180人</p>
+                <p class="text">開催地：名古屋<br />参加人数：200人</p>
                 <dl class="comment">
                   <dt class="text">「年齢やバックグラウンドに関係なく自然に話せる雰囲気でよかったです。みんな同じ目標に向かって努力していると実感でき、改めて頑張ろうと思えました。」</dt>
                   <dd>M.Kさん（30代/男性）</dd>

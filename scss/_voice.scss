@@ -159,7 +159,11 @@ body.page-voice {
     padding-top: 350px;
 
     @include mx.tb {
-      padding-top: 350px;
+      padding-top: 250px;
+    }
+
+    @include mx.sp-650 {
+      padding-top: 200px;
     }
 
     .wrapper {
@@ -172,13 +176,15 @@ body.page-voice {
       margin-bottom: 100px;
       
       @include mx.tb {
-        height: 85vh;
+        height: 80vh;
         margin-inline: 20px;
         margin-bottom: 80px;
       }
 
-      @include mx.sp-650 {
-        height: 80vh;
+      @include mx.sp {
+        height: 65vh;
+        padding-block: 20px;
+        margin-bottom: 200px;
       }
       
       .wrapper-inner {
@@ -193,7 +199,6 @@ body.page-voice {
         
         @include mx.tb {
           padding-inline: 30px;
-          
         }
         
         .meetups {
@@ -230,7 +235,7 @@ body.page-voice {
               @include mx.tb {
                 width: 100%;
                 margin-right: 0;
-                margin-bottom: 30px;
+                // margin-bottom: 30px;
               }
               
               @include mx.sp {
@@ -279,8 +284,8 @@ body.page-voice {
                 padding: 15px 20px;
                 margin-inline: auto;
 
-                @include mx.sp {
-                  width: 100%;
+                @include mx.tb {
+                  display: none;
                 }
                 
                 &::after {
@@ -314,6 +319,10 @@ body.page-voice {
               @include mx.tb {
                 width: 90%;
                 margin-inline: auto;
+              }
+
+              @include mx.sp-650 {
+                width: 100%;
               }
               
               img {
@@ -394,7 +403,7 @@ body.page-voice {
     }
 
     @include mx.sp-650 {
-      margin-bottom: 100px;
+      margin-bottom: 150px;
     }
 
     @include mx.sp {
@@ -627,6 +636,10 @@ body.page-voice {
       height: auto;
       background-color: transparent;
       color: $black;
+    }
+
+    @include mx.sp-650 {
+      margin-bottom: 50px;
     }
 
     .wrapper {
