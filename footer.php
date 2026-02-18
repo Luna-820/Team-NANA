@@ -1,6 +1,6 @@
 <footer>
     <div class="inner">
-        <a href="https://line.me/R/ti/p/@420zidsx?oat_content=url" class="contact" target="_blank">
+        <a href="https://line.me/R/ti/p/@939dwake" class="contact" target="_blank">
             <div class="flex">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/contact.png" alt="contact" />
                 <p class="small">

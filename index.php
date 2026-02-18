@@ -31,7 +31,7 @@ get_header();
             <span class="title"><span class="yellow">"未来"</span>をつくろう</span>
         </p>
         <div class="link">
-            <a href="https://line.me/R/ti/p/@420zidsx?oat_content=url" class="line" target="_blank">無料LINE相談</a>
+            <a href="https://line.me/R/ti/p/@939dwake" class="line" target="_blank">無料LINE相談</a>
         </div>
     </div>
 

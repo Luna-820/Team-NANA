@@ -166,7 +166,7 @@
 
                 <ul class="link">
                     <li>
-                        <a href="https://line.me/R/ti/p/@420zidsx?oat_content=url" target="_blank">公式LINE</a>
+                        <a href="https://line.me/R/ti/p/@939dwake" target="_blank">公式LINE</a>
                     </li>
                     <li>
                         <a href="https://pronavi-board.noe-p.com/" target="_blank">PortNavi <span>〜受講生の制作物〜</span></a>
@@ -220,7 +220,7 @@
 
             <!-- 固定 -->
             <div class="fixed">
-                <a href="https://line.me/R/ti/p/@420zidsx?oat_content=url" class="line" target="_blank">LINE相談</a>
+                <a href="https://line.me/R/ti/p/@939dwake" class="line" target="_blank">LINE相談</a>
                 <div class="hamburger_fixed">
                     <div class="hamburger_toggle">
                         <span></span>
