@@ -51,7 +51,8 @@ a {
 img {
   width: 100%;
   vertical-align: bottom;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .section-title {
@@ -363,7 +364,8 @@ header {
   height: calc(100vh - 160px);
   display: block;
   border-radius: 20px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   bottom: 0;
   margin-inline: auto;
   z-index: -1;
@@ -536,7 +538,8 @@ header {
 }
 .purpose .purpose-list li a img {
   width: 15%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin-right: 10px;
 }
 .purpose .purpose-list li a .box-title {
@@ -617,7 +620,8 @@ header {
 }
 .before-after .list li img {
   height: 200px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 5px;
 }
 @media (max-width: 900px) {
@@ -662,7 +666,8 @@ header {
 }
 .before-after .list li .text-right .arrow img {
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .before-after .list li .text-right .small {
   text-align: center;
@@ -2331,7 +2336,8 @@ body.page-company #sns .flex-right ul li .icon {
 body.page-company #sns .flex-right ul li .icon img {
   height: 120px;
   max-width: 160px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 body.page-company #sns .flex-right ul li .text {
   width: 70%;
@@ -2486,6 +2492,7 @@ body.page-company #youtube .video-title {
   }
 }
 body.page-company #youtube .video-link {
+  width: -moz-fit-content;
   width: fit-content;
   padding: 4px 12px;
   background-color: #80A0B1;
@@ -2567,6 +2574,7 @@ body.page-company #media ul li .info a {
   color: #FFFFFF;
   border: 2px solid transparent;
   transition: all 0.5s ease;
+  width: -moz-fit-content;
   width: fit-content;
 }
 body.page-company #media ul li .info a:hover {
@@ -2727,7 +2735,8 @@ body.page-voice .voices .list li:last-child {
 }
 body.page-voice .voices .list li img {
   height: 200px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 5px;
 }
 @media (max-width: 900px) {
@@ -2760,7 +2769,7 @@ body.page-voice .meetup-section {
   height: 450vh;
   position: relative;
   color: #FFFFFF;
-  padding-top: 350px;
+  padding-top: 300px;
 }
 @media (max-width: 900px) {
   body.page-voice .meetup-section {
@@ -2781,16 +2790,21 @@ body.page-voice .meetup-section .wrapper {
   border-radius: 20px;
   margin-bottom: 100px;
 }
+@media (max-width: 1100px) {
+  body.page-voice .meetup-section .wrapper {
+    height: 50vh;
+  }
+}
 @media (max-width: 900px) {
   body.page-voice .meetup-section .wrapper {
-    height: 80vh;
+    height: 60vh;
     margin-inline: 20px;
-    margin-bottom: 80px;
+    margin-bottom: 100px;
   }
 }
 @media (max-width: 430px) {
   body.page-voice .meetup-section .wrapper {
-    height: 65vh;
+    height: 50vh;
     padding-block: 20px;
     margin-bottom: 200px;
   }
@@ -2827,6 +2841,11 @@ body.page-voice .meetup-section .wrapper .wrapper-inner .meetups .meetup {
   transform: translateY(40px);
   transition: opacity 0.7s ease, transform 0.7s ease;
   padding: 40px 0;
+}
+@media (max-width: 1100px) {
+  body.page-voice .meetup-section .wrapper .wrapper-inner .meetups .meetup {
+    justify-content: center;
+  }
 }
 @media (max-width: 900px) {
   body.page-voice .meetup-section .wrapper .wrapper-inner .meetups .meetup {
@@ -2934,7 +2953,8 @@ body.page-voice .meetup-section .wrapper .wrapper-inner .meetups .meetup .right 
   }
 }
 body.page-voice .meetup-section .wrapper .wrapper-inner .meetups .meetup .right img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 5px;
   box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.25);
 }
@@ -3211,7 +3231,8 @@ body.page-voice .metaleaf .wrapper .list li:nth-child(6) img {
 }
 body.page-voice .metaleaf .wrapper .list li img {
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 10px;
   box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.25);
 }
@@ -3342,7 +3363,8 @@ body.page-voice .hackathon .wrapper .slider-container .vertical-slider:last-chil
 body.page-voice .hackathon .wrapper .slider-container .vertical-slider img {
   width: 100%;
   display: block;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin-bottom: 20px;
 }
 body.page-voice .hackathon .wrapper .slider-container .slider-down {
@@ -3532,7 +3554,8 @@ body.page-meetup .meetup-list .wrapper .meetups .meetup-item .right {
 }
 body.page-meetup .meetup-list .wrapper .meetups .meetup-item .right img {
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 5px;
   box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.25);
 }
@@ -3560,6 +3583,7 @@ body.page-meetup .meetup-list .wrapper .pagination .next:hover {
 }
 body.page-meetup .meetup-list .wrapper .pagination .current {
   background-color: #db8405;
+  color: #FFFFFF;
 }
 
 body.page-tokushoho header {
@@ -4215,7 +4239,8 @@ footer .contact .flex {
 footer .contact .flex img {
   display: block;
   width: 20%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 footer .contact .flex p {
   color: #FFFFFF;

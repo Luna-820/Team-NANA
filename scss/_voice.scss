@@ -156,7 +156,7 @@ body.page-voice {
     height: calc(450vh);
     position: relative;
     color: $white;
-    padding-top: 350px;
+    padding-top: 300px;
 
     @include mx.tb {
       padding-top: 250px;
@@ -174,15 +174,19 @@ body.page-voice {
       background-color: $blue;
       border-radius: 20px;
       margin-bottom: 100px;
+
+      @include mx.tb-1100 {
+        height: 50vh;
+      }
       
       @include mx.tb {
-        height: 80vh;
+        height: 60vh;
         margin-inline: 20px;
-        margin-bottom: 80px;
+        margin-bottom: 100px;
       }
 
       @include mx.sp {
-        height: 65vh;
+        height: 50vh;
         padding-block: 20px;
         margin-bottom: 200px;
       }
@@ -217,6 +221,10 @@ body.page-voice {
             transform: translateY(40px);
             transition: opacity 0.7s ease, transform 0.7s ease;
             padding: 40px 0;
+
+            @include mx.tb-1100 {
+              justify-content: center;
+            }
             
             @include mx.tb {
               flex-direction: column;
