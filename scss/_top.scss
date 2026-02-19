@@ -127,7 +127,7 @@
   opacity: 0.4;
 
   video {
-    @include mx.tb {
+    @include mx.tb-1100 {
       height: 100vh;
     }
   }
