@@ -24,19 +24,19 @@ function add_styles()
         '1.8.1'
     );
 
-    // Reset Style（直下にある場合はパスに注意）
-    wp_register_style(
-        'reset_style',
-        get_template_directory_uri() . '/reset.css',
-        array(),
-        '1.0'
-    );
+    // // Reset Style（直下にある場合はパスに注意）
+    // wp_register_style(
+    //     'reset_style',
+    //     get_template_directory_uri() . '/reset.css',
+    //     array(),
+    //     '1.0'
+    // );
 
     // Main Style（依存関係に slick_style を追加）
     wp_enqueue_style(
         'main_style',
         get_template_directory_uri() . '/main.css',
-        array('reset_style', 'google-fonts_style', 'slick_style'),
+        array( 'google-fonts_style', 'slick_style'),
         '1.0'
     );
 }

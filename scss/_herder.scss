@@ -391,14 +391,14 @@ header {
       visibility: visible;
       transform: translateX(0);
       opacity: 1;
-      z-index: 1;
+      z-index: 998;
     }
 
     .hamburger-menu {
       transform: translateX(0);
       opacity: 1;
       pointer-events: all;
-      z-index: 2;
+      z-index: 999;
     }
 
     .fixed {

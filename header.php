@@ -173,11 +173,11 @@
                     </li>
                     <li>
                         <a href="https://www.instagram.com/kakashi.programming.lab?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                            target="_blank"><img src="<?php echo $theme_url; ?>/img/instgram.png" class="ig" />かかし</a>
+                            target="_blank"><img src="<?php echo $theme_url; ?>/img/instgram.png" class="ig" alt="インスタアイコン" />かかし</a>
                     </li>
                     <li>
                         <a href="https://www.instagram.com/iruka.freelance?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                            target="_blank"><img src="<?php echo $theme_url; ?>/img/instgram.png" class="ig" />いるか</a>
+                            target="_blank"><img src="<?php echo $theme_url; ?>/img/instgram.png" class="ig" alt="インスタアイコン" />いるか</a>
                     </li>
                     <li><a href="https://navigator-of-engineering.com/" target="_blank">運営会社</a></li>
                 </ul>

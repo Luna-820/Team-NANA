@@ -30,6 +30,8 @@ body {
   background-color: #FFFFFF;
   color: #333333;
   margin: 0;
+  /* Safari only: 対象のクラスやタグを細くする */
+  -webkit-font-smoothing: antialiased;
 }
 
 ul {
@@ -49,8 +51,7 @@ a {
 img {
   width: 100%;
   vertical-align: bottom;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .section-title {
@@ -325,7 +326,7 @@ typebot-bubble::part(button):hover {
   z-index: -100;
   opacity: 0.4;
 }
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   .video-bg video {
     height: 100vh;
   }
@@ -362,8 +363,7 @@ header {
   height: calc(100vh - 160px);
   display: block;
   border-radius: 20px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   bottom: 0;
   margin-inline: auto;
   z-index: -1;
@@ -536,8 +536,7 @@ header {
 }
 .purpose .purpose-list li a img {
   width: 15%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   margin-right: 10px;
 }
 .purpose .purpose-list li a .box-title {
@@ -618,8 +617,7 @@ header {
 }
 .before-after .list li img {
   height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 5px;
 }
 @media (max-width: 900px) {
@@ -664,8 +662,7 @@ header {
 }
 .before-after .list li .text-right .arrow img {
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .before-after .list li .text-right .small {
   text-align: center;
@@ -2334,8 +2331,7 @@ body.page-company #sns .flex-right ul li .icon {
 body.page-company #sns .flex-right ul li .icon img {
   height: 120px;
   max-width: 160px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 body.page-company #sns .flex-right ul li .text {
   width: 70%;
@@ -2490,7 +2486,6 @@ body.page-company #youtube .video-title {
   }
 }
 body.page-company #youtube .video-link {
-  width: -moz-fit-content;
   width: fit-content;
   padding: 4px 12px;
   background-color: #80A0B1;
@@ -2572,7 +2567,6 @@ body.page-company #media ul li .info a {
   color: #FFFFFF;
   border: 2px solid transparent;
   transition: all 0.5s ease;
-  width: -moz-fit-content;
   width: fit-content;
 }
 body.page-company #media ul li .info a:hover {
@@ -2733,8 +2727,7 @@ body.page-voice .voices .list li:last-child {
 }
 body.page-voice .voices .list li img {
   height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 5px;
 }
 @media (max-width: 900px) {
@@ -2941,8 +2934,7 @@ body.page-voice .meetup-section .wrapper .wrapper-inner .meetups .meetup .right 
   }
 }
 body.page-voice .meetup-section .wrapper .wrapper-inner .meetups .meetup .right img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 5px;
   box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.25);
 }
@@ -3219,8 +3211,7 @@ body.page-voice .metaleaf .wrapper .list li:nth-child(6) img {
 }
 body.page-voice .metaleaf .wrapper .list li img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 10px;
   box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.25);
 }
@@ -3351,8 +3342,7 @@ body.page-voice .hackathon .wrapper .slider-container .vertical-slider:last-chil
 body.page-voice .hackathon .wrapper .slider-container .vertical-slider img {
   width: 100%;
   display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   margin-bottom: 20px;
 }
 body.page-voice .hackathon .wrapper .slider-container .slider-down {
@@ -3542,8 +3532,7 @@ body.page-meetup .meetup-list .wrapper .meetups .meetup-item .right {
 }
 body.page-meetup .meetup-list .wrapper .meetups .meetup-item .right img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 5px;
   box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.25);
 }
@@ -3803,9 +3792,6 @@ body.page-policy #fv .section-title::before {
     width: 220px;
   }
 }
-body.page-policy .section {
-  padding-block: 18px;
-}
 body.page-policy .section p, body.page-policy .section span {
   margin-left: 3rem;
 }
@@ -3813,6 +3799,9 @@ body.page-policy .section p, body.page-policy .section span {
   body.page-policy .section p, body.page-policy .section span {
     margin-left: 0;
   }
+}
+body.page-policy .section {
+  padding-block: 18px;
 }
 body.page-policy .section .sub-section {
   margin-left: 2.4rem;
@@ -4172,13 +4161,13 @@ header.active .menu-bg {
   visibility: visible;
   transform: translateX(0);
   opacity: 1;
-  z-index: 1;
+  z-index: 998;
 }
 header.active .hamburger-menu {
   transform: translateX(0);
   opacity: 1;
   pointer-events: all;
-  z-index: 2;
+  z-index: 999;
 }
 header.active .fixed {
   opacity: 0;
@@ -4226,8 +4215,7 @@ footer .contact .flex {
 footer .contact .flex img {
   display: block;
   width: 20%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 footer .contact .flex p {
   color: #FFFFFF;
