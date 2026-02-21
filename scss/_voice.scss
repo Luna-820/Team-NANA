@@ -406,16 +406,12 @@ body.page-voice {
     }
 
     @include mx.tb {
-      margin-top: -300px;
-      margin-bottom: 300px;
+      margin-top: -250px;
+      margin-bottom: 400px;
     }
 
     @include mx.sp-650 {
       margin-bottom: 150px;
-    }
-
-    @include mx.sp {
-      margin-bottom: 50px;
     }
 
     .wrapper {
@@ -618,7 +614,7 @@ body.page-voice {
           }
 
           .text {
-            font-size: $fw-medium;
+            font-size: 400;
             font-weight: bold;
 
             span {
