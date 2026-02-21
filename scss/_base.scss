@@ -16,7 +16,7 @@ $border-grey: #a6a6a6;
 // --------------------------------------
 // Typography 
 // --------------------------------------
-$font-family-base: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif;
+$font-family-base: 'Zen Maru Gothic New', 'Noto Sans JP', sans-serif;
 // 文字サイズ（(Base 1rem = 10px/PCサイズ）
 $fs-h2: 3.0rem;
 $fs-h3: 2.0rem;
@@ -28,7 +28,7 @@ $fs-small: 1.2rem;
 
 // 文字の太さ
 $fw-bold: 700;
-$fw-medium: 500;
+// $fw-medium: 500;
 $fw-light: 400;
 
 // 行間・文字間スペース
@@ -167,7 +167,7 @@ img {
 .middle {
     @extend %paragraph;
     font-size: $fs-middle;
-    font-weight: $fw-medium;
+    // font-weight: $fw-medium;
 
     @include mx.tb {
         font-size: 1.6rem;
