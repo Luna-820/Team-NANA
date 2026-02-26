@@ -47,7 +47,12 @@ get_header();
               </dl>
             </div>
             <div class="right">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/meetup-1.webp" alt="オフ会写真1" />
+                <?php 
+                $image = get_field('new_img');
+                if ($image): 
+                ?>
+                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                <?php endif; ?>
             </div>
           </li>
           <?php
