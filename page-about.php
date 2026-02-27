@@ -96,31 +96,31 @@ get_header();
         <dd class="content">
           <span class="label">授業</span>
           <h3 box-title>プログラミング基礎</h3>
-          <p class="small">HTML/CSSの基礎を徹底的に学習</p>
+          <p class="small">HTML/CSSの基礎を徹底的に学習。</p>
         </dd>
         <dt class="month">2–3month</dt>
         <dd class="content">
           <span class="label">授業</span>
           <h3 box-title>模写コーディング</h3>
-          <p class="small">HTML/CSSの基礎を徹底的に学習</p>
+          <p class="small">実案件レベルのサイトを模写し、実践力を強化。</p>
         </dd>
         <dt class="month">4month</dt>
         <dd class="content">
           <span class="label">授業</span>
           <h3 box-title>オリジナルサイト作成</h3>
-          <p class="small">HTML/CSSの基礎を徹底的に学習</p>
+          <p class="small">企画から設計まで行い、自分だけのサイトを制作。</p>
         </dd>
         <dt class="month">5month</dt>
         <dd class="content">
           <span class="label case">案件</span>
           <h3 box-title>案件獲得サポート</h3>
-          <p class="small">HTML/CSSの基礎を徹底的に学習</p>
+          <p class="small">プロフィール添削から提案文作成までコーチが徹底支援。</p>
         </dd>
         <dt class="month">6month</dt>
         <dd class="content">
           <span class="label case">案件</span>
           <h3 box-title>案件獲得時の営業同行</h3>
-          <p class="small">HTML/CSSの基礎を徹底的に学習</p>
+          <p class="small">商談に同席し、受注までを実践サポート。</p>
         </dd>
       </dl>
       <p class="small inner">
